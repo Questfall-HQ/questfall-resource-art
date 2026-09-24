@@ -7,7 +7,7 @@ const source = fileURLToPath(new URL('../assets/', import.meta.url));
 const catalogs = [
   {images: resourceImages, source, directory: 'resources', label: 'resource'},
   {images: lootboxImages, source: join(source, 'lootboxes'), directory: 'lootboxes', label: 'lootbox'},
-  {images: attributeCandidateImages, source: fileURLToPath(new URL('../proposals/attribute-images-v1/', import.meta.url)), directory: 'attribute-candidates', label: 'attribute candidate'},
+  {images: attributeCandidateImages, source: fileURLToPath(new URL('../proposals/attribute-images-v2/', import.meta.url)), directory: 'attribute-candidates/v2', label: 'attribute candidate'},
 ];
 
 for (const catalog of catalogs) {

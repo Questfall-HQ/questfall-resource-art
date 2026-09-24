@@ -20,10 +20,12 @@ symbol. Both clients render these paths through their local `rpg-attr-icon` tag.
 Traits in the current Application UI use their parent attribute's symbol; they
 do not have separate artwork. SVG styling and equipment-slot icons remain local.
 
-`attributeCandidateImages` holds an experimental raster set in
-`proposals/attribute-images-v1/`. It follows the six existing attribute
-silhouettes and is available for side-by-side preview in Admin. It does not
-replace the active SVG attributes or the separate Mining Points resource image.
+`attributeCandidateImages` holds the current experimental raster set in
+`proposals/attribute-images-v2/`; the first proposal remains in
+`proposals/attribute-images-v1/`. The candidates follow the six existing
+attribute silhouettes and are available for side-by-side preview in Admin.
+They do not replace the active SVG attributes or the separate Mining Points
+resource image.
 
 To update a resource image, replace its file in `assets/` or add a new file and
 catalog entry. Commit the change, tag a new version, update the exact Git tag in
