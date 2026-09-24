@@ -15,3 +15,4 @@ export declare const lootboxImages: Readonly<{
 }>;
 
 export {attributeIcons, type AttributeIcon} from './attribute-icons.js';
+export {lootboxIcon} from './lootbox-icon.js';

@@ -16,3 +16,4 @@ export const lootboxImages = Object.freeze({
 });
 
 export {attributeIcons} from './attribute-icons.js';
+export {lootboxIcon} from './lootbox-icon.js';

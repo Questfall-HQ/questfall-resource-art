@@ -10,6 +10,11 @@ imports `resourceImages` and `lootboxImages` for its own UI and runs
 sync command copies the catalogued files to `public/images/resources` and
 `public/images/lootboxes`. Opening videos remain in Application.
 
+`lootboxIcon` is the generic Box Open symbol used by Application when the
+lootbox rarity is unspecified. Both clients render this SVG geometry directly.
+The symbol comes from Font Awesome Free 7.2.0; its attribution and license are
+in `third-party/fontawesome-free/LICENSE.txt`.
+
 `attributeIcons` contains the six attribute symbols plus the generic `boost`
 symbol. Both clients render these paths through their local `rpg-attr-icon` tag.
 Traits in the current Application UI use their parent attribute's symbol; they
