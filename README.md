@@ -16,9 +16,10 @@ sync command copies the catalogued files to `public/images/resources` and
 The other entries remain the artwork for individual rarity levels.
 
 `attributeIcons` contains the six attribute symbols plus the generic `boost`
-symbol. Both clients render these paths through their local `rpg-attr-icon` tag.
-Traits in the current Application UI use their parent attribute's symbol; they
-do not have separate artwork. SVG styling and equipment-slot icons remain local.
+symbol. Admin still renders the six SVG symbols; Application uses the raster
+set below for those attributes and keeps the SVG `boost` symbol. Traits in
+Application use their parent attribute's image and do not have separate
+artwork. SVG styling and equipment-slot icons remain local.
 
 `attributeCandidateImages` holds the current raster set: Trading, Stamina, and
 Luck from `proposals/attribute-images-v2/`, refined Mining and Crafting from
