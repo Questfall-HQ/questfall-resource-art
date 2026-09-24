@@ -1,9 +1,9 @@
 {
   "name": "@questfall/resource-art",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
-  "description": "Shared resource artwork for Questfall Application and Admin",
+  "description": "Shared resource and attribute artwork for Questfall Application and Admin",
   "types": "./catalog.d.ts",
   "exports": {
     ".": {

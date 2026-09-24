@@ -5,3 +5,5 @@ export const resourceImages = Object.freeze({
   essence: '/images/resources/essence.avif',
   mining_points: '/images/resources/mining-points-v3.avif',
 });
+
+export {attributeIcons} from './attribute-icons.js';

@@ -4,3 +4,5 @@ export declare const resourceImages: Readonly<{
   essence: string;
   mining_points: string;
 }>;
+
+export {attributeIcons, type AttributeIcon} from './attribute-icons.js';
