@@ -15,4 +15,13 @@ export declare const lootboxImages: Readonly<{
   mythical: string;
 }>;
 
+export declare const attributeCandidateImages: Readonly<{
+  inventory: string;
+  mining: string;
+  crafting: string;
+  trading: string;
+  stamina: string;
+  luck: string;
+}>;
+
 export {attributeIcons, type AttributeIcon} from './attribute-icons.js';
