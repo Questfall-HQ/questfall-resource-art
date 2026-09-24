@@ -7,6 +7,7 @@ export const resourceImages = Object.freeze({
 });
 
 export const lootboxImages = Object.freeze({
+  generic: '/images/lootboxes/generic.avif',
   common: '/images/lootboxes/common.webp',
   uncommon: '/images/lootboxes/uncommon.webp',
   rare: '/images/lootboxes/rare.webp',
@@ -16,4 +17,3 @@ export const lootboxImages = Object.freeze({
 });
 
 export {attributeIcons} from './attribute-icons.js';
-export {lootboxIcon} from './lootbox-icon.js';

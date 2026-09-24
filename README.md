@@ -1,8 +1,10 @@
 # Questfall Resource Art
 
 Shared artwork for resource, lootbox, and RPG attribute markers in Questfall
-Application and Admin. The four AVIF resource images, six WebP lootbox images,
-and SVG attribute geometry came from `questfall-application`.
+Application and Admin. The four AVIF resource images, six rarity-specific WebP
+lootbox images, and SVG attribute geometry came from `questfall-application`.
+The generic lootbox image is the closed chest from the third Welcome quest,
+"Buy a Common Lootbox".
 
 `catalog.js` maps canonical resource and lootbox keys to public paths. Each client
 imports `resourceImages` and `lootboxImages` for its own UI and runs
@@ -10,10 +12,8 @@ imports `resourceImages` and `lootboxImages` for its own UI and runs
 sync command copies the catalogued files to `public/images/resources` and
 `public/images/lootboxes`. Opening videos remain in Application.
 
-`lootboxIcon` is the generic Box Open symbol used by Application when the
-lootbox rarity is unspecified. Both clients render this SVG geometry directly.
-The symbol comes from Font Awesome Free 7.2.0; its attribution and license are
-in `third-party/fontawesome-free/LICENSE.txt`.
+`lootboxImages.generic` is the marker for lootboxes without a specified rarity.
+The other entries remain the artwork for individual rarity levels.
 
 `attributeIcons` contains the six attribute symbols plus the generic `boost`
 symbol. Both clients render these paths through their local `rpg-attr-icon` tag.

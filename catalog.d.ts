@@ -6,6 +6,7 @@ export declare const resourceImages: Readonly<{
 }>;
 
 export declare const lootboxImages: Readonly<{
+  generic: string;
   common: string;
   uncommon: string;
   rare: string;
@@ -15,4 +16,3 @@ export declare const lootboxImages: Readonly<{
 }>;
 
 export {attributeIcons, type AttributeIcon} from './attribute-icons.js';
-export {lootboxIcon} from './lootbox-icon.js';
