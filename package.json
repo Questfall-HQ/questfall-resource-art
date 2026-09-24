@@ -1,0 +1,13 @@
+{
+  "name": "@questfall/resource-art",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Shared resource artwork for Questfall Application and Admin",
+  "exports": {
+    ".": "./catalog.js"
+  },
+  "bin": {
+    "questfall-resource-art-sync": "./bin/sync.mjs"
+  }
+}
