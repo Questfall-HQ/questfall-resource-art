@@ -18,7 +18,7 @@ export const lootboxImages = Object.freeze({
 
 // Raster attribute art currently used in Application.
 export const attributeCandidateImages = Object.freeze({
-  inventory: '/images/inventory-options/v1/organizer.png',
+  inventory: '/images/inventory-options/v1/backpack.png',
   mining: '/images/attribute-candidates/v3/mining.png',
   crafting: '/images/attribute-candidates/v3/crafting.png',
   trading: '/images/attribute-candidates/v2/trading.png',
@@ -28,9 +28,9 @@ export const attributeCandidateImages = Object.freeze({
 
 export const inventoryVariantImages = Object.freeze({
   cube: '/images/attribute-candidates/v2/inventory.png',
-  backpack: '/images/inventory-options/v1/backpack.png',
+  backpack: attributeCandidateImages.inventory,
   stack: '/images/inventory-options/v1/stack.png',
-  organizer: attributeCandidateImages.inventory,
+  organizer: '/images/inventory-options/v1/organizer.png',
 });
 
 export {attributeIcons} from './attribute-icons.js';

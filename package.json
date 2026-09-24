@@ -1,6 +1,6 @@
 {
   "name": "@questfall/resource-art",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "private": true,
   "type": "module",
   "description": "Shared resource, lootbox, and attribute artwork for Questfall Application and Admin",

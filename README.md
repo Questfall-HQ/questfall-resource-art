@@ -23,10 +23,10 @@ artwork. SVG styling and equipment-slot icons remain local.
 
 `attributeCandidateImages` holds the current raster set: Trading, Stamina, and
 Luck from `proposals/attribute-images-v2/`, refined Mining and Crafting from
-`proposals/attribute-images-v3/`, and the Inventory organizer tray from
+`proposals/attribute-images-v3/`, and the Inventory backpack from
 `proposals/inventory-options-v1/`. Application uses these six images through
 its shared attribute icon component. The separate Mining Points image remains
-the gold lightning resource. `inventoryVariantImages` lists the active tray
+the gold lightning resource. `inventoryVariantImages` lists the active backpack
 and three other Inventory silhouettes, including the original cube. Admin
 shows all four together for comparison. Earlier proposals remain available.
 
