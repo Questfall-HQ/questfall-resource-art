@@ -1,13 +1,14 @@
 # Questfall Resource Art
 
-Shared artwork for resource and RPG attribute markers in Questfall Application
-and Admin. The four initial AVIF files and the SVG attribute geometry were
-copied from `questfall-application`.
+Shared artwork for resource, lootbox, and RPG attribute markers in Questfall
+Application and Admin. The four AVIF resource images, six WebP lootbox images,
+and SVG attribute geometry came from `questfall-application`.
 
-`catalog.js` maps canonical resource keys to public paths. Each client imports
-`resourceImages` for its own `resource-icon` component and runs
+`catalog.js` maps canonical resource and lootbox keys to public paths. Each client
+imports `resourceImages` and `lootboxImages` for its own UI and runs
 `bun node_modules/@questfall/resource-art/bin/sync.mjs` before compiling. The
-sync command copies the catalogued files to `public/images/resources`.
+sync command copies the catalogued files to `public/images/resources` and
+`public/images/lootboxes`. Opening videos remain in Application.
 
 `attributeIcons` contains the six attribute symbols plus the generic `boost`
 symbol. Both clients render these paths through their local `rpg-attr-icon` tag.
