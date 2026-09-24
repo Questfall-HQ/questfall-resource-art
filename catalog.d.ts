@@ -24,4 +24,11 @@ export declare const attributeCandidateImages: Readonly<{
   luck: string;
 }>;
 
+export declare const inventoryVariantImages: Readonly<{
+  cube: string;
+  backpack: string;
+  stack: string;
+  organizer: string;
+}>;
+
 export {attributeIcons, type AttributeIcon} from './attribute-icons.js';

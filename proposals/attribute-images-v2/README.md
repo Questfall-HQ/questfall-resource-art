@@ -2,8 +2,8 @@
 
 Six transparent PNG concepts generated with the built-in image generation
 tool, using each v1 image as an edit target and its original SVG silhouette as
-a shape reference. These are Admin preview candidates; Application and Admin
-continue to render the original SVG attribute icons.
+a shape reference. Application now uses these six images as its attribute icons;
+Admin continues to show them beside the original SVGs.
 
 Shared prompt: preserve one centered, recognizable attribute silhouette on a
 transparent square canvas with mild depth; replace glossy chrome and neon rims

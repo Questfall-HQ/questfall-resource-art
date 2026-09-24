@@ -26,4 +26,11 @@ export const attributeCandidateImages = Object.freeze({
   luck: '/images/attribute-candidates/v2/luck.png',
 });
 
+export const inventoryVariantImages = Object.freeze({
+  cube: attributeCandidateImages.inventory,
+  backpack: '/images/inventory-options/v1/backpack.png',
+  stack: '/images/inventory-options/v1/stack.png',
+  organizer: '/images/inventory-options/v1/organizer.png',
+});
+
 export {attributeIcons} from './attribute-icons.js';
