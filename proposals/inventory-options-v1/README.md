@@ -4,7 +4,8 @@ Three transparent PNG options generated with the built-in image generation tool.
 The v2 Inventory cube was provided as a reference for the quiet lilac palette,
 soft satin material and broad, simple silhouette. The images intentionally avoid
 its cube shape. They are for comparison in Admin at 16, 24, 32 and 64 pixels;
-the cube remains active in Application.
+the storage blocks are active in Application. The previous cube remains in the
+v2 attribute proposal as an alternative.
 
 Common prompt: one centered game UI Inventory icon on a transparent square
 canvas, dusty lilac (`#c4b5fd`), subtle volume and restrained highlights,

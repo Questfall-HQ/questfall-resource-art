@@ -18,7 +18,7 @@ export const lootboxImages = Object.freeze({
 
 // Experimental raster replacements for the six attribute glyphs.
 export const attributeCandidateImages = Object.freeze({
-  inventory: '/images/attribute-candidates/v2/inventory.png',
+  inventory: '/images/inventory-options/v1/stack.png',
   mining: '/images/attribute-candidates/v2/mining.png',
   crafting: '/images/attribute-candidates/v2/crafting.png',
   trading: '/images/attribute-candidates/v2/trading.png',
@@ -27,9 +27,9 @@ export const attributeCandidateImages = Object.freeze({
 });
 
 export const inventoryVariantImages = Object.freeze({
-  cube: attributeCandidateImages.inventory,
+  cube: '/images/attribute-candidates/v2/inventory.png',
   backpack: '/images/inventory-options/v1/backpack.png',
-  stack: '/images/inventory-options/v1/stack.png',
+  stack: attributeCandidateImages.inventory,
   organizer: '/images/inventory-options/v1/organizer.png',
 });
 
