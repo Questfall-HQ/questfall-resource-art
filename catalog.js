@@ -16,11 +16,11 @@ export const lootboxImages = Object.freeze({
   mythical: '/images/lootboxes/mythical.webp',
 });
 
-// Experimental raster replacements for the six attribute glyphs.
+// Raster attribute art currently used in Application.
 export const attributeCandidateImages = Object.freeze({
-  inventory: '/images/inventory-options/v1/stack.png',
-  mining: '/images/attribute-candidates/v2/mining.png',
-  crafting: '/images/attribute-candidates/v2/crafting.png',
+  inventory: '/images/inventory-options/v1/organizer.png',
+  mining: '/images/attribute-candidates/v3/mining.png',
+  crafting: '/images/attribute-candidates/v3/crafting.png',
   trading: '/images/attribute-candidates/v2/trading.png',
   stamina: '/images/attribute-candidates/v2/stamina.png',
   luck: '/images/attribute-candidates/v2/luck.png',
@@ -29,8 +29,8 @@ export const attributeCandidateImages = Object.freeze({
 export const inventoryVariantImages = Object.freeze({
   cube: '/images/attribute-candidates/v2/inventory.png',
   backpack: '/images/inventory-options/v1/backpack.png',
-  stack: attributeCandidateImages.inventory,
-  organizer: '/images/inventory-options/v1/organizer.png',
+  stack: '/images/inventory-options/v1/stack.png',
+  organizer: attributeCandidateImages.inventory,
 });
 
 export {attributeIcons} from './attribute-icons.js';

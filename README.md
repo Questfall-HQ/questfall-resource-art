@@ -20,14 +20,14 @@ symbol. Both clients render these paths through their local `rpg-attr-icon` tag.
 Traits in the current Application UI use their parent attribute's symbol; they
 do not have separate artwork. SVG styling and equipment-slot icons remain local.
 
-`attributeCandidateImages` holds the current raster set: five images from
-`proposals/attribute-images-v2/` and the active Inventory stack from
-`proposals/inventory-options-v1/`. The first proposal remains in
-`proposals/attribute-images-v1/`. Application uses these six images through
+`attributeCandidateImages` holds the current raster set: Trading, Stamina, and
+Luck from `proposals/attribute-images-v2/`, refined Mining and Crafting from
+`proposals/attribute-images-v3/`, and the Inventory organizer tray from
+`proposals/inventory-options-v1/`. Application uses these six images through
 its shared attribute icon component. The separate Mining Points image remains
-the gold lightning resource. `inventoryVariantImages` lists the active stack
+the gold lightning resource. `inventoryVariantImages` lists the active tray
 and three other Inventory silhouettes, including the original cube. Admin
-shows all four together for comparison.
+shows all four together for comparison. Earlier proposals remain available.
 
 To update a resource image, replace its file in `assets/` or add a new file and
 catalog entry. Commit the change, tag a new version, update the exact Git tag in

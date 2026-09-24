@@ -8,6 +8,10 @@ const attributeV2Images = Object.fromEntries(
   Object.entries({...attributeCandidateImages, cube: inventoryVariantImages.cube})
     .filter(([, path]) => path.startsWith('/images/attribute-candidates/v2/')),
 );
+const attributeV3Images = Object.fromEntries(
+  Object.entries(attributeCandidateImages)
+    .filter(([, path]) => path.startsWith('/images/attribute-candidates/v3/')),
+);
 const inventoryOptions = Object.fromEntries(
   Object.entries(inventoryVariantImages).filter(([key]) => key !== 'cube'),
 );
@@ -15,6 +19,7 @@ const catalogs = [
   {images: resourceImages, source, directory: 'resources', label: 'resource'},
   {images: lootboxImages, source: join(source, 'lootboxes'), directory: 'lootboxes', label: 'lootbox'},
   {images: attributeV2Images, source: fileURLToPath(new URL('../proposals/attribute-images-v2/', import.meta.url)), directory: 'attribute-candidates/v2', label: 'attribute candidate'},
+  {images: attributeV3Images, source: fileURLToPath(new URL('../proposals/attribute-images-v3/', import.meta.url)), directory: 'attribute-candidates/v3', label: 'refined attribute'},
   {images: inventoryOptions, source: fileURLToPath(new URL('../proposals/inventory-options-v1/', import.meta.url)), directory: 'inventory-options/v1', label: 'inventory option'},
 ];
 
