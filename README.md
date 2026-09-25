@@ -34,10 +34,10 @@ resource preview shows the active backpack. Earlier proposals remain available.
 submission UI: an inbox, a completed form, photo proof, a paper plane, three
 envelope treatments, a postage stamp, and two treatments of a square folded
 letter. Admin's resource preview shows them at card and small UI sizes.
-`uiImages.submissions` selects the dimensional letter for Application's League
-quest count. `uiImages.submissions_outline` selects the matching contour for
-Author Space submission markers. Earlier candidates remain available for
-comparison.
+`uiIcons.submissions` is the active, single-color stacked-sheet marker in
+Application and Admin. It uses the Font Awesome Free layer-group silhouette;
+the source license is in `third-party/fontawesome-free/LICENSE.txt`. The raster
+concepts remain available for comparison.
 
 To update a resource image, replace its file in `assets/` or add a new file and
 catalog entry. Commit the change, tag a new version, update the exact Git tag in

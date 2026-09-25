@@ -47,10 +47,5 @@ export const uiCandidateImages = Object.freeze({
   submissions_letter_outline: '/images/ui-candidates/v1/submissions-letter-outline.svg',
 });
 
-// Active interface artwork; candidate paths remain available for comparison.
-export const uiImages = Object.freeze({
-  submissions: uiCandidateImages.submissions_letter_square,
-  submissions_outline: uiCandidateImages.submissions_letter_outline,
-});
-
 export {attributeIcons} from './attribute-icons.js';
+export {uiIcons} from './ui-icons.js';
