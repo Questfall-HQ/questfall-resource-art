@@ -11,7 +11,7 @@ export const resourceImages = Object.freeze({
   qft: '/images/resources/qft.webp',
   shards: '/images/resources/shards.webp',
   gems: '/images/resources/gems.webp',
-  attribute_points: '/images/resources/attribute-points.webp',
+  attribute_points: '/images/resources/attribute-points.svg',
 });
 
 export const lootboxImages = Object.freeze({
