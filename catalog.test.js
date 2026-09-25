@@ -18,6 +18,8 @@ test('product aliases resolve to the selected shared artwork', () => {
   expect(markerFor('lootbox_a').image.endsWith('/mythical.webp')).toBe(true);
   expect(markerFor('attribute_inventory').image.endsWith('/attributes/inventory.png')).toBe(true);
   expect(markerFor('submissions').symbol).toBeDefined();
+  expect(markerFor('moderation').symbol.viewbox).toBe('0 0 384 512');
+  expect(markerFor('trophy').symbol.viewbox).toBe('0 0 512 512');
   expect(markerFor('weekly_reset').image).toMatch(/weekly-reset\.webp$/);
   for (const key of ['qft', 'shards', 'gems', 'attribute_points']) {
     expect(markerFor(key).image).toBeDefined();

@@ -84,6 +84,8 @@ export const markers = Object.freeze({
     `attribute_${id}`, {group: 'attribute', id, image: attributeImages[id], symbol: attributeIcons[id]},
   ])),
   attribute_boost: {group: 'attribute', id: 'boost', symbol: attributeIcons.boost},
+  moderation: {group: 'ui', symbol: uiIcons.moderation},
+  trophy: {group: 'ui', symbol: uiIcons.trophy},
   submissions: {group: 'ui', image: uiImages.submissions, symbol: uiIcons.submissions},
   weekly_reset: {group: 'ui', image: uiImages.weekly_reset},
 });
