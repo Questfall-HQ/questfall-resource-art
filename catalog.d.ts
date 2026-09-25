@@ -42,4 +42,8 @@ export declare const uiCandidateImages: Readonly<{
   submissions_stamp: string;
 }>;
 
+export declare const uiImages: Readonly<{
+  submissions: string;
+}>;
+
 export {attributeIcons, type AttributeIcon} from './attribute-icons.js';

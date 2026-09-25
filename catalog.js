@@ -45,4 +45,9 @@ export const uiCandidateImages = Object.freeze({
   submissions_stamp: '/images/ui-candidates/v1/submissions-stamp.png',
 });
 
+// Active interface artwork; candidate paths remain available for comparison.
+export const uiImages = Object.freeze({
+  submissions: uiCandidateImages.submissions_mail_open,
+});
+
 export {attributeIcons} from './attribute-icons.js';
