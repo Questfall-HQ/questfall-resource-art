@@ -1,10 +1,11 @@
 import {expect, test} from 'bun:test';
-import {mkdtemp, mkdir, readdir, rm, stat, writeFile} from 'node:fs/promises';
+import {mkdtemp, mkdir, readFile, readdir, rm, stat, writeFile} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import sharp from 'sharp';
 import {markerFor, markers, visualFor} from './catalog.js';
+import {buildArtwork} from './scripts/build-artwork.mjs';
 
 const script = fileURLToPath(new URL('./bin/sync.mjs', import.meta.url));
 
@@ -84,6 +85,39 @@ test('normal sync excludes proposals; preview sync includes them', async () => {
     const preview = Bun.spawnSync(['bun', script, '--proposals'], {cwd: target});
     expect(preview.exitCode).toBe(0);
     expect(await readdir(join(target, 'public/images/ui-candidates/v1'))).toHaveLength(10);
+  } finally {
+    await rm(target, {recursive: true, force: true});
+  }
+});
+
+test('artwork build skips unchanged sources and rebuilds only changed or missing variants', async () => {
+  const target = await mkdtemp(join(tmpdir(), 'questfall-artwork-build-'));
+  const entries = {sample: {
+    group: 'resource', source: 'sources/sample.png',
+    sources: {small: 'sources/small.png'}, output: 'sample',
+  }};
+  const source = color => sharp({create: {width: 512, height: 512, channels: 4, background: color}}).png().toBuffer();
+  try {
+    await mkdir(join(target, 'sources'), {recursive: true});
+    await writeFile(join(target, 'sources/sample.png'), await source('#ff0000'));
+    await writeFile(join(target, 'sources/small.png'), await source('#0000ff'));
+
+    expect((await buildArtwork({directory: target, entries, inventory: false})).built).toEqual([
+      'sample/tiny', 'sample/small', 'sample/large',
+    ]);
+    expect((await buildArtwork({directory: target, entries, inventory: false})).built).toEqual([]);
+    await buildArtwork({directory: target, entries, inventory: false, check: true});
+
+    const tinyBefore = await readFile(join(target, 'assets/sample-tiny.avif'));
+    const smallBefore = await readFile(join(target, 'assets/sample-small.avif'));
+    await writeFile(join(target, 'sources/small.png'), await source('#00ff00'));
+    await expect(buildArtwork({directory: target, entries, inventory: false, check: true})).rejects.toThrow('sample/small');
+    expect((await buildArtwork({directory: target, entries, inventory: false})).built).toEqual(['sample/small']);
+    expect(await readFile(join(target, 'assets/sample-tiny.avif'))).toEqual(tinyBefore);
+    expect(await readFile(join(target, 'assets/sample-small.avif'))).not.toEqual(smallBefore);
+
+    await rm(join(target, 'assets/sample-tiny.avif'));
+    expect((await buildArtwork({directory: target, entries, inventory: false})).built).toEqual(['sample/tiny']);
   } finally {
     await rm(target, {recursive: true, force: true});
   }

@@ -1,6 +1,6 @@
 {
   "name": "@questfall/resource-art",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "private": true,
   "type": "module",
   "description": "Shared resource, lootbox, and attribute artwork for Questfall Application and Admin",
@@ -15,10 +15,11 @@
     "questfall-resource-art-sync": "./bin/sync.mjs"
   },
   "scripts": {
-    "build:attribute-variants": "bun scripts/build-attribute-variants.mjs",
+    "build:artwork": "bun scripts/build-artwork.mjs",
+    "check:artwork": "bun scripts/build-artwork.mjs --check",
     "test": "bun test"
   },
   "devDependencies": {
-    "sharp": "^0.35.4"
+    "sharp": "0.35.4"
   }
 }

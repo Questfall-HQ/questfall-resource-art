@@ -1,0 +1,251 @@
+{
+  "version": 1,
+  "entries": {
+    "attribute_inventory": {
+      "tiny": {
+        "source": {
+          "path": "sources/attributes/inventory.png",
+          "bytes": 887605,
+          "sha256": "0853275670d28bab2efeecf29787f47472367892b1009cb0c0f1e7ec796d8ca7"
+        },
+        "fingerprint": "0a8ff5cd4a18761e8157117d7c5527cb701d31639093fc87d94f9ae52a97bfcf",
+        "output": {
+          "path": "attributes/inventory-tiny.avif",
+          "bytes": 2186,
+          "sha256": "c246f55d902712f20726f55da9234a8964906ab6a9e1942f5365fe6a2231b909"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/attributes/inventory.png",
+          "bytes": 887605,
+          "sha256": "0853275670d28bab2efeecf29787f47472367892b1009cb0c0f1e7ec796d8ca7"
+        },
+        "fingerprint": "2202301cce2ece29a624d2984ccf801fe05c69a44a81be714b696af9dac3b4f5",
+        "output": {
+          "path": "attributes/inventory-small.avif",
+          "bytes": 4853,
+          "sha256": "9b5b916dd0ca7eb2f6bfc7e08638edd0186fa511d8c1c308b84c1da1e98638d0"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/attributes/inventory.png",
+          "bytes": 887605,
+          "sha256": "0853275670d28bab2efeecf29787f47472367892b1009cb0c0f1e7ec796d8ca7"
+        },
+        "fingerprint": "936426273a48f17c64993508c3aa43eb505ca51acb84d6cc11f4cbb7d23e9723",
+        "output": {
+          "path": "attributes/inventory.avif",
+          "bytes": 10368,
+          "sha256": "5164f5dee0e94553335aa182d230665230ea574fb4e38dd73ef3c4f997960e86"
+        }
+      }
+    },
+    "attribute_mining": {
+      "tiny": {
+        "source": {
+          "path": "sources/attributes/mining.png",
+          "bytes": 833552,
+          "sha256": "03d413386bc18acf99faa491f5c713ced67964ee6632c4d69b8d6a851cc11ba8"
+        },
+        "fingerprint": "66909c828faa3a463a26a5f2a73c6e6fd5a119f9d73aecab3aee7eb6066e3921",
+        "output": {
+          "path": "attributes/mining-tiny.avif",
+          "bytes": 2099,
+          "sha256": "13db57f92e58cfb88cf404e5a9f49770a8802f37e4376f28c87126826df5cf53"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/attributes/mining.png",
+          "bytes": 833552,
+          "sha256": "03d413386bc18acf99faa491f5c713ced67964ee6632c4d69b8d6a851cc11ba8"
+        },
+        "fingerprint": "baf2810d74a3ac14628f6e6da48c6190a6be36956205a8a80697ff5b834a465d",
+        "output": {
+          "path": "attributes/mining-small.avif",
+          "bytes": 4210,
+          "sha256": "477505bf73a2ee985a5d065dfaab6a4a1a11080bf4382f857335f1be44bc9bdd"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/attributes/mining.png",
+          "bytes": 833552,
+          "sha256": "03d413386bc18acf99faa491f5c713ced67964ee6632c4d69b8d6a851cc11ba8"
+        },
+        "fingerprint": "c6f77e1697bebf3fdc47578ab2da1241f672fcbd6cc04c1f56245942820bc51f",
+        "output": {
+          "path": "attributes/mining.avif",
+          "bytes": 9742,
+          "sha256": "922f3a1697ac6fb97de2ef7074a29aec0b867ab89b2df8c37b7c03e0172e98b5"
+        }
+      }
+    },
+    "attribute_crafting": {
+      "tiny": {
+        "source": {
+          "path": "sources/attributes/crafting.png",
+          "bytes": 990292,
+          "sha256": "81064181f0847bb6169ff728590bb409eee60185222bf5a06f4cff7c7f374f85"
+        },
+        "fingerprint": "cbe8f83fa4e1d09e51c6e3fca61fba8010bf851822f17bb5f8f300061b2701ae",
+        "output": {
+          "path": "attributes/crafting-tiny.avif",
+          "bytes": 1885,
+          "sha256": "a1bdb45d1a8d341fbb4b026d55fd5064070bea2432a1fed98f082f1e02e28a55"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/attributes/crafting.png",
+          "bytes": 990292,
+          "sha256": "81064181f0847bb6169ff728590bb409eee60185222bf5a06f4cff7c7f374f85"
+        },
+        "fingerprint": "454a14f942537a4916ad23af422883a57a7cabc23286dfafe346edc76a324c08",
+        "output": {
+          "path": "attributes/crafting-small.avif",
+          "bytes": 3555,
+          "sha256": "9912da2383c0fbaac515c2fc9021bccf8133c9b7bf79848a823ba5053a61863d"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/attributes/crafting.png",
+          "bytes": 990292,
+          "sha256": "81064181f0847bb6169ff728590bb409eee60185222bf5a06f4cff7c7f374f85"
+        },
+        "fingerprint": "fb9dcc8bdae1b30d710a446a35ec5ab3adfa224949159b74bcbaf23d96584126",
+        "output": {
+          "path": "attributes/crafting.avif",
+          "bytes": 7488,
+          "sha256": "29c772bddf076510792ef465fc52a5aca59a9124d5a778dc075831e3dc410b92"
+        }
+      }
+    },
+    "attribute_trading": {
+      "tiny": {
+        "source": {
+          "path": "sources/attributes/trading.png",
+          "bytes": 1417934,
+          "sha256": "17a49b465ca8d63289f8ee0f7bf2a5b27820a3abd39765bcc063b748384cadfc"
+        },
+        "fingerprint": "ea5bf16578fb7a9aed8511111ed1fe3603d7de5e881a6cb2d976ab08bce4c052",
+        "output": {
+          "path": "attributes/trading-tiny.avif",
+          "bytes": 2048,
+          "sha256": "02663e6f193326978ab97902507586bee7ebf929c72c80e6ea7fad1671f20a36"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/attributes/trading.png",
+          "bytes": 1417934,
+          "sha256": "17a49b465ca8d63289f8ee0f7bf2a5b27820a3abd39765bcc063b748384cadfc"
+        },
+        "fingerprint": "a9813da71b004296d0455c220d868f1a716689e0d06262a1793c24fc18e60176",
+        "output": {
+          "path": "attributes/trading-small.avif",
+          "bytes": 4483,
+          "sha256": "446437686b9f835d5ae6dca03f77cf00d26d9c42188806ffa65f09b24fc438f3"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/attributes/trading.png",
+          "bytes": 1417934,
+          "sha256": "17a49b465ca8d63289f8ee0f7bf2a5b27820a3abd39765bcc063b748384cadfc"
+        },
+        "fingerprint": "434427c5cea29913f8d99838c4723e517c587860663998fc29c5564dd8211588",
+        "output": {
+          "path": "attributes/trading.avif",
+          "bytes": 9967,
+          "sha256": "b262719845c98ebda71354ce4cee3455ea921d0cef1459615e5182d6fd9e6e18"
+        }
+      }
+    },
+    "attribute_stamina": {
+      "tiny": {
+        "source": {
+          "path": "sources/attributes/stamina.png",
+          "bytes": 1036055,
+          "sha256": "53a1f4235119d814cef9e4bf593f14f55b500d5549fcfe690d1831a387bf94ff"
+        },
+        "fingerprint": "d04aeb8825ed2ffbcd1f5c6d6de028b26f575badcf6c8ec75d145330f46a4f43",
+        "output": {
+          "path": "attributes/stamina-tiny.avif",
+          "bytes": 2137,
+          "sha256": "f6a30c732c7da98b7ab84fd27d198658950fa95450730e4a55a6e03f05e2177d"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/attributes/stamina.png",
+          "bytes": 1036055,
+          "sha256": "53a1f4235119d814cef9e4bf593f14f55b500d5549fcfe690d1831a387bf94ff"
+        },
+        "fingerprint": "bd82d60f718751d25d7439018e721c432221a0b64e11b70ee82c2fe11213cb77",
+        "output": {
+          "path": "attributes/stamina-small.avif",
+          "bytes": 4562,
+          "sha256": "8d6c85f7f55b715c1252850eb5d23828b8b1dc54b01aaf9849b8d4cae9d22b6e"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/attributes/stamina.png",
+          "bytes": 1036055,
+          "sha256": "53a1f4235119d814cef9e4bf593f14f55b500d5549fcfe690d1831a387bf94ff"
+        },
+        "fingerprint": "bce02ad281d730c631fd5aada29b935f022422ac3b82bec8836c81a285a57f7f",
+        "output": {
+          "path": "attributes/stamina.avif",
+          "bytes": 9691,
+          "sha256": "cea8d50a0f2d8df17cdc1070173f83623422ee8d8c183cd2365eae0ef0365028"
+        }
+      }
+    },
+    "attribute_luck": {
+      "tiny": {
+        "source": {
+          "path": "sources/attributes/luck.png",
+          "bytes": 1265165,
+          "sha256": "ce0feb8ad4a64b53eea28c7b03477f1d6520dfa3f686fb85b3a3d4f70a96e065"
+        },
+        "fingerprint": "9414a9317d1fb0885d873776c423e8b7b21d507acaf3e3f35ec089f55f741f73",
+        "output": {
+          "path": "attributes/luck-tiny.avif",
+          "bytes": 2587,
+          "sha256": "d64456834bf9ebce9989950ef323addfd6b7983f94e066c5bf21d8d9da7d7070"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/attributes/luck.png",
+          "bytes": 1265165,
+          "sha256": "ce0feb8ad4a64b53eea28c7b03477f1d6520dfa3f686fb85b3a3d4f70a96e065"
+        },
+        "fingerprint": "d3a220fb9607f628069e0d0a22c0530ae9a0cb79dfe750fc05e2d822859b7d11",
+        "output": {
+          "path": "attributes/luck-small.avif",
+          "bytes": 5456,
+          "sha256": "47448c44c3e90b033332044bccbfe2d8f027d19b8b69102be632b08d65bc929a"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/attributes/luck.png",
+          "bytes": 1265165,
+          "sha256": "ce0feb8ad4a64b53eea28c7b03477f1d6520dfa3f686fb85b3a3d4f70a96e065"
+        },
+        "fingerprint": "f08d2e3fa0a15db3edcc529aa4e2a1a33072be22a7b965cb59057edd0b8c708f",
+        "output": {
+          "path": "attributes/luck.avif",
+          "bytes": 12396,
+          "sha256": "d517155c400fd85f6677a87781f37b4c0989084bf20b076b562deb4a58d78d7d"
+        }
+      }
+    }
+  }
+}

@@ -1,33 +1,6 @@
-export declare const resourceImages: Readonly<{
-  gold: string;
-  silver: string;
-  essence: string;
-  mining_points: string;
-  quest_bounty: string;
-  qft: string;
-  shards: string;
-  gems: string;
-  attribute_points: string;
-}>;
-
-export declare const lootboxImages: Readonly<{
-  generic: string;
-  common: string;
-  uncommon: string;
-  rare: string;
-  epic: string;
-  legendary: string;
-  mythical: string;
-}>;
-
-export declare const attributeImages: Readonly<{
-  inventory: string;
-  mining: string;
-  crafting: string;
-  trading: string;
-  stamina: string;
-  luck: string;
-}>;
+export declare const resourceImages: Readonly<Record<string, string>>;
+export declare const lootboxImages: Readonly<Record<string, string>>;
+export declare const attributeImages: Readonly<Record<string, string>>;
 
 export declare const attributeTinyImages: Readonly<Record<keyof typeof attributeImages, string>>;
 export declare const attributeSmallImages: Readonly<Record<keyof typeof attributeImages, string>>;
@@ -52,10 +25,7 @@ export declare const uiCandidateImages: Readonly<{
   submissions_letter_outline: string;
 }>;
 
-export declare const uiImages: Readonly<{
-  submissions: string;
-  weekly_reset: string;
-}>;
+export declare const uiImages: Readonly<Record<string, string>>;
 
 export type MarkerVariant = 'tiny' | 'small' | 'large';
 export type MarkerVisual = Readonly<{

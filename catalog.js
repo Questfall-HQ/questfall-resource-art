@@ -1,45 +1,23 @@
 import {attributeIcons} from './attribute-icons.js';
+import {artwork, filesFor, publicPath} from './artwork-manifest.js';
 import {uiIcons} from './ui-icons.js';
 
 // Public paths stay stable across clients; replace artwork only in this package.
-export const resourceImages = Object.freeze({
-  gold: '/images/resources/gold.avif',
-  silver: '/images/resources/silver.avif',
-  essence: '/images/resources/essence.avif',
-  mining_points: '/images/resources/mining-points-v3.avif',
-  quest_bounty: '/images/resources/quest-bounty.webp',
-  qft: '/images/resources/qft.webp',
-  shards: '/images/resources/shards.webp',
-  gems: '/images/resources/gems.webp',
-  attribute_points: '/images/resources/attribute-points.svg',
-});
-
-export const lootboxImages = Object.freeze({
-  generic: '/images/lootboxes/generic.avif',
-  common: '/images/lootboxes/common.webp',
-  uncommon: '/images/lootboxes/uncommon.webp',
-  rare: '/images/lootboxes/rare.webp',
-  epic: '/images/lootboxes/epic.webp',
-  legendary: '/images/lootboxes/legendary.webp',
-  mythical: '/images/lootboxes/mythical.webp',
-});
-
-export const attributeImages = Object.freeze({
-  inventory: '/images/attributes/inventory.avif',
-  mining: '/images/attributes/mining.avif',
-  crafting: '/images/attributes/crafting.avif',
-  trading: '/images/attributes/trading.avif',
-  stamina: '/images/attributes/stamina.avif',
-  luck: '/images/attributes/luck.avif',
-});
-
-export const attributeTinyImages = Object.freeze(Object.fromEntries(
-  Object.keys(attributeImages).map(id => [id, `/images/attributes/${id}-tiny.avif`]),
+const imageMap = (group, variant = 'large') => Object.freeze(Object.fromEntries(
+  Object.entries(artwork)
+    .filter(([, entry]) => entry.group === group)
+    .map(([key, entry]) => {
+      const files = filesFor(entry);
+      const file = files[variant] ?? files.large ?? files.small ?? files.tiny;
+      return [entry.name ?? key, publicPath(entry, file)];
+    }),
 ));
 
-export const attributeSmallImages = Object.freeze(Object.fromEntries(
-  Object.keys(attributeImages).map(id => [id, `/images/attributes/${id}-small.avif`]),
-));
+export const resourceImages = imageMap('resource');
+export const lootboxImages = imageMap('lootbox');
+export const attributeImages = imageMap('attribute');
+export const attributeTinyImages = imageMap('attribute', 'tiny');
+export const attributeSmallImages = imageMap('attribute', 'small');
 
 export const inventoryVariantImages = Object.freeze({
   cube: '/images/attribute-candidates/v2/inventory.png',
@@ -63,52 +41,30 @@ export const uiCandidateImages = Object.freeze({
 });
 
 // Shared UI artwork; some entries also have single-color symbol counterparts.
-export const uiImages = Object.freeze({
-  submissions: '/images/ui/submissions-object.webp',
-  weekly_reset: '/images/ui/weekly-reset.webp',
-});
+export const uiImages = imageMap('ui');
 
 // Each designation has three visual slots. Missing slots fall back through
 // visualFor(), so artwork can be added gradually without changing clients.
-const imageMarker = (group, image, variant = 'large') => ({group, image, variants: {[variant]: {image}}});
 const symbolMarker = (group, symbol) => ({group, symbol, variants: {tiny: {symbol}}});
+const imageMarkers = Object.fromEntries(Object.entries(artwork).map(([key, entry]) => {
+  const files = filesFor(entry);
+  const variants = Object.fromEntries(Object.entries(files).map(([slot, file]) => [slot, {image: publicPath(entry, file)}]));
+  const image = variants.large?.image ?? variants.small?.image ?? variants.tiny?.image;
+  const id = entry.group === 'attribute' ? {id: entry.name} : {};
+  const symbol = entry.group === 'attribute' ? {symbol: attributeIcons[entry.name]} : {};
+  return [key, {group: entry.group, ...id, image, ...symbol, variants}];
+}));
 
 export const markers = Object.freeze({
-  gold: imageMarker('resource', resourceImages.gold),
-  silver: imageMarker('resource', resourceImages.silver),
-  essence: imageMarker('resource', resourceImages.essence),
-  mining_points: imageMarker('resource', resourceImages.mining_points),
-  quest_bounty: imageMarker('resource', resourceImages.quest_bounty),
-  qft: imageMarker('resource', resourceImages.qft),
+  ...imageMarkers,
   experience: {group: 'resource', text: 'XP', variants: {tiny: {text: 'XP'}}},
-  shards: imageMarker('resource', resourceImages.shards),
-  gems: imageMarker('resource', resourceImages.gems),
-  attribute_points: imageMarker('resource', resourceImages.attribute_points, 'tiny'),
-  lootbox: imageMarker('lootbox', lootboxImages.generic),
-  lootbox_f: imageMarker('lootbox', lootboxImages.common),
-  lootbox_e: imageMarker('lootbox', lootboxImages.uncommon),
-  lootbox_d: imageMarker('lootbox', lootboxImages.rare),
-  lootbox_c: imageMarker('lootbox', lootboxImages.epic),
-  lootbox_b: imageMarker('lootbox', lootboxImages.legendary),
-  lootbox_a: imageMarker('lootbox', lootboxImages.mythical),
-  ...Object.fromEntries(Object.keys(attributeImages).map(id => [
-    `attribute_${id}`, {
-      group: 'attribute', id, image: attributeImages[id], symbol: attributeIcons[id],
-      variants: {
-        tiny: {image: attributeTinyImages[id]},
-        small: {image: attributeSmallImages[id]},
-        large: {image: attributeImages[id]},
-      },
-    },
-  ])),
   attribute_boost: {...symbolMarker('attribute', attributeIcons.boost), id: 'boost'},
   moderation: symbolMarker('ui', uiIcons.moderation),
   trophy: symbolMarker('ui', uiIcons.trophy),
   submissions: {
-    group: 'ui', image: uiImages.submissions, symbol: uiIcons.submissions,
-    variants: {tiny: {symbol: uiIcons.submissions}, large: {image: uiImages.submissions}},
+    ...imageMarkers.submissions, symbol: uiIcons.submissions,
+    variants: {...imageMarkers.submissions.variants, tiny: {symbol: uiIcons.submissions}},
   },
-  weekly_reset: imageMarker('ui', uiImages.weekly_reset),
 });
 
 export const markerAliases = Object.freeze({
