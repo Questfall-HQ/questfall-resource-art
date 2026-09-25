@@ -40,6 +40,7 @@ export async function buildArtwork({directory = root, entries = artwork, check =
   const next = {version: 1, entries: {}};
   const expected = new Set();
   const changes = [];
+  let generated = 0;
   const legacyKeys = new Set([
     'gold', 'silver', 'essence', 'mining_points', 'quest_bounty', 'qft', 'shards', 'gems',
     'attribute_points', 'lootbox', 'lootbox_f', 'lootbox_e', 'lootbox_d', 'lootbox_c',
@@ -48,9 +49,15 @@ export async function buildArtwork({directory = root, entries = artwork, check =
 
   for (const [key, entry] of Object.entries(entries)) {
     if (!['resource', 'lootbox', 'attribute', 'ui'].includes(entry.group)) throw new Error(`Invalid group: ${key}`);
-    if (!!entry.source === !!entry.file) throw new Error(`Declare one source or legacy file: ${key}`);
+    const sourceSlots = Object.keys(entry.sources ?? {});
+    const hasSource = !!entry.source || sourceSlots.length > 0;
+    if (!hasSource && !entry.file) throw new Error(`Declare an artwork source or file: ${key}`);
+    if (entry.source && entry.file) throw new Error(`Use per-variant sources with an existing file: ${key}`);
     if (entry.file && inventory && !legacyKeys.has(key)) throw new Error(`New artwork needs a source and AVIF variants: ${key}`);
-    if (entry.source && !entry.output) throw new Error(`Missing output stem: ${key}`);
+    if (hasSource && !entry.output) throw new Error(`Missing output stem: ${key}`);
+    if (sourceSlots.some(slot => !variantSettings[slot] || (entry.file && slot === (entry.slot ?? 'large')))) {
+      throw new Error(`Invalid or duplicate variant source: ${key}`);
+    }
     if (entry.group === 'attribute' && entry.name !== key.slice('attribute_'.length)) throw new Error(`Invalid attribute name: ${key}`);
     if (entry.group === 'lootbox' && !entry.name) throw new Error(`Missing lootbox name: ${key}`);
     const directoryName = {resource: '', lootbox: 'lootboxes/', attribute: 'attributes/', ui: 'ui/'}[entry.group];
@@ -58,7 +65,7 @@ export async function buildArtwork({directory = root, entries = artwork, check =
     if (!location.startsWith(directoryName) || (entry.group === 'resource' && location.includes('/'))) {
       throw new Error(`Asset must use the ${entry.group} directory: ${key}`);
     }
-    if (entry.source && (!entry.source.startsWith('sources/') ||
+    if (hasSource && ((entry.source && !entry.source.startsWith('sources/')) ||
       Object.values(entry.sources ?? {}).some(path => !path.startsWith('sources/')))) {
       throw new Error(`Source must live in sources/: ${key}`);
     }
@@ -71,11 +78,13 @@ export async function buildArtwork({directory = root, entries = artwork, check =
     if (entry.file) {
       if (!(await exists(join(directory, 'assets', entry.file)))) throw new Error(`Missing active file: ${entry.file}`);
       if (entry.master && !(await exists(join(directory, entry.master)))) throw new Error(`Missing legacy master: ${entry.master}`);
-      continue;
     }
+    if (!hasSource) continue;
 
     next.entries[key] = {};
     for (const [variant, file] of Object.entries(files)) {
+      if (entry.file === file) continue;
+      generated++;
       const settings = variantSettings[variant];
       const source = entry.sources?.[variant] ?? entry.source;
       const sourcePath = join(directory, source);
@@ -133,7 +142,7 @@ export async function buildArtwork({directory = root, entries = artwork, check =
   } else if ((await readFile(cachePath, 'utf8').catch(() => '')) !== cacheText) {
     await writeFile(cachePath, cacheText);
   }
-  return {built: changes, skipped: Object.keys(next.entries).length * 3 - changes.length};
+  return {built: changes, skipped: generated - changes.length};
 }
 
 if (import.meta.main) {

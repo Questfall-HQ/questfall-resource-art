@@ -48,8 +48,9 @@ bun test
 Review the three sizes on Admin's `/system/resources` stand. Commit both the
 source and generated AVIFs with the cache, tag the package, then update its
 exact tag in Application and Admin. Both clients only copy ready-to-use assets.
-Silver currently has only a large image, so it is also
-shown in smaller contexts until a small version is chosen. Attribute Points
+Gold and Silver use dedicated, simpler `tiny` and `small` AVIFs; their approved
+large coin artwork remains in the legacy `file` slot. For an existing legacy
+entry, `file` can coexist with `sources` for the other size slots. Attribute Points
 currently have only the flat cyan chevrons, so larger contexts use those until
 a large version is chosen. Quest
 Bounty has a silver bolt and Mining Points have a gold bolt; XP is text.

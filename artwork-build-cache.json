@@ -1,6 +1,62 @@
 {
   "version": 1,
   "entries": {
+    "gold": {
+      "tiny": {
+        "source": {
+          "path": "sources/resources/gold-tiny.png",
+          "bytes": 1122921,
+          "sha256": "82bd6bc0388401e557a0e63c0a9a637fc15029df5371ecb370a6c4dbbacc2532"
+        },
+        "fingerprint": "07daa6298aa4b6428ce255ba93354f7a422f5c476007b88023711e2a04dde2da",
+        "output": {
+          "path": "gold-tiny.avif",
+          "bytes": 2777,
+          "sha256": "367597b5ac75a83af9ade2bfb15f0cb9e703d611ed78d20bf49935815189435e"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/resources/gold-small.png",
+          "bytes": 1408424,
+          "sha256": "43634fcd118847a9bff9a2f2a8f2e26ee75378b4df99dd80d61cc08e5f1242be"
+        },
+        "fingerprint": "f9cddf1d3812d9af2d09fcbf25b5db083aa0cd09879ced6e113dea0b73d0873f",
+        "output": {
+          "path": "gold-small.avif",
+          "bytes": 6009,
+          "sha256": "33ad7579b4928917ade8d1b5aa8ebae7d9cb7ba1fe9ad53262b5a442b426f6d0"
+        }
+      }
+    },
+    "silver": {
+      "tiny": {
+        "source": {
+          "path": "sources/resources/silver-tiny.png",
+          "bytes": 1163179,
+          "sha256": "5d35230442a7394de3a4f43c84b446bb911bd86b0d4177561021ff59f6f8eb40"
+        },
+        "fingerprint": "56a67c73ce2dcd4de59ad7a0d44a90a59ae28977382e6e5918d3d4c248c861c7",
+        "output": {
+          "path": "silver-tiny.avif",
+          "bytes": 2439,
+          "sha256": "01b4f4052970415b0ebe8b177d8ee1de042d9c201521b3dff7c1aece6c806b84"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/resources/silver-small.png",
+          "bytes": 1475506,
+          "sha256": "c6f42604e90faeabeaf2d4319444346516258cf3ab2d0b280ef62ecd2856dd4a"
+        },
+        "fingerprint": "d7ff323625f6aa538b29f21598778c5ee830e5fed533b6c908691dbab0a7d8fc",
+        "output": {
+          "path": "silver-small.avif",
+          "bytes": 5076,
+          "sha256": "ad70ad859f56f76ddb783c8f2cc165240a946a2d2fa66293b92d9e6966bd3773"
+        }
+      }
+    },
     "attribute_inventory": {
       "tiny": {
         "source": {

@@ -1,8 +1,12 @@
-// The active artwork inventory. Entries with a source are built into three
-// AVIF sizes; file entries are approved artwork awaiting source migration.
+// The active artwork inventory. Sources build AVIF sizes; file entries keep
+// approved artwork until that slot is replaced by a generated variant.
 export const artwork = Object.freeze({
-  gold: {group: 'resource', file: 'gold.avif'},
-  silver: {group: 'resource', file: 'silver.avif'},
+  gold: {group: 'resource', file: 'gold.avif', output: 'gold', sources: {
+    tiny: 'sources/resources/gold-tiny.png', small: 'sources/resources/gold-small.png',
+  }},
+  silver: {group: 'resource', file: 'silver.avif', output: 'silver', sources: {
+    tiny: 'sources/resources/silver-tiny.png', small: 'sources/resources/silver-small.png',
+  }},
   essence: {group: 'resource', file: 'essence.avif'},
   mining_points: {group: 'resource', file: 'mining-points-v3.avif'},
   quest_bounty: {group: 'resource', file: 'quest-bounty.webp'},
@@ -37,11 +41,13 @@ export const variantSettings = Object.freeze({
   large: {size: 256, padding: 13, quality: 82, maxBytes: 60_000},
 });
 
-export const filesFor = entry => entry.source ? {
-  tiny: `${entry.output}-tiny.avif`,
-  small: `${entry.output}-small.avif`,
-  large: `${entry.output}.avif`,
-} : {[entry.slot ?? 'large']: entry.file};
+export const filesFor = entry => {
+  const files = {};
+  const slots = entry.source ? Object.keys(variantSettings) : Object.keys(entry.sources ?? {});
+  for (const slot of slots) files[slot] = `${entry.output}${slot === 'large' ? '' : `-${slot}`}.avif`;
+  if (entry.file) files[entry.slot ?? 'large'] = entry.file;
+  return files;
+};
 
 export const publicPath = (entry, file) => entry.group === 'resource'
   ? `/images/resources/${file.split('/').at(-1)}`

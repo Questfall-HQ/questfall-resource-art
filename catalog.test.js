@@ -32,7 +32,7 @@ test('product aliases resolve to the selected shared artwork', () => {
   expect(markerFor('chest_shards')).toBe(markers.shards);
 });
 
-test('size variants select optimized attribute artwork and predictable fallbacks', async () => {
+test('size variants select optimized artwork and predictable fallbacks', async () => {
   for (const id of ['inventory', 'mining', 'crafting', 'trading', 'stamina', 'luck']) {
     const key = `attribute_${id}`;
     const tiny = visualFor(key, 'tiny');
@@ -57,7 +57,19 @@ test('size variants select optimized attribute artwork and predictable fallbacks
   }
   expect(visualFor('submissions', 'tiny').symbol).toBeDefined();
   expect(visualFor('submissions', 'large').image).toBe(markers.submissions.image);
-  expect(visualFor('silver', 'tiny')).toMatchObject({image: markers.silver.image, resolved: 'large'});
+  for (const coin of ['gold', 'silver']) {
+    for (const [variant, size] of [['tiny', 64], ['small', 128]]) {
+      expect(visualFor(coin, variant)).toMatchObject({
+        image: `/images/resources/${coin}-${variant}.avif`, resolved: variant,
+      });
+      const file = fileURLToPath(new URL(`./assets/${coin}-${variant}.avif`, import.meta.url));
+      const metadata = await sharp(file).metadata();
+      expect(metadata.format).toBe('heif');
+      expect(metadata.hasAlpha).toBe(true);
+      expect(metadata.width).toBe(size);
+    }
+    expect(visualFor(coin, 'large')).toMatchObject({image: `/images/resources/${coin}.avif`, resolved: 'large'});
+  }
   expect(visualFor('attribute_points', 'large')).toMatchObject({image: markers.attribute_points.image, resolved: 'tiny'});
   expect(visualFor('xp', 'large')).toMatchObject({text: 'XP', resolved: 'tiny'});
   expect(visualFor('missing', 'tiny')).toBeNull();
@@ -77,7 +89,7 @@ test('normal sync excludes proposals; preview sync includes them', async () => {
     expect(active.exitCode).toBe(0);
     expect(await readdir(join(target, 'public/images/attributes'))).toHaveLength(18);
     expect(await readdir(join(target, 'public/images/attributes'))).not.toContain('mining.png');
-    expect(await readdir(join(target, 'public/images/resources'))).toHaveLength(9);
+    expect(await readdir(join(target, 'public/images/resources'))).toHaveLength(13);
     expect(await readdir(join(target, 'public/images/resources'))).not.toContain('experience.webp');
     expect((await readdir(join(target, 'public/images/ui'))).sort()).toEqual(['submissions-object.webp', 'weekly-reset.webp']);
     expect(readdir(join(target, 'public/images/ui-candidates/v1'))).rejects.toThrow();
@@ -85,6 +97,33 @@ test('normal sync excludes proposals; preview sync includes them', async () => {
     const preview = Bun.spawnSync(['bun', script, '--proposals'], {cwd: target});
     expect(preview.exitCode).toBe(0);
     expect(await readdir(join(target, 'public/images/ui-candidates/v1'))).toHaveLength(10);
+  } finally {
+    await rm(target, {recursive: true, force: true});
+  }
+});
+
+test('existing large artwork can gain cached tiny and small sources', async () => {
+  const target = await mkdtemp(join(tmpdir(), 'questfall-artwork-hybrid-'));
+  const entries = {coin: {group: 'resource', file: 'coin.avif', output: 'coin', sources: {
+    tiny: 'sources/coin-tiny.png', small: 'sources/coin-small.png',
+  }}};
+  const source = color => sharp({create: {width: 512, height: 512, channels: 4, background: color}}).png().toBuffer();
+  try {
+    await mkdir(join(target, 'sources'), {recursive: true});
+    await mkdir(join(target, 'assets'), {recursive: true});
+    await writeFile(join(target, 'sources/coin-tiny.png'), await source('#ff0000'));
+    await writeFile(join(target, 'sources/coin-small.png'), await source('#0000ff'));
+    const large = await sharp(await source('#888888')).avif().toBuffer();
+    await writeFile(join(target, 'assets/coin.avif'), large);
+
+    expect((await buildArtwork({directory: target, entries, inventory: false})).built).toEqual(['coin/tiny', 'coin/small']);
+    expect((await buildArtwork({directory: target, entries, inventory: false})).built).toEqual([]);
+    expect(await readFile(join(target, 'assets/coin.avif'))).toEqual(large);
+    await buildArtwork({directory: target, entries, inventory: false, check: true});
+
+    await writeFile(join(target, 'sources/coin-tiny.png'), await source('#00ff00'));
+    expect((await buildArtwork({directory: target, entries, inventory: false})).built).toEqual(['coin/tiny']);
+    expect(await readFile(join(target, 'assets/coin.avif'))).toEqual(large);
   } finally {
     await rm(target, {recursive: true, force: true});
   }
