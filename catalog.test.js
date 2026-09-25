@@ -3,7 +3,7 @@ import {mkdtemp, readdir, rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {markerFor, markers} from './catalog.js';
+import {markerFor, markers, visualFor} from './catalog.js';
 
 const script = fileURLToPath(new URL('./bin/sync.mjs', import.meta.url));
 
@@ -28,6 +28,23 @@ test('product aliases resolve to the selected shared artwork', () => {
   expect(markerFor('experience').image).toBeUndefined();
   expect(markerFor('xp')).toBe(markers.experience);
   expect(markerFor('chest_shards')).toBe(markers.shards);
+});
+
+test('size variants select flat symbols and object artwork with predictable fallbacks', () => {
+  expect(visualFor('attribute_mining', 'tiny').symbol).toBeDefined();
+  expect(visualFor('attribute_mining', 'large').image).toBe(markers.attribute_mining.image);
+  expect(visualFor('attribute_mining', 'small')).toMatchObject({resolved: 'tiny'});
+  expect(visualFor('submissions', 'tiny').symbol).toBeDefined();
+  expect(visualFor('submissions', 'large').image).toBe(markers.submissions.image);
+  expect(visualFor('silver', 'tiny')).toMatchObject({image: markers.silver.image, resolved: 'large'});
+  expect(visualFor('attribute_points', 'large')).toMatchObject({image: markers.attribute_points.image, resolved: 'tiny'});
+  expect(visualFor('xp', 'large')).toMatchObject({text: 'XP', resolved: 'tiny'});
+  expect(visualFor('missing', 'tiny')).toBeNull();
+  for (const key of Object.keys(markers)) {
+    expect(visualFor(key, 'tiny')).not.toBeNull();
+    expect(visualFor(key, 'small')).not.toBeNull();
+    expect(visualFor(key, 'large')).not.toBeNull();
+  }
 });
 
 test('normal sync excludes proposals; preview sync includes them', async () => {

@@ -54,16 +54,24 @@ export declare const uiImages: Readonly<{
   weekly_reset: string;
 }>;
 
+export type MarkerVariant = 'tiny' | 'small' | 'large';
+export type MarkerVisual = Readonly<{
+  image?: string;
+  text?: string;
+  symbol?: import('./attribute-icons.js').AttributeIcon | import('./ui-icons.js').UiIcon;
+}>;
 export type Marker = Readonly<{
   group: 'resource' | 'lootbox' | 'attribute' | 'ui';
   id?: string;
   image?: string;
   text?: string;
   symbol?: import('./attribute-icons.js').AttributeIcon | import('./ui-icons.js').UiIcon;
+  variants: Readonly<Partial<Record<MarkerVariant, MarkerVisual>>>;
 }>;
 export declare const markers: Readonly<Record<string, Marker>>;
 export declare const markerAliases: Readonly<Record<string, string>>;
 export declare const markerFor: (key: string) => Marker | null;
+export declare const visualFor: (key: string, variant?: MarkerVariant) => (MarkerVisual & Readonly<{requested: MarkerVariant; resolved: MarkerVariant}>) | null;
 
 export {attributeIcons, type AttributeIcon} from './attribute-icons.js';
 export {uiIcons, type UiIcon} from './ui-icons.js';

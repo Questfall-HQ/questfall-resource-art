@@ -60,34 +60,43 @@ export const uiImages = Object.freeze({
   weekly_reset: '/images/ui/weekly-reset.webp',
 });
 
-// One mapping from product designations to artwork. Clients choose image or
-// symbol according to their layout; aliases share the same marker object.
+// Each designation has three visual slots. Missing slots fall back through
+// visualFor(), so artwork can be added gradually without changing clients.
+const imageMarker = (group, image, variant = 'large') => ({group, image, variants: {[variant]: {image}}});
+const symbolMarker = (group, symbol) => ({group, symbol, variants: {tiny: {symbol}}});
+
 export const markers = Object.freeze({
-  gold: {group: 'resource', image: resourceImages.gold},
-  silver: {group: 'resource', image: resourceImages.silver},
-  essence: {group: 'resource', image: resourceImages.essence},
-  mining_points: {group: 'resource', image: resourceImages.mining_points},
-  quest_bounty: {group: 'resource', image: resourceImages.quest_bounty},
-  qft: {group: 'resource', image: resourceImages.qft},
-  experience: {group: 'resource', text: 'XP'},
-  shards: {group: 'resource', image: resourceImages.shards},
-  gems: {group: 'resource', image: resourceImages.gems},
-  attribute_points: {group: 'resource', image: resourceImages.attribute_points},
-  lootbox: {group: 'lootbox', image: lootboxImages.generic},
-  lootbox_f: {group: 'lootbox', image: lootboxImages.common},
-  lootbox_e: {group: 'lootbox', image: lootboxImages.uncommon},
-  lootbox_d: {group: 'lootbox', image: lootboxImages.rare},
-  lootbox_c: {group: 'lootbox', image: lootboxImages.epic},
-  lootbox_b: {group: 'lootbox', image: lootboxImages.legendary},
-  lootbox_a: {group: 'lootbox', image: lootboxImages.mythical},
+  gold: imageMarker('resource', resourceImages.gold),
+  silver: imageMarker('resource', resourceImages.silver),
+  essence: imageMarker('resource', resourceImages.essence),
+  mining_points: imageMarker('resource', resourceImages.mining_points),
+  quest_bounty: imageMarker('resource', resourceImages.quest_bounty),
+  qft: imageMarker('resource', resourceImages.qft),
+  experience: {group: 'resource', text: 'XP', variants: {tiny: {text: 'XP'}}},
+  shards: imageMarker('resource', resourceImages.shards),
+  gems: imageMarker('resource', resourceImages.gems),
+  attribute_points: imageMarker('resource', resourceImages.attribute_points, 'tiny'),
+  lootbox: imageMarker('lootbox', lootboxImages.generic),
+  lootbox_f: imageMarker('lootbox', lootboxImages.common),
+  lootbox_e: imageMarker('lootbox', lootboxImages.uncommon),
+  lootbox_d: imageMarker('lootbox', lootboxImages.rare),
+  lootbox_c: imageMarker('lootbox', lootboxImages.epic),
+  lootbox_b: imageMarker('lootbox', lootboxImages.legendary),
+  lootbox_a: imageMarker('lootbox', lootboxImages.mythical),
   ...Object.fromEntries(Object.keys(attributeImages).map(id => [
-    `attribute_${id}`, {group: 'attribute', id, image: attributeImages[id], symbol: attributeIcons[id]},
+    `attribute_${id}`, {
+      group: 'attribute', id, image: attributeImages[id], symbol: attributeIcons[id],
+      variants: {tiny: {symbol: attributeIcons[id]}, large: {image: attributeImages[id]}},
+    },
   ])),
-  attribute_boost: {group: 'attribute', id: 'boost', symbol: attributeIcons.boost},
-  moderation: {group: 'ui', symbol: uiIcons.moderation},
-  trophy: {group: 'ui', symbol: uiIcons.trophy},
-  submissions: {group: 'ui', image: uiImages.submissions, symbol: uiIcons.submissions},
-  weekly_reset: {group: 'ui', image: uiImages.weekly_reset},
+  attribute_boost: {...symbolMarker('attribute', attributeIcons.boost), id: 'boost'},
+  moderation: symbolMarker('ui', uiIcons.moderation),
+  trophy: symbolMarker('ui', uiIcons.trophy),
+  submissions: {
+    group: 'ui', image: uiImages.submissions, symbol: uiIcons.submissions,
+    variants: {tiny: {symbol: uiIcons.submissions}, large: {image: uiImages.submissions}},
+  },
+  weekly_reset: imageMarker('ui', uiImages.weekly_reset),
 });
 
 export const markerAliases = Object.freeze({
@@ -99,5 +108,24 @@ export const markerAliases = Object.freeze({
 });
 
 export const markerFor = key => markers[markerAliases[key] ?? key] ?? null;
+
+const fallbackOrder = Object.freeze({
+  tiny: ['tiny', 'small', 'large'],
+  small: ['small', 'tiny', 'large'],
+  large: ['large', 'small', 'tiny'],
+});
+
+export const visualFor = (key, variant = 'small') => {
+  const marker = markerFor(key);
+  if (!marker) return null;
+  const requested = fallbackOrder[variant] ? variant : 'small';
+  for (const resolved of fallbackOrder[requested]) {
+    const visual = marker.variants[resolved];
+    if (visual?.image || visual?.symbol || visual?.text) {
+      return {...visual, requested, resolved};
+    }
+  }
+  return null;
+};
 
 export {attributeIcons, uiIcons};

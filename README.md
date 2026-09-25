@@ -4,11 +4,23 @@ Shared source of truth for static resource, lootbox, attribute, and Submissions
 markers in Questfall Application and Admin. This package owns the artwork and
 the mapping from product designations to that artwork. The API contract owns
 public reward keys; PocketBase owns balances and game rules. Clients own labels,
-layout, size, and contextual choice between an image and a symbol.
+layout, and the requested visual size.
 
-`catalog.js` exports `markers` and `markerFor(key)`. A marker may have an
-`image`, a single-color `symbol`, short `text`, or a combination. For example,
-Application displays attribute images while Admin uses their symbols. Quest
+`catalog.js` exports `markers`, `markerFor(key)`, and `visualFor(key, variant)`.
+Every marker has `tiny`, `small`, and `large` visual slots. Each slot can hold
+an image, a single-color symbol, or short text. `visualFor` returns the chosen
+art and its `requested` and `resolved` variants. Missing slots fall back in
+this order: `tiny → small → large`, `small → tiny → large`, and
+`large → small → tiny`. Unknown keys return `null`. This lets clients request
+the right size now and add artwork for empty slots later without changing
+their layouts. Tiny symbols are intended for dense labels and variable
+backgrounds; large images are intended for prominent illustrations.
+
+For example, attributes use flat symbols at `tiny` and object images at
+`large`; `small` currently falls back to the symbol. Silver currently has
+only a large image, so it is also shown in smaller contexts until a flat
+version is chosen. Attribute Points currently have only the flat cyan
+chevrons, so larger contexts use those until a large version is chosen. Quest
 Bounty has a silver bolt and Mining Points have a gold bolt; XP is text.
 `personal_silver` and `space_silver` resolve to Silver, and
 `lootbox_a` through `lootbox_f` resolve to their rarity artwork. The generic
@@ -23,7 +35,8 @@ for Mining and Season are shared single-color UI symbols. `xp` and `chest_shards
 for Experience and Chest Shards. The earlier Experience book remains in
 `proposals/`.
 
-Attribute Points use three flat cyan chevrons.
+The legacy `image`, `symbol`, and `text` properties on `markerFor` remain for
+existing consumers; new components should use `visualFor`.
 
 Active files live under `assets/` and are copied into each client's
 `public/images` by:
