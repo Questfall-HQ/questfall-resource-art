@@ -17,7 +17,8 @@ Traits use their parent attribute marker.
 
 QFT, Experience, Chest Shards, Gems, and Attribute Points also have shared
 markers. The current QFT image is provisional until its visual identity is
-finalized. Chest Shards use one puzzle piece. `xp` and `chest_shards` are aliases
+finalized. Chest Shards use the matte violet puzzle piece; the Weekly Reset
+hourglass is a shared UI image. `xp` and `chest_shards` are aliases
 for Experience and Chest Shards. The earlier Experience book remains in
 `proposals/`.
 

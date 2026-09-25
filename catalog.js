@@ -54,9 +54,10 @@ export const uiCandidateImages = Object.freeze({
   submissions_letter_outline: '/images/ui-candidates/v1/submissions-letter-outline.svg',
 });
 
-// Dimensional counterparts to the single-color UI symbols.
+// Shared UI artwork; some entries also have single-color symbol counterparts.
 export const uiImages = Object.freeze({
   submissions: '/images/ui/submissions-object.webp',
+  weekly_reset: '/images/ui/weekly-reset.webp',
 });
 
 // One mapping from product designations to artwork. Clients choose image or
@@ -84,6 +85,7 @@ export const markers = Object.freeze({
   ])),
   attribute_boost: {group: 'attribute', id: 'boost', symbol: attributeIcons.boost},
   submissions: {group: 'ui', image: uiImages.submissions, symbol: uiIcons.submissions},
+  weekly_reset: {group: 'ui', image: uiImages.weekly_reset},
 });
 
 export const markerAliases = Object.freeze({

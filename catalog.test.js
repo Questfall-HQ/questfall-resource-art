@@ -18,6 +18,7 @@ test('product aliases resolve to the selected shared artwork', () => {
   expect(markerFor('lootbox_a').image.endsWith('/mythical.webp')).toBe(true);
   expect(markerFor('attribute_inventory').image.endsWith('/attributes/inventory.png')).toBe(true);
   expect(markerFor('submissions').symbol).toBeDefined();
+  expect(markerFor('weekly_reset').image).toMatch(/weekly-reset\.webp$/);
   for (const key of ['qft', 'shards', 'gems', 'attribute_points']) {
     expect(markerFor(key).image).toBeDefined();
   }
@@ -35,7 +36,7 @@ test('normal sync excludes proposals; preview sync includes them', async () => {
     expect(await readdir(join(target, 'public/images/attributes'))).toHaveLength(6);
     expect(await readdir(join(target, 'public/images/resources'))).toHaveLength(9);
     expect(await readdir(join(target, 'public/images/resources'))).not.toContain('experience.webp');
-    expect(await readdir(join(target, 'public/images/ui'))).toContain('submissions-object.webp');
+    expect((await readdir(join(target, 'public/images/ui'))).sort()).toEqual(['submissions-object.webp', 'weekly-reset.webp']);
     expect(readdir(join(target, 'public/images/ui-candidates/v1'))).rejects.toThrow();
 
     const preview = Bun.spawnSync(['bun', script, '--proposals'], {cwd: target});

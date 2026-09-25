@@ -51,6 +51,7 @@ export declare const uiCandidateImages: Readonly<{
 
 export declare const uiImages: Readonly<{
   submissions: string;
+  weekly_reset: string;
 }>;
 
 export type Marker = Readonly<{
