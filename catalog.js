@@ -39,6 +39,10 @@ export const uiCandidateImages = Object.freeze({
   submissions_form: '/images/ui-candidates/v1/submissions-form.png',
   submissions_proof: '/images/ui-candidates/v1/submissions-proof.png',
   submissions_send: '/images/ui-candidates/v1/submissions-send.png',
+  submissions_mail_sealed: '/images/ui-candidates/v1/submissions-mail-sealed.png',
+  submissions_mail_open: '/images/ui-candidates/v1/submissions-mail-open.png',
+  submissions_mail_sent: '/images/ui-candidates/v1/submissions-mail-sent.png',
+  submissions_stamp: '/images/ui-candidates/v1/submissions-stamp.png',
 });
 
 export {attributeIcons} from './attribute-icons.js';

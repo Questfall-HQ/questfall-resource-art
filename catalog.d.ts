@@ -36,6 +36,10 @@ export declare const uiCandidateImages: Readonly<{
   submissions_form: string;
   submissions_proof: string;
   submissions_send: string;
+  submissions_mail_sealed: string;
+  submissions_mail_open: string;
+  submissions_mail_sent: string;
+  submissions_stamp: string;
 }>;
 
 export {attributeIcons, type AttributeIcon} from './attribute-icons.js';

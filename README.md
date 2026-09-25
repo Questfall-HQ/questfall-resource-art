@@ -30,10 +30,11 @@ the gold lightning resource. `inventoryVariantImages` lists the active backpack
 and three other Inventory silhouettes, including the original cube. Admin
 shows all four together for comparison. Earlier proposals remain available.
 
-`uiCandidateImages` contains four Submissions concepts for the Author Space and
-quest submission UI: an inbox, a completed form, photo proof, and a paper plane
-for sending. Admin's resource preview shows them at card and small UI sizes.
-Application and Admin still use their current icons until one is selected.
+`uiCandidateImages` contains Submissions concepts for the Author Space and quest
+submission UI: an inbox, a completed form, photo proof, a paper plane, three
+envelope treatments, and a postage stamp. Admin's resource preview shows them
+at card and small UI sizes. Application and Admin still use their current icons
+until one is selected.
 
 To update a resource image, replace its file in `assets/` or add a new file and
 catalog entry. Commit the change, tag a new version, update the exact Git tag in
