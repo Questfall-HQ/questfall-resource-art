@@ -23,8 +23,7 @@ for Mining and Season are shared single-color UI symbols. `xp` and `chest_shards
 for Experience and Chest Shards. The earlier Experience book remains in
 `proposals/`.
 
-Attribute Points use three flat cyan chevrons. The earlier round token is kept
-as `proposals/attribute-points-coin.webp` and is not synced to clients.
+Attribute Points use three flat cyan chevrons.
 
 Active files live under `assets/` and are copied into each client's
 `public/images` by:
