@@ -7,16 +7,19 @@ public reward keys; PocketBase owns balances and game rules. Clients own labels,
 layout, size, and contextual choice between an image and a symbol.
 
 `catalog.js` exports `markers` and `markerFor(key)`. A marker may have an
-`image`, a single-color `symbol`, or both. For example, Application displays
-attribute images while Admin uses their symbols. `quest_bounty` resolves to
-Mining Points, `personal_silver` and `space_silver` resolve to Silver, and
+`image`, a single-color `symbol`, short `text`, or a combination. For example,
+Application displays attribute images while Admin uses their symbols. Quest
+Bounty has a silver bolt and Mining Points have a gold bolt; XP is text.
+`personal_silver` and `space_silver` resolve to Silver, and
 `lootbox_a` through `lootbox_f` resolve to their rarity artwork. The generic
 `lootbox` has its own chest. `stamina` resolves to the Stamina attribute.
 Traits use their parent attribute marker.
 
 QFT, Experience, Chest Shards, Gems, and Attribute Points also have shared
 markers. The current QFT image is provisional until its visual identity is
-finalized. `xp` and `chest_shards` are aliases for Experience and Chest Shards.
+finalized. Chest Shards use one puzzle piece. `xp` and `chest_shards` are aliases
+for Experience and Chest Shards. The earlier Experience book remains in
+`proposals/`.
 
 Active files live under `assets/` and are copied into each client's
 `public/images` by:

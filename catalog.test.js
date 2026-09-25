@@ -8,7 +8,9 @@ import {markerFor, markers} from './catalog.js';
 const script = fileURLToPath(new URL('./bin/sync.mjs', import.meta.url));
 
 test('product aliases resolve to the selected shared artwork', () => {
-  expect(markerFor('quest_bounty')).toBe(markers.mining_points);
+  expect(markerFor('quest_bounty')).not.toBe(markers.mining_points);
+  expect(markerFor('quest_bounty').image).toMatch(/quest-bounty\.webp$/);
+  expect(markerFor('mining_points').image).toMatch(/mining-points-v3\.avif$/);
   expect(markerFor('personal_silver')).toBe(markers.silver);
   expect(markerFor('space_silver')).toBe(markers.silver);
   expect(markerFor('stamina')).toBe(markers.attribute_stamina);
@@ -16,9 +18,11 @@ test('product aliases resolve to the selected shared artwork', () => {
   expect(markerFor('lootbox_a').image.endsWith('/mythical.webp')).toBe(true);
   expect(markerFor('attribute_inventory').image.endsWith('/attributes/inventory.png')).toBe(true);
   expect(markerFor('submissions').symbol).toBeDefined();
-  for (const key of ['qft', 'experience', 'shards', 'gems', 'attribute_points']) {
+  for (const key of ['qft', 'shards', 'gems', 'attribute_points']) {
     expect(markerFor(key).image).toBeDefined();
   }
+  expect(markerFor('experience')).toMatchObject({text: 'XP'});
+  expect(markerFor('experience').image).toBeUndefined();
   expect(markerFor('xp')).toBe(markers.experience);
   expect(markerFor('chest_shards')).toBe(markers.shards);
 });
@@ -30,6 +34,7 @@ test('normal sync excludes proposals; preview sync includes them', async () => {
     expect(active.exitCode).toBe(0);
     expect(await readdir(join(target, 'public/images/attributes'))).toHaveLength(6);
     expect(await readdir(join(target, 'public/images/resources'))).toHaveLength(9);
+    expect(await readdir(join(target, 'public/images/resources'))).not.toContain('experience.webp');
     expect(await readdir(join(target, 'public/images/ui'))).toContain('submissions-object.webp');
     expect(readdir(join(target, 'public/images/ui-candidates/v1'))).rejects.toThrow();
 

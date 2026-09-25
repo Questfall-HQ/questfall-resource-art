@@ -3,8 +3,8 @@ export declare const resourceImages: Readonly<{
   silver: string;
   essence: string;
   mining_points: string;
+  quest_bounty: string;
   qft: string;
-  experience: string;
   shards: string;
   gems: string;
   attribute_points: string;
@@ -57,6 +57,7 @@ export type Marker = Readonly<{
   group: 'resource' | 'lootbox' | 'attribute' | 'ui';
   id?: string;
   image?: string;
+  text?: string;
   symbol?: import('./attribute-icons.js').AttributeIcon | import('./ui-icons.js').UiIcon;
 }>;
 export declare const markers: Readonly<Record<string, Marker>>;

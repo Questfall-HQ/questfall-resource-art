@@ -7,8 +7,8 @@ export const resourceImages = Object.freeze({
   silver: '/images/resources/silver.avif',
   essence: '/images/resources/essence.avif',
   mining_points: '/images/resources/mining-points-v3.avif',
+  quest_bounty: '/images/resources/quest-bounty.webp',
   qft: '/images/resources/qft.webp',
-  experience: '/images/resources/experience.webp',
   shards: '/images/resources/shards.webp',
   gems: '/images/resources/gems.webp',
   attribute_points: '/images/resources/attribute-points.webp',
@@ -66,8 +66,9 @@ export const markers = Object.freeze({
   silver: {group: 'resource', image: resourceImages.silver},
   essence: {group: 'resource', image: resourceImages.essence},
   mining_points: {group: 'resource', image: resourceImages.mining_points},
+  quest_bounty: {group: 'resource', image: resourceImages.quest_bounty},
   qft: {group: 'resource', image: resourceImages.qft},
-  experience: {group: 'resource', image: resourceImages.experience},
+  experience: {group: 'resource', text: 'XP'},
   shards: {group: 'resource', image: resourceImages.shards},
   gems: {group: 'resource', image: resourceImages.gems},
   attribute_points: {group: 'resource', image: resourceImages.attribute_points},
@@ -86,7 +87,6 @@ export const markers = Object.freeze({
 });
 
 export const markerAliases = Object.freeze({
-  quest_bounty: 'mining_points',
   personal_silver: 'silver',
   space_silver: 'silver',
   stamina: 'attribute_stamina',
