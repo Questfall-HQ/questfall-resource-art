@@ -31,4 +31,8 @@ export declare const inventoryVariantImages: Readonly<{
   organizer: string;
 }>;
 
+export declare const uiCandidateImages: Readonly<{
+  submissions: string;
+}>;
+
 export {attributeIcons, type AttributeIcon} from './attribute-icons.js';
