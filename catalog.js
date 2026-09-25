@@ -47,5 +47,10 @@ export const uiCandidateImages = Object.freeze({
   submissions_letter_outline: '/images/ui-candidates/v1/submissions-letter-outline.svg',
 });
 
+// Dimensional counterparts to the single-color UI symbols.
+export const uiImages = Object.freeze({
+  submissions: '/images/ui/submissions-object.webp',
+});
+
 export {attributeIcons} from './attribute-icons.js';
 export {uiIcons} from './ui-icons.js';

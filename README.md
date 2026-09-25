@@ -34,10 +34,15 @@ resource preview shows the active backpack. Earlier proposals remain available.
 submission UI: an inbox, a completed form, photo proof, a paper plane, three
 envelope treatments, a postage stamp, and two treatments of a square folded
 letter. Admin's resource preview shows them at card and small UI sizes.
-`uiIcons.submissions` is the active, single-color stacked-sheet marker in
-Application and Admin. It uses the Font Awesome Free layer-group silhouette;
-the source license is in `third-party/fontawesome-free/LICENSE.txt`. The raster
-concepts remain available for comparison.
+`uiIcons.submissions` is the single-color stacked-sheet symbol used in compact
+contexts such as the Author Space header. It uses the Font Awesome Free
+layer-group silhouette; the source license is in
+`third-party/fontawesome-free/LICENSE.txt`. `uiImages.submissions` is its
+dimensional object counterpart for image-led contexts such as the Leagues panel.
+Both forms share the same silhouette and are selected by one client component.
+The original transparent PNG is retained beside the smaller WebP served to clients.
+The earlier raster concepts remain available for comparison. This symbol/object
+pair is the convention for future UI art that needs both treatments.
 
 To update a resource image, replace its file in `assets/` or add a new file and
 catalog entry. Commit the change, tag a new version, update the exact Git tag in

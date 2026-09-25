@@ -44,5 +44,9 @@ export declare const uiCandidateImages: Readonly<{
   submissions_letter_outline: string;
 }>;
 
+export declare const uiImages: Readonly<{
+  submissions: string;
+}>;
+
 export {attributeIcons, type AttributeIcon} from './attribute-icons.js';
 export {uiIcons, type UiIcon} from './ui-icons.js';

@@ -1,7 +1,7 @@
 import {copyFile, mkdir} from 'node:fs/promises';
 import {basename, join} from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {attributeCandidateImages, inventoryVariantImages, lootboxImages, resourceImages, uiCandidateImages} from '../catalog.js';
+import {attributeCandidateImages, inventoryVariantImages, lootboxImages, resourceImages, uiCandidateImages, uiImages} from '../catalog.js';
 
 const source = fileURLToPath(new URL('../assets/', import.meta.url));
 const attributeV2Images = Object.fromEntries(
@@ -22,6 +22,7 @@ const catalogs = [
   {images: attributeV3Images, source: fileURLToPath(new URL('../proposals/attribute-images-v3/', import.meta.url)), directory: 'attribute-candidates/v3', label: 'refined attribute'},
   {images: inventoryOptions, source: fileURLToPath(new URL('../proposals/inventory-options-v1/', import.meta.url)), directory: 'inventory-options/v1', label: 'inventory option'},
   {images: uiCandidateImages, source: fileURLToPath(new URL('../proposals/ui-icons-v1/', import.meta.url)), directory: 'ui-candidates/v1', label: 'UI candidate'},
+  {images: uiImages, source: join(source, 'ui'), directory: 'ui', label: 'UI object'},
 ];
 
 for (const catalog of catalogs) {
