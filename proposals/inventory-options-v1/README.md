@@ -3,9 +3,9 @@
 Three transparent PNG options generated with the built-in image generation tool.
 The v2 Inventory cube was provided as a reference for the quiet lilac palette,
 soft satin material and broad, simple silhouette. The images intentionally avoid
-its cube shape. They are for comparison in Admin at 16, 24, 32 and 64 pixels;
-the backpack is active in Application. The previous cube remains in the
-v2 attribute proposal as an alternative.
+its cube shape. The selected backpack now lives at
+`assets/attributes/inventory.png`; the two remaining files are alternatives.
+The previous cube remains in the v2 attribute proposal.
 
 Common prompt: one centered game UI Inventory icon on a transparent square
 canvas, dusty lilac (`#c4b5fd`), subtle volume and restrained highlights,
@@ -14,6 +14,6 @@ gems or elaborate ornament.
 
 | File | Object direction |
 | --- | --- |
-| `backpack.png` | Compact adventurer backpack with broad body, top flap and strap hints; distinct from Trading's tied pouch. |
+| `assets/attributes/inventory.png` | Selected compact adventurer backpack with broad body, top flap and strap hints; distinct from Trading's tied pouch. |
 | `stack.png` | Three interlocking storage blocks, with one foreground block and two offset behind. |
 | `organizer.png` | Open square organizer tray with four large compartments at a slight angle. |

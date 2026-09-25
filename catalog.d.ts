@@ -15,7 +15,7 @@ export declare const lootboxImages: Readonly<{
   mythical: string;
 }>;
 
-export declare const attributeCandidateImages: Readonly<{
+export declare const attributeImages: Readonly<{
   inventory: string;
   mining: string;
   crafting: string;
@@ -47,6 +47,16 @@ export declare const uiCandidateImages: Readonly<{
 export declare const uiImages: Readonly<{
   submissions: string;
 }>;
+
+export type Marker = Readonly<{
+  group: 'resource' | 'lootbox' | 'attribute' | 'ui';
+  id?: string;
+  image?: string;
+  symbol?: import('./attribute-icons.js').AttributeIcon | import('./ui-icons.js').UiIcon;
+}>;
+export declare const markers: Readonly<Record<string, Marker>>;
+export declare const markerAliases: Readonly<Record<string, string>>;
+export declare const markerFor: (key: string) => Marker | null;
 
 export {attributeIcons, type AttributeIcon} from './attribute-icons.js';
 export {uiIcons, type UiIcon} from './ui-icons.js';

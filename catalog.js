@@ -1,3 +1,6 @@
+import {attributeIcons} from './attribute-icons.js';
+import {uiIcons} from './ui-icons.js';
+
 // Public paths stay stable across clients; replace artwork only in this package.
 export const resourceImages = Object.freeze({
   gold: '/images/resources/gold.avif',
@@ -16,19 +19,18 @@ export const lootboxImages = Object.freeze({
   mythical: '/images/lootboxes/mythical.webp',
 });
 
-// Raster attribute art currently used in Application.
-export const attributeCandidateImages = Object.freeze({
-  inventory: '/images/inventory-options/v1/backpack.png',
-  mining: '/images/attribute-candidates/v3/mining.png',
-  crafting: '/images/attribute-candidates/v3/crafting.png',
-  trading: '/images/attribute-candidates/v2/trading.png',
-  stamina: '/images/attribute-candidates/v2/stamina.png',
-  luck: '/images/attribute-candidates/v2/luck.png',
+export const attributeImages = Object.freeze({
+  inventory: '/images/attributes/inventory.png',
+  mining: '/images/attributes/mining.png',
+  crafting: '/images/attributes/crafting.png',
+  trading: '/images/attributes/trading.png',
+  stamina: '/images/attributes/stamina.png',
+  luck: '/images/attributes/luck.png',
 });
 
 export const inventoryVariantImages = Object.freeze({
   cube: '/images/attribute-candidates/v2/inventory.png',
-  backpack: attributeCandidateImages.inventory,
+  backpack: attributeImages.inventory,
   stack: '/images/inventory-options/v1/stack.png',
   organizer: '/images/inventory-options/v1/organizer.png',
 });
@@ -52,5 +54,34 @@ export const uiImages = Object.freeze({
   submissions: '/images/ui/submissions-object.webp',
 });
 
-export {attributeIcons} from './attribute-icons.js';
-export {uiIcons} from './ui-icons.js';
+// One mapping from product designations to artwork. Clients choose image or
+// symbol according to their layout; aliases share the same marker object.
+export const markers = Object.freeze({
+  gold: {group: 'resource', image: resourceImages.gold},
+  silver: {group: 'resource', image: resourceImages.silver},
+  essence: {group: 'resource', image: resourceImages.essence},
+  mining_points: {group: 'resource', image: resourceImages.mining_points},
+  lootbox: {group: 'lootbox', image: lootboxImages.generic},
+  lootbox_f: {group: 'lootbox', image: lootboxImages.common},
+  lootbox_e: {group: 'lootbox', image: lootboxImages.uncommon},
+  lootbox_d: {group: 'lootbox', image: lootboxImages.rare},
+  lootbox_c: {group: 'lootbox', image: lootboxImages.epic},
+  lootbox_b: {group: 'lootbox', image: lootboxImages.legendary},
+  lootbox_a: {group: 'lootbox', image: lootboxImages.mythical},
+  ...Object.fromEntries(Object.keys(attributeImages).map(id => [
+    `attribute_${id}`, {group: 'attribute', id, image: attributeImages[id], symbol: attributeIcons[id]},
+  ])),
+  attribute_boost: {group: 'attribute', id: 'boost', symbol: attributeIcons.boost},
+  submissions: {group: 'ui', image: uiImages.submissions, symbol: uiIcons.submissions},
+});
+
+export const markerAliases = Object.freeze({
+  quest_bounty: 'mining_points',
+  personal_silver: 'silver',
+  space_silver: 'silver',
+  stamina: 'attribute_stamina',
+});
+
+export const markerFor = key => markers[markerAliases[key] ?? key] ?? null;
+
+export {attributeIcons, uiIcons};

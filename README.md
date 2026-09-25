@@ -1,52 +1,32 @@
 # Questfall Resource Art
 
-Shared artwork for resource, lootbox, and RPG attribute markers in Questfall
-Application and Admin. The four AVIF resource images, six rarity-specific WebP
-lootbox images, and SVG attribute geometry came from `questfall-application`.
-The generic lootbox image is the closed chest from the third Welcome quest,
-"Buy a Common Lootbox".
+Shared source of truth for static resource, lootbox, attribute, and Submissions
+markers in Questfall Application and Admin. This package owns the artwork and
+the mapping from product designations to that artwork. The API contract owns
+public reward keys; PocketBase owns balances and game rules. Clients own labels,
+layout, size, and contextual choice between an image and a symbol.
 
-`catalog.js` maps canonical resource and lootbox keys to public paths. Each client
-imports `resourceImages` and `lootboxImages` for its own UI and runs
-`bun node_modules/@questfall/resource-art/bin/sync.mjs` before compiling. The
-sync command copies the catalogued files to `public/images/resources` and
-`public/images/lootboxes`. Opening videos remain in Application.
+`catalog.js` exports `markers` and `markerFor(key)`. A marker may have an
+`image`, a single-color `symbol`, or both. For example, Application displays
+attribute images while Admin uses their symbols. `quest_bounty` resolves to
+Mining Points, `personal_silver` and `space_silver` resolve to Silver, and
+`lootbox_a` through `lootbox_f` resolve to their rarity artwork. The generic
+`lootbox` has its own chest. `stamina` resolves to the Stamina attribute.
+Traits use their parent attribute marker.
 
-`lootboxImages.generic` is the marker for lootboxes without a specified rarity.
-The other entries remain the artwork for individual rarity levels.
+Active files live under `assets/` and are copied into each client's
+`public/images` by:
 
-`attributeIcons` contains the six attribute symbols plus the generic `boost`
-symbol. Admin still renders the six SVG symbols; Application uses the raster
-set below for those attributes and keeps the SVG `boost` symbol. Traits in
-Application use their parent attribute's image and do not have separate
-artwork. SVG styling and equipment-slot icons remain local.
+```sh
+bun node_modules/@questfall/resource-art/bin/sync.mjs
+```
 
-`attributeCandidateImages` holds the current raster set: Trading, Stamina, and
-Luck from `proposals/attribute-images-v2/`, refined Mining and Crafting from
-`proposals/attribute-images-v3/`, and the Inventory backpack from
-`proposals/inventory-options-v1/`. Application uses these six images through
-its shared attribute icon component. The separate Mining Points image remains
-the gold lightning resource. `inventoryVariantImages` lists the active backpack
-and three other Inventory silhouettes, including the original cube. Admin's
-resource preview shows the active backpack. Earlier proposals remain available.
+Earlier experiments remain in `proposals/`. To copy them for a local design
+preview, use `sync.mjs --proposals`. Normal builds copy active files only.
+The Application's lootbox opening videos and each client's layout-specific
+graphics remain local. Welcome reward markers use the same shared entries as
+other rewards; its panel background and other decoration remain local.
 
-`uiCandidateImages` contains Submissions concepts for the Author Space and quest
-submission UI: an inbox, a completed form, photo proof, a paper plane, three
-envelope treatments, a postage stamp, and two treatments of a square folded
-letter. Admin's resource preview shows them at card and small UI sizes.
-`uiIcons.submissions` is the single-color stacked-sheet symbol used in compact
-contexts such as the Author Space header. It uses the Font Awesome Free
-layer-group silhouette; the source license is in
-`third-party/fontawesome-free/LICENSE.txt`. `uiImages.submissions` is its
-dimensional object counterpart for image-led contexts such as the Leagues panel.
-Both forms share the same silhouette and are selected by one client component.
-The original transparent PNG is retained beside the smaller WebP served to clients.
-The earlier raster concepts remain available for comparison. This symbol/object
-pair is the convention for future UI art that needs both treatments.
-
-To update a resource image, replace its file in `assets/` or add a new file and
-catalog entry. Commit the change, tag a new version, update the exact Git tag in
-both clients, run their checks, and release each client as needed. Keep older
-versions available for rollbacks and open tabs on older client builds.
-
-UI styling, aliases, and Admin-only metrics remain in the clients.
+To update artwork, edit the active file or catalog entry here, run `bun test`,
+commit and tag a new version, update the exact Git tag in both clients, then
+run their checks. Old tags remain available for open tabs and rollbacks.
