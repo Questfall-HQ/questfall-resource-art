@@ -1,0 +1,6 @@
+# Submissions letter artwork
+
+Generated with the built-in ImageGen tool. The outline SVG is drawn separately
+from the same folded-letter silhouette for small interface sizes.
+
+> Use case: stylized-concept. Asset type: transparent-background game UI icon used at 20 px beside dimensional RPG attribute artwork. Create ONE isolated three-dimensional paper letter/document icon, without any envelope: a nearly square upright ivory sheet (visible silhouette approximately 0.88 width to 1 height), subtly rounded corners, a small folded upper-right corner, and exactly two short thick dark plum writing strokes across the center. Include a narrow muted magenta edge or backing layer to tie it to Questfall's fuchsia submission theme. Calm handcrafted illustrated 3D material, soft satin finish, restrained shading, clean broad shapes, crisp dark outer edge for contrast on a dark charcoal UI. The sheet should occupy about 88% of a square canvas with minimal padding; it must remain immediately recognizable at 20 px. True transparent alpha background. No envelope, no stamp, no checkmark, no seal, no symbols, no text, no border frame, no drop shadow outside the silhouette, no sparkles, no intense glare.

@@ -40,10 +40,13 @@ export declare const uiCandidateImages: Readonly<{
   submissions_mail_open: string;
   submissions_mail_sent: string;
   submissions_stamp: string;
+  submissions_letter_square: string;
+  submissions_letter_outline: string;
 }>;
 
 export declare const uiImages: Readonly<{
   submissions: string;
+  submissions_outline: string;
 }>;
 
 export {attributeIcons, type AttributeIcon} from './attribute-icons.js';
