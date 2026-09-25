@@ -36,6 +36,9 @@ export const inventoryVariantImages = Object.freeze({
 // Preview candidates for non-resource interface symbols.
 export const uiCandidateImages = Object.freeze({
   submissions: '/images/ui-candidates/v1/submissions.png',
+  submissions_form: '/images/ui-candidates/v1/submissions-form.png',
+  submissions_proof: '/images/ui-candidates/v1/submissions-proof.png',
+  submissions_send: '/images/ui-candidates/v1/submissions-send.png',
 });
 
 export {attributeIcons} from './attribute-icons.js';
