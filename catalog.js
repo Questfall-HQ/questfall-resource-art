@@ -25,13 +25,21 @@ export const lootboxImages = Object.freeze({
 });
 
 export const attributeImages = Object.freeze({
-  inventory: '/images/attributes/inventory.png',
-  mining: '/images/attributes/mining.png',
-  crafting: '/images/attributes/crafting.png',
-  trading: '/images/attributes/trading.png',
-  stamina: '/images/attributes/stamina.png',
-  luck: '/images/attributes/luck.png',
+  inventory: '/images/attributes/inventory.avif',
+  mining: '/images/attributes/mining.avif',
+  crafting: '/images/attributes/crafting.avif',
+  trading: '/images/attributes/trading.avif',
+  stamina: '/images/attributes/stamina.avif',
+  luck: '/images/attributes/luck.avif',
 });
+
+export const attributeTinyImages = Object.freeze(Object.fromEntries(
+  Object.keys(attributeImages).map(id => [id, `/images/attributes/${id}-tiny.avif`]),
+));
+
+export const attributeSmallImages = Object.freeze(Object.fromEntries(
+  Object.keys(attributeImages).map(id => [id, `/images/attributes/${id}-small.avif`]),
+));
 
 export const inventoryVariantImages = Object.freeze({
   cube: '/images/attribute-candidates/v2/inventory.png',
@@ -86,7 +94,11 @@ export const markers = Object.freeze({
   ...Object.fromEntries(Object.keys(attributeImages).map(id => [
     `attribute_${id}`, {
       group: 'attribute', id, image: attributeImages[id], symbol: attributeIcons[id],
-      variants: {tiny: {symbol: attributeIcons[id]}, large: {image: attributeImages[id]}},
+      variants: {
+        tiny: {image: attributeTinyImages[id]},
+        small: {image: attributeSmallImages[id]},
+        large: {image: attributeImages[id]},
+      },
     },
   ])),
   attribute_boost: {...symbolMarker('attribute', attributeIcons.boost), id: 'boost'},

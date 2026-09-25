@@ -29,6 +29,9 @@ export declare const attributeImages: Readonly<{
   luck: string;
 }>;
 
+export declare const attributeTinyImages: Readonly<Record<keyof typeof attributeImages, string>>;
+export declare const attributeSmallImages: Readonly<Record<keyof typeof attributeImages, string>>;
+
 export declare const inventoryVariantImages: Readonly<{
   cube: string;
   backpack: string;
