@@ -302,6 +302,47 @@
           "sha256": "d517155c400fd85f6677a87781f37b4c0989084bf20b076b562deb4a58d78d7d"
         }
       }
+    },
+    "chat_button_glass": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/chat-button-glass.png",
+          "bytes": 809557,
+          "sha256": "d142b1cacc8da9fe3da79eac41c02cbad567c4645b7a6e06f0ef5d90a2c545b0"
+        },
+        "fingerprint": "2fcab642e9f76c5790981ec8785c2dc1cbf46606487fbf1117f4dd586450c0ea",
+        "output": {
+          "path": "ui/chat-button-glass-tiny.avif",
+          "bytes": 1723,
+          "sha256": "79d7bd6dbde9e4abc73a515f8eecdb440ec7704f909809bf9fb0d3cd43bc7f80"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/chat-button-glass.png",
+          "bytes": 809557,
+          "sha256": "d142b1cacc8da9fe3da79eac41c02cbad567c4645b7a6e06f0ef5d90a2c545b0"
+        },
+        "fingerprint": "94a4f2bfa5b3c56f8b445121238edb1c4a4c5210ce371f7dce256ef199d5a5ec",
+        "output": {
+          "path": "ui/chat-button-glass-small.avif",
+          "bytes": 3493,
+          "sha256": "057abc60a7367802e92fa34095f96e7192ca014b10e4ceccea252739796c8670"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/chat-button-glass.png",
+          "bytes": 809557,
+          "sha256": "d142b1cacc8da9fe3da79eac41c02cbad567c4645b7a6e06f0ef5d90a2c545b0"
+        },
+        "fingerprint": "6447d50648ce0e745d9ae03d058bba82b89982a599b72f8cb03607ae32258e43",
+        "output": {
+          "path": "ui/chat-button-glass.avif",
+          "bytes": 7901,
+          "sha256": "6302acd1385d6d1a968168d3a4964d916fb663fabffce649d7aefdc65c214b8d"
+        }
+      }
     }
   }
 }

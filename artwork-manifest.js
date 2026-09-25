@@ -32,6 +32,7 @@ export const artwork = Object.freeze({
 
   submissions: {group: 'ui', file: 'ui/submissions-object.webp', master: 'sources/ui/submissions-object.png'},
   weekly_reset: {group: 'ui', file: 'ui/weekly-reset.webp'},
+  chat_button_glass: {group: 'ui', source: 'sources/ui/chat-button-glass.png', output: 'ui/chat-button-glass'},
 });
 
 export const variantSettings = Object.freeze({

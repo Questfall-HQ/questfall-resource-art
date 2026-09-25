@@ -91,7 +91,10 @@ test('normal sync excludes proposals; preview sync includes them', async () => {
     expect(await readdir(join(target, 'public/images/attributes'))).not.toContain('mining.png');
     expect(await readdir(join(target, 'public/images/resources'))).toHaveLength(13);
     expect(await readdir(join(target, 'public/images/resources'))).not.toContain('experience.webp');
-    expect((await readdir(join(target, 'public/images/ui'))).sort()).toEqual(['submissions-object.webp', 'weekly-reset.webp']);
+    expect((await readdir(join(target, 'public/images/ui'))).sort()).toEqual([
+      'chat-button-glass-small.avif', 'chat-button-glass-tiny.avif', 'chat-button-glass.avif',
+      'submissions-object.webp', 'weekly-reset.webp',
+    ]);
     expect(readdir(join(target, 'public/images/ui-candidates/v1'))).rejects.toThrow();
 
     const preview = Bun.spawnSync(['bun', script, '--proposals'], {cwd: target});

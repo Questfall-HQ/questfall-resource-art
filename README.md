@@ -79,9 +79,10 @@ bun node_modules/@questfall/resource-art/bin/sync.mjs
 
 Earlier experiments remain in `proposals/`. To copy them for a local design
 preview, use `sync.mjs --proposals`. Normal builds copy active files only.
-The Application's lootbox opening videos and each client's layout-specific
-graphics remain local. Welcome reward markers use the same shared entries as
-other rewards; its panel background and other decoration remain local.
+The Application's lootbox opening videos and other layout-specific graphics
+remain local. The chat composer glass button is shared UI artwork. Welcome
+reward markers use the same shared entries as other rewards; its panel
+background and other decoration remain local.
 
 To update generated artwork, replace its source and run `bun run build:artwork`.
 For an existing legacy entry, change its active file until its master is
