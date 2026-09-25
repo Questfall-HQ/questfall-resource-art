@@ -18,14 +18,14 @@
       "small": {
         "source": {
           "path": "sources/resources/gold-small.png",
-          "bytes": 1408424,
-          "sha256": "43634fcd118847a9bff9a2f2a8f2e26ee75378b4df99dd80d61cc08e5f1242be"
+          "bytes": 1281054,
+          "sha256": "35e6d61b2cedf36f5101242207540bb11d7eb406ca823cc1f80caf82b431a405"
         },
-        "fingerprint": "f9cddf1d3812d9af2d09fcbf25b5db083aa0cd09879ced6e113dea0b73d0873f",
+        "fingerprint": "1f0416729bb0efb7e57e9d2db5b154a0b8b806db173a00dc076b5531ed9b32b3",
         "output": {
           "path": "gold-small.avif",
-          "bytes": 6009,
-          "sha256": "33ad7579b4928917ade8d1b5aa8ebae7d9cb7ba1fe9ad53262b5a442b426f6d0"
+          "bytes": 5538,
+          "sha256": "d7aae72983e8d0577a54305f3e8ea62f83d5d07390d604e926be71aa8bbfafac"
         }
       }
     },
@@ -46,14 +46,14 @@
       "small": {
         "source": {
           "path": "sources/resources/silver-small.png",
-          "bytes": 1475506,
-          "sha256": "c6f42604e90faeabeaf2d4319444346516258cf3ab2d0b280ef62ecd2856dd4a"
+          "bytes": 1401341,
+          "sha256": "156cb72f4e7767720a0e2c9a61512c7b1ea6e47dae1db9de84b097635a00eee1"
         },
-        "fingerprint": "d7ff323625f6aa538b29f21598778c5ee830e5fed533b6c908691dbab0a7d8fc",
+        "fingerprint": "429f87614ea646a9547c684b78051758d704689d131a473a18a7054215228bf4",
         "output": {
           "path": "silver-small.avif",
-          "bytes": 5076,
-          "sha256": "ad70ad859f56f76ddb783c8f2cc165240a946a2d2fa66293b92d9e6966bd3773"
+          "bytes": 4725,
+          "sha256": "bbad6f33cdebe294ab9d9094c9f307681b12946fb21d271805dbac57e390cefe"
         }
       }
     },
