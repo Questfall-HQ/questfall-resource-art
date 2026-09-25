@@ -14,6 +14,10 @@ Mining Points, `personal_silver` and `space_silver` resolve to Silver, and
 `lootbox` has its own chest. `stamina` resolves to the Stamina attribute.
 Traits use their parent attribute marker.
 
+QFT, Experience, Chest Shards, Gems, and Attribute Points also have shared
+markers. The current QFT image is provisional until its visual identity is
+finalized. `xp` and `chest_shards` are aliases for Experience and Chest Shards.
+
 Active files live under `assets/` and are copied into each client's
 `public/images` by:
 

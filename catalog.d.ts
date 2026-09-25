@@ -3,6 +3,11 @@ export declare const resourceImages: Readonly<{
   silver: string;
   essence: string;
   mining_points: string;
+  qft: string;
+  experience: string;
+  shards: string;
+  gems: string;
+  attribute_points: string;
 }>;
 
 export declare const lootboxImages: Readonly<{

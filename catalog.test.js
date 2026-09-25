@@ -16,6 +16,11 @@ test('product aliases resolve to the selected shared artwork', () => {
   expect(markerFor('lootbox_a').image.endsWith('/mythical.webp')).toBe(true);
   expect(markerFor('attribute_inventory').image.endsWith('/attributes/inventory.png')).toBe(true);
   expect(markerFor('submissions').symbol).toBeDefined();
+  for (const key of ['qft', 'experience', 'shards', 'gems', 'attribute_points']) {
+    expect(markerFor(key).image).toBeDefined();
+  }
+  expect(markerFor('xp')).toBe(markers.experience);
+  expect(markerFor('chest_shards')).toBe(markers.shards);
 });
 
 test('normal sync excludes proposals; preview sync includes them', async () => {
@@ -24,6 +29,7 @@ test('normal sync excludes proposals; preview sync includes them', async () => {
     const active = Bun.spawnSync(['bun', script], {cwd: target});
     expect(active.exitCode).toBe(0);
     expect(await readdir(join(target, 'public/images/attributes'))).toHaveLength(6);
+    expect(await readdir(join(target, 'public/images/resources'))).toHaveLength(9);
     expect(await readdir(join(target, 'public/images/ui'))).toContain('submissions-object.webp');
     expect(readdir(join(target, 'public/images/ui-candidates/v1'))).rejects.toThrow();
 

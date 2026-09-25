@@ -7,6 +7,11 @@ export const resourceImages = Object.freeze({
   silver: '/images/resources/silver.avif',
   essence: '/images/resources/essence.avif',
   mining_points: '/images/resources/mining-points-v3.avif',
+  qft: '/images/resources/qft.webp',
+  experience: '/images/resources/experience.webp',
+  shards: '/images/resources/shards.webp',
+  gems: '/images/resources/gems.webp',
+  attribute_points: '/images/resources/attribute-points.webp',
 });
 
 export const lootboxImages = Object.freeze({
@@ -61,6 +66,11 @@ export const markers = Object.freeze({
   silver: {group: 'resource', image: resourceImages.silver},
   essence: {group: 'resource', image: resourceImages.essence},
   mining_points: {group: 'resource', image: resourceImages.mining_points},
+  qft: {group: 'resource', image: resourceImages.qft},
+  experience: {group: 'resource', image: resourceImages.experience},
+  shards: {group: 'resource', image: resourceImages.shards},
+  gems: {group: 'resource', image: resourceImages.gems},
+  attribute_points: {group: 'resource', image: resourceImages.attribute_points},
   lootbox: {group: 'lootbox', image: lootboxImages.generic},
   lootbox_f: {group: 'lootbox', image: lootboxImages.common},
   lootbox_e: {group: 'lootbox', image: lootboxImages.uncommon},
@@ -80,6 +90,8 @@ export const markerAliases = Object.freeze({
   personal_silver: 'silver',
   space_silver: 'silver',
   stamina: 'attribute_stamina',
+  xp: 'experience',
+  chest_shards: 'shards',
 });
 
 export const markerFor = key => markers[markerAliases[key] ?? key] ?? null;
