@@ -71,7 +71,7 @@ export type Marker = Readonly<{
 export declare const markers: Readonly<Record<string, Marker>>;
 export declare const markerAliases: Readonly<Record<string, string>>;
 export declare const markerFor: (key: string) => Marker | null;
-export declare const visualFor: (key: string, variant?: MarkerVariant) => (MarkerVisual & Readonly<{requested: MarkerVariant; resolved: MarkerVariant}>) | null;
+export declare const visualFor: (key: string, variant?: string) => (MarkerVisual & Readonly<{requested: MarkerVariant; resolved: MarkerVariant}>) | null;
 
 export {attributeIcons, type AttributeIcon} from './attribute-icons.js';
 export {uiIcons, type UiIcon} from './ui-icons.js';
