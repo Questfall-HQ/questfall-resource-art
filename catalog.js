@@ -61,6 +61,7 @@ export const markers = Object.freeze({
   attribute_boost: {...symbolMarker('attribute', attributeIcons.boost), id: 'boost'},
   moderation: symbolMarker('ui', uiIcons.moderation),
   trophy: symbolMarker('ui', uiIcons.trophy),
+  rating: symbolMarker('ui', uiIcons.rating),
   submissions: {
     ...imageMarkers.submissions, symbol: uiIcons.submissions,
     variants: {...imageMarkers.submissions.variants, tiny: {symbol: uiIcons.submissions}},

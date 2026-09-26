@@ -6,5 +6,6 @@ export interface UiIcon {
 export declare const uiIcons: Readonly<{
   moderation: UiIcon;
   trophy: UiIcon;
+  rating: UiIcon;
   submissions: UiIcon;
 }>;

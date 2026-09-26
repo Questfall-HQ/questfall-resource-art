@@ -62,8 +62,8 @@ Traits use their parent attribute marker.
 QFT, Experience, Chest Shards, Gems, and Attribute Points also have shared
 markers. The current QFT image is provisional until its visual identity is
 finalized. Chest Shards use the matte violet puzzle piece; the Weekly Reset
-hourglass is a shared UI image. Moderation's double check and the trophy used
-for Mining and Season are shared single-color UI symbols. `xp` and `chest_shards` are aliases
+hourglass is a shared UI image. Moderation's double check, the rating star, and
+the trophy used for Mining and Season are shared single-color UI symbols. `xp` and `chest_shards` are aliases
 for Experience and Chest Shards. The earlier Experience book remains in
 `proposals/`.
 
