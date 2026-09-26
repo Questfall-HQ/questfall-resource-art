@@ -10,6 +10,9 @@ layout, and the requested visual size.
 It also exports `slotImages`, `slotTinyImages`, and `slotSmallImages` for the
 seven RPG categories (six equipment slots and the potion filter). Application
 uses one shared set in equipment placeholders, inventory, and Marketplace.
+The current slot images live under `/images/slots/v2/`, so their URLs change
+when the artwork changes despite long browser image caches. Earlier client
+tabs can continue using the first `/images/slots/` files.
 Every marker has `tiny`, `small`, and `large` visual slots. Each slot can hold
 an image, a single-color symbol, or short text. `visualFor` returns the chosen
 art and its `requested` and `resolved` variants. Missing slots fall back in
