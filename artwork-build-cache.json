@@ -306,15 +306,15 @@
     "slot_head": {
       "tiny": {
         "source": {
-          "path": "sources/slots/head.png",
-          "bytes": 296855,
-          "sha256": "67186fc45b597d3a759cb728cf32d6baf5d4496580eb2c82eec8dfc31a333a10"
+          "path": "sources/slots/tiny/head.png",
+          "bytes": 9505,
+          "sha256": "1aa5eda233ee45c3e4f2be4aa600b5d4c9eb67ae8e90f3ca1429c8de220f4e93"
         },
-        "fingerprint": "6555ad2d5cc038c5c1d752e5fde7448320746820a08694371bea7efe9d9889ee",
+        "fingerprint": "a7f5b28151b60133ddb89f4ec371e5a3808f73a632f21696495c67e1e7c13021",
         "output": {
-          "path": "slots/v2/head-tiny.avif",
-          "bytes": 2026,
-          "sha256": "9956cdaf9233e27b879a2537cadc0b5941c146f32e32b235a6587a19a41deaca"
+          "path": "slots/v3/head-tiny.avif",
+          "bytes": 1880,
+          "sha256": "7b30ac5ee5ea600b7bf4ee9dbb464ddb804a188052b5a4f3afcb6ebf3e0ed6a4"
         }
       },
       "small": {
@@ -323,9 +323,9 @@
           "bytes": 296855,
           "sha256": "67186fc45b597d3a759cb728cf32d6baf5d4496580eb2c82eec8dfc31a333a10"
         },
-        "fingerprint": "6593223c6d529d7d3f5afaf83bb4864a2c26024c031af2bdc958d47636138e7a",
+        "fingerprint": "897e626cff5bae4b4f265953728d44ef080887aee75980ea1247a324aae3c489",
         "output": {
-          "path": "slots/v2/head-small.avif",
+          "path": "slots/v3/head-small.avif",
           "bytes": 3938,
           "sha256": "46fb9d2a0bb9444d38df8285ec9a47574b00706e44253766abee49ab2985a41d"
         }
@@ -336,9 +336,9 @@
           "bytes": 296855,
           "sha256": "67186fc45b597d3a759cb728cf32d6baf5d4496580eb2c82eec8dfc31a333a10"
         },
-        "fingerprint": "680bea3b9c3ae4ef0963affa6e00b637a554867fe0dfa404c41fcf4651756387",
+        "fingerprint": "a9bd5a1a25f74574d3fe31baf4e0a3b9381a436cac55cd9b3027837fbe64b17e",
         "output": {
-          "path": "slots/v2/head.avif",
+          "path": "slots/v3/head.avif",
           "bytes": 8226,
           "sha256": "e533db5bb3ebfacbd5e97734716db1bc565a9417f4bb24a2841d2176d26b9517"
         }
@@ -347,15 +347,15 @@
     "slot_chest": {
       "tiny": {
         "source": {
-          "path": "sources/slots/chest.png",
-          "bytes": 344560,
-          "sha256": "274b4d0574d62c18e9d3dd7e39b963c16694101a994a2f585f75df349fb71e19"
+          "path": "sources/slots/tiny/chest.png",
+          "bytes": 4268,
+          "sha256": "e609d4ff3fcf2bc211852444d32a08eb6300e4678f919f653654f5120ae5e89a"
         },
-        "fingerprint": "011f895452ef67a0ada909e1c7df5cd508b171313415c5552d83339eef6d2ece",
+        "fingerprint": "00c390f31410887c36f314c10e268ebeefbab8490792414e659718c77eb002ac",
         "output": {
-          "path": "slots/v2/chest-tiny.avif",
-          "bytes": 2392,
-          "sha256": "981fe2ac1beae3d8662697f58d7bf3c83ecdb0f645372b0a8c5ac6ab06fb8062"
+          "path": "slots/v3/chest-tiny.avif",
+          "bytes": 1555,
+          "sha256": "cbdb3f861847104f2f0e545a50fb0c59ab7d9121566e35051b4d382fbb598445"
         }
       },
       "small": {
@@ -364,9 +364,9 @@
           "bytes": 344560,
           "sha256": "274b4d0574d62c18e9d3dd7e39b963c16694101a994a2f585f75df349fb71e19"
         },
-        "fingerprint": "aea286ff00b1798b602dc84ec5a2f9f08e06f1418d80b384fbc2e210c7de5dc6",
+        "fingerprint": "2ff71873628ad2285839b5f734a7ae451c397e2993ea27a6247756b86112a2fe",
         "output": {
-          "path": "slots/v2/chest-small.avif",
+          "path": "slots/v3/chest-small.avif",
           "bytes": 4619,
           "sha256": "b414c8e2d4e9e4cb67ee94fc0865573bdaab043615e0e8eb5f6a2c6acfee41a1"
         }
@@ -377,9 +377,9 @@
           "bytes": 344560,
           "sha256": "274b4d0574d62c18e9d3dd7e39b963c16694101a994a2f585f75df349fb71e19"
         },
-        "fingerprint": "29f8640369d4fbee6fc9410068e9fa4edb99e3c72bdacdb4e1eee0688b8af2b1",
+        "fingerprint": "356bc70ccdf4252229493dfd65be44c8934b581ab38a3764c6b5c3cb877fc23d",
         "output": {
-          "path": "slots/v2/chest.avif",
+          "path": "slots/v3/chest.avif",
           "bytes": 10001,
           "sha256": "1f57fa4763f5a43dad817c2913c162e55cf4d8176e88e009a086a5397e22f3e0"
         }
@@ -388,15 +388,15 @@
     "slot_hands": {
       "tiny": {
         "source": {
-          "path": "sources/slots/hands.png",
-          "bytes": 245353,
-          "sha256": "96f20c21c2304a6349c08b5fab6d62f1bb85f8c69cd7eb5aef20337f141df615"
+          "path": "sources/slots/tiny/hands.png",
+          "bytes": 9627,
+          "sha256": "14f8fe7950d444ed109814cd65b85590b710225dc952b05e9ad4057e0a978ee7"
         },
-        "fingerprint": "fe850fb48c6b93f8190b062b08bfbd3653c70e89f1c1fb4c6b439e8dc4e81f36",
+        "fingerprint": "55bee6486f62e7c4517d99c625b75861cba55840f45e0a0f5593fdff2740f516",
         "output": {
-          "path": "slots/v2/hands-tiny.avif",
-          "bytes": 2113,
-          "sha256": "274cf8fa82574dbaa342919bde98ffeb8a4a981badd2563e7e69b0b788fd8a87"
+          "path": "slots/v3/hands-tiny.avif",
+          "bytes": 1816,
+          "sha256": "3ffe5fa5b51d012f04324dea5b8eae93d85136970fb45a15a54860ea950908ab"
         }
       },
       "small": {
@@ -405,9 +405,9 @@
           "bytes": 245353,
           "sha256": "96f20c21c2304a6349c08b5fab6d62f1bb85f8c69cd7eb5aef20337f141df615"
         },
-        "fingerprint": "c8f17dcee1984b51c7b833150827159aa3b2bbdf724e35b1d284423d9642fc20",
+        "fingerprint": "633a2d73aa3fb66fc1dd21d1dce7b7ec178949fb5384017c571f259f22925276",
         "output": {
-          "path": "slots/v2/hands-small.avif",
+          "path": "slots/v3/hands-small.avif",
           "bytes": 4246,
           "sha256": "5189a087cc4f54ca3b1309d8bc67fe7821176dd364ee0bb77e037e6bb4788e50"
         }
@@ -418,9 +418,9 @@
           "bytes": 245353,
           "sha256": "96f20c21c2304a6349c08b5fab6d62f1bb85f8c69cd7eb5aef20337f141df615"
         },
-        "fingerprint": "75e794d88d77927703570d0ec6106c5b5108539ea0ff771c4217ef3b449db348",
+        "fingerprint": "df8bdbaeda7d09f2fa63f6f7726a1d0c1e4d0836b2c462c3a5da915de7b6e479",
         "output": {
-          "path": "slots/v2/hands.avif",
+          "path": "slots/v3/hands.avif",
           "bytes": 9459,
           "sha256": "16dfdb608e1d92a2c78861b23eb1b0fdd726ecb3a871b347c64f25acde048d3a"
         }
@@ -429,15 +429,15 @@
     "slot_legs": {
       "tiny": {
         "source": {
-          "path": "sources/slots/legs.png",
-          "bytes": 281574,
-          "sha256": "1ae2ce690eef77f864a4b8b8a9e4854e78a1eda16cc4a231305c9d6bd94a7dde"
+          "path": "sources/slots/tiny/legs.png",
+          "bytes": 6362,
+          "sha256": "506f8db4b87d61642416882f90f61a8f884bc62ae37a48b52e2f104dd3314450"
         },
-        "fingerprint": "19514b750a9259caea88a10361487652a0f6766782620ae8849995ceadda42f6",
+        "fingerprint": "a19407af52f8721ad4c4351f04bad34f023196651d22da8e0c146c4a58959724",
         "output": {
-          "path": "slots/v2/legs-tiny.avif",
-          "bytes": 1778,
-          "sha256": "1783590b140f90c9f7ca089d22f14f7d0bbc22bffe129b682f5b34a093036c99"
+          "path": "slots/v3/legs-tiny.avif",
+          "bytes": 1453,
+          "sha256": "f7d73e5cf92c95aead332d17fc837371f85a7109d1c083f9c56b3e87636c8ac1"
         }
       },
       "small": {
@@ -446,9 +446,9 @@
           "bytes": 281574,
           "sha256": "1ae2ce690eef77f864a4b8b8a9e4854e78a1eda16cc4a231305c9d6bd94a7dde"
         },
-        "fingerprint": "308afb60a911f7d40477db5c572b30928727261e8db405d1ce79d9af91e32d62",
+        "fingerprint": "cdb7443d84c109bffbbf9077367303e10c741f447b8d976af15748a76bd5fc35",
         "output": {
-          "path": "slots/v2/legs-small.avif",
+          "path": "slots/v3/legs-small.avif",
           "bytes": 3403,
           "sha256": "e8c1cdfcada3c19f4cb9551bb621cf0ccf55be8fe89d21fca5c12fe0975d13e7"
         }
@@ -459,9 +459,9 @@
           "bytes": 281574,
           "sha256": "1ae2ce690eef77f864a4b8b8a9e4854e78a1eda16cc4a231305c9d6bd94a7dde"
         },
-        "fingerprint": "46484694d2b456aef37a4c8dbd670e342232589f7b8f8d11530d3a268a9036ea",
+        "fingerprint": "950edbb5d96b3bb4ce7c448056d32d4a671383ac5b3453f2b6b6f6b3fed413ca",
         "output": {
-          "path": "slots/v2/legs.avif",
+          "path": "slots/v3/legs.avif",
           "bytes": 7282,
           "sha256": "8d906a4923c420792b2b54f4bd7fcfe16dc8571ede247247c29c2f85dd64809c"
         }
@@ -470,15 +470,15 @@
     "slot_feet": {
       "tiny": {
         "source": {
-          "path": "sources/slots/feet.png",
-          "bytes": 288105,
-          "sha256": "7cf6eb97840f806c06883e1c1f2d2a26b01952f0b2a744dfca64d6de719b04ff"
+          "path": "sources/slots/tiny/feet.png",
+          "bytes": 4132,
+          "sha256": "feb28b7d5a9c29e7cd1e29025ee8df4b3153943be762c519d70655e18433aec4"
         },
-        "fingerprint": "ef9aefbded762e71a9064561b8a02b28b6aa72db5dabc2f3015ddc1195a14121",
+        "fingerprint": "40b59a730c73441cde7b9c18b1ddcfff8f4d13cbb6faa2210cea6c2ce8518095",
         "output": {
-          "path": "slots/v2/feet-tiny.avif",
-          "bytes": 2119,
-          "sha256": "d71c95bd8bac4f9efb62c99e6da953ad17e71daa22b8f820a0d1ad3b7a4130e3"
+          "path": "slots/v3/feet-tiny.avif",
+          "bytes": 1162,
+          "sha256": "6118cd9d261220321425e312109724482017e452c334ac82393ff544e2f407ec"
         }
       },
       "small": {
@@ -487,9 +487,9 @@
           "bytes": 288105,
           "sha256": "7cf6eb97840f806c06883e1c1f2d2a26b01952f0b2a744dfca64d6de719b04ff"
         },
-        "fingerprint": "7358fcf3141bb6af3e28a9d8a713599ad52e4cabd20eacbde828e5ec18a7a226",
+        "fingerprint": "4c0947a5b895829fbf53954e478dfbd7e5411ecbf0ada259f1279a79f3d3a50d",
         "output": {
-          "path": "slots/v2/feet-small.avif",
+          "path": "slots/v3/feet-small.avif",
           "bytes": 4014,
           "sha256": "0096938c31ace9660cd2883adecf51d32c5b163f7d354f108bde99758dd0aa99"
         }
@@ -500,9 +500,9 @@
           "bytes": 288105,
           "sha256": "7cf6eb97840f806c06883e1c1f2d2a26b01952f0b2a744dfca64d6de719b04ff"
         },
-        "fingerprint": "4fa0ec1137824f5c22541769f8417fed06230d0dc472f811adb385cec36db911",
+        "fingerprint": "35480b4cc25fd143330ffa878374d8dd9f0f21c39db6eb5176b1a27aa66fe38f",
         "output": {
-          "path": "slots/v2/feet.avif",
+          "path": "slots/v3/feet.avif",
           "bytes": 8735,
           "sha256": "b6c520592531f2077b721eceff09dce99e35d55da93b4d656b5724f82ad06bdd"
         }
@@ -511,15 +511,15 @@
     "slot_outer": {
       "tiny": {
         "source": {
-          "path": "sources/slots/outer.png",
-          "bytes": 354239,
-          "sha256": "c3d89ed26895b3b88bc7774105bf263482a111ae1d4b5a11c81c7c97da8d1315"
+          "path": "sources/slots/tiny/outer.png",
+          "bytes": 6860,
+          "sha256": "118edafa8be8f52756ffe775e72ca05ab679d8d97c123f048ebb7eebd084d91f"
         },
-        "fingerprint": "53a0e735582bfc99c14036a4a15c3bb8d12237afbc3e05e85489e33320a94559",
+        "fingerprint": "34f1f72614d749025f890ff65e207d5a1689592abbce8d0e2552afa14d14d1ca",
         "output": {
-          "path": "slots/v2/outer-tiny.avif",
-          "bytes": 2045,
-          "sha256": "8e35341c294d79f8280fa51c7ef924f62f555e36150619b4ccbc6c42e1f0d778"
+          "path": "slots/v3/outer-tiny.avif",
+          "bytes": 1726,
+          "sha256": "f2e6f438a1fe02fe5e4bed8b1974c8fb5cbbae9a4b437fc18674721b60c8fb21"
         }
       },
       "small": {
@@ -528,9 +528,9 @@
           "bytes": 354239,
           "sha256": "c3d89ed26895b3b88bc7774105bf263482a111ae1d4b5a11c81c7c97da8d1315"
         },
-        "fingerprint": "2fb864e30a9aaec5953fe0f88e1bc98e58e1b9c5fc461ac5ba35aaeb73da6125",
+        "fingerprint": "6e38f513c6f22297f69a70dcd17c1db9c96bd01114fc56a72d6bff7def87bd85",
         "output": {
-          "path": "slots/v2/outer-small.avif",
+          "path": "slots/v3/outer-small.avif",
           "bytes": 4214,
           "sha256": "5b491d1ecb423020e96e57eda489cb8b9dfca514455c2cb7eb81d9de6135d928"
         }
@@ -541,9 +541,9 @@
           "bytes": 354239,
           "sha256": "c3d89ed26895b3b88bc7774105bf263482a111ae1d4b5a11c81c7c97da8d1315"
         },
-        "fingerprint": "6369e1a574c3846a7d0126eb9b206879ddde1e8d8b643bf6ced37622e3eb8536",
+        "fingerprint": "d8c4bab01b6a4285fca91c408a53ff4764cf897875e79da877d714197706a06a",
         "output": {
-          "path": "slots/v2/outer.avif",
+          "path": "slots/v3/outer.avif",
           "bytes": 8979,
           "sha256": "9a8d56cff4e20a4ea28916e2ee3fd9043193dce4c30785ad01a62780295f3a9a"
         }
@@ -552,15 +552,15 @@
     "slot_potion": {
       "tiny": {
         "source": {
-          "path": "sources/slots/potion.png",
-          "bytes": 280139,
-          "sha256": "5b729f9744413b6b8b962eeec19c828e7e14f564c9a309171e3d1e8412dd02c2"
+          "path": "sources/slots/tiny/potion.png",
+          "bytes": 7821,
+          "sha256": "f2ad450288893aff6a5a4f342d409979484118ebb095d68b5a33c3dc618fc37e"
         },
-        "fingerprint": "e3760a87a746b6ec09eb857f03a61e0a46bb59b72da70353d82594d5f81bc8a0",
+        "fingerprint": "d0a4b28a78896a810c28f2caa282d2769d8f4bb75b3b6721dec50bccbc921d01",
         "output": {
-          "path": "slots/v2/potion-tiny.avif",
-          "bytes": 2305,
-          "sha256": "5c4e17731e3aaffa4e4f33edb34ea2f7a6bb3a24046b6f5a5704a1704cca694d"
+          "path": "slots/v3/potion-tiny.avif",
+          "bytes": 1840,
+          "sha256": "f6b0c0c4e8cea3f0ada39c935db465cc172df52e439be66c625879d3f0982132"
         }
       },
       "small": {
@@ -569,9 +569,9 @@
           "bytes": 280139,
           "sha256": "5b729f9744413b6b8b962eeec19c828e7e14f564c9a309171e3d1e8412dd02c2"
         },
-        "fingerprint": "1dab8d893c8de7af55183f63db94def039bb2f5385eacfda501596bcbba18f65",
+        "fingerprint": "1609588a651a47a046012a0a97395dc69401a9928eaea3d4ecffe361716289b4",
         "output": {
-          "path": "slots/v2/potion-small.avif",
+          "path": "slots/v3/potion-small.avif",
           "bytes": 5135,
           "sha256": "21b88e4c2b4f3e8fad8696dd3245f3a1f107453e0d4b2fa2c6c2d9834c8be583"
         }
@@ -582,9 +582,9 @@
           "bytes": 280139,
           "sha256": "5b729f9744413b6b8b962eeec19c828e7e14f564c9a309171e3d1e8412dd02c2"
         },
-        "fingerprint": "116bd1a125308487ea56906d6cb84401c7246b2f2017639877a6daa885bb40f9",
+        "fingerprint": "2cd430b533370c8b60065762166ae0a19ccc99a7ff631b1de54454b41cf1bfbe",
         "output": {
-          "path": "slots/v2/potion.avif",
+          "path": "slots/v3/potion.avif",
           "bytes": 11499,
           "sha256": "71a2172023f05825ca41db16b23959a6a7e51ac055a357bdc77369392b194bf0"
         }

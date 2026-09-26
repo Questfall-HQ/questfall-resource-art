@@ -25,8 +25,8 @@ test('product aliases resolve to the selected shared artwork', () => {
   expect(markerFor('rating').symbol).toBeDefined();
   expect(markerFor('weekly_reset').image).toMatch(/weekly-reset\.webp$/);
   for (const id of ['head', 'chest', 'hands', 'legs', 'feet', 'outer', 'potion']) {
-    expect(slotImages[id]).toBe(`/images/slots/v2/${id}.avif`);
-    expect(slotTinyImages[id]).toBe(`/images/slots/v2/${id}-tiny.avif`);
+    expect(slotImages[id]).toBe(`/images/slots/v3/${id}.avif`);
+    expect(slotTinyImages[id]).toBe(`/images/slots/v3/${id}-tiny.avif`);
     expect(markerFor(`slot_${id}`).group).toBe('slot');
   }
   for (const key of ['qft', 'shards', 'gems', 'attribute_points']) {
@@ -96,7 +96,7 @@ test('normal sync excludes proposals; preview sync includes them', async () => {
     expect(await readdir(join(target, 'public/images/attributes'))).toHaveLength(18);
     expect(await readdir(join(target, 'public/images/attributes'))).not.toContain('mining.png');
     expect(await readdir(join(target, 'public/images/resources'))).toHaveLength(13);
-    expect(await readdir(join(target, 'public/images/slots/v2'))).toHaveLength(21);
+    expect(await readdir(join(target, 'public/images/slots/v3'))).toHaveLength(21);
     expect(await readdir(join(target, 'public/images/resources'))).not.toContain('experience.webp');
     expect((await readdir(join(target, 'public/images/ui'))).sort()).toEqual([
       'chat-button-glass-small.avif', 'chat-button-glass-tiny.avif', 'chat-button-glass.avif',
