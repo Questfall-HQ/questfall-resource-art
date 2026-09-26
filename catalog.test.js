@@ -100,6 +100,7 @@ test('normal sync excludes proposals; preview sync includes them', async () => {
     expect(await readdir(join(target, 'public/images/resources'))).not.toContain('experience.webp');
     expect((await readdir(join(target, 'public/images/ui'))).sort()).toEqual([
       'chat-button-glass-small.avif', 'chat-button-glass-tiny.avif', 'chat-button-glass.avif',
+      'questfall-logo-small.avif', 'questfall-logo-tiny.avif', 'questfall-logo.avif',
       'submissions-object.webp', 'weekly-reset.webp',
     ]);
     expect(readdir(join(target, 'public/images/ui-candidates/v1'))).rejects.toThrow();

@@ -41,6 +41,7 @@ export const artwork = Object.freeze({
   submissions: {group: 'ui', file: 'ui/submissions-object.webp', master: 'sources/ui/submissions-object.png'},
   weekly_reset: {group: 'ui', file: 'ui/weekly-reset.webp'},
   chat_button_glass: {group: 'ui', source: 'sources/ui/chat-button-glass.png', output: 'ui/chat-button-glass'},
+  questfall_logo: {group: 'ui', source: 'sources/ui/questfall-logo.png', output: 'ui/questfall-logo', padding: {tiny: 1}},
 });
 
 export const variantSettings = Object.freeze({

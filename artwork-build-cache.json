@@ -630,6 +630,47 @@
           "sha256": "6302acd1385d6d1a968168d3a4964d916fb663fabffce649d7aefdc65c214b8d"
         }
       }
+    },
+    "questfall_logo": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/questfall-logo.png",
+          "bytes": 1028417,
+          "sha256": "0f4c3494ed2353288e65113a84bb2411b38a9b3e48d53c3151d4ccc206b83a02"
+        },
+        "fingerprint": "16c158a4734b07c8f41355b63e7678195461e8fc6565d0734b000525b3dae783",
+        "output": {
+          "path": "ui/questfall-logo-tiny.avif",
+          "bytes": 2790,
+          "sha256": "6fd45ffa497b02657ce3fed4eb61f330acb91b64b9921d8f0a7c63a84794145a"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/questfall-logo.png",
+          "bytes": 1028417,
+          "sha256": "0f4c3494ed2353288e65113a84bb2411b38a9b3e48d53c3151d4ccc206b83a02"
+        },
+        "fingerprint": "1184072387724862c798b5054f39e68128fe59adde108654d77513ee46f93e19",
+        "output": {
+          "path": "ui/questfall-logo-small.avif",
+          "bytes": 5280,
+          "sha256": "f6b4ca683d947a6718ea414713c64dc357bdeb4d1918011edc2a6b7bac618831"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/questfall-logo.png",
+          "bytes": 1028417,
+          "sha256": "0f4c3494ed2353288e65113a84bb2411b38a9b3e48d53c3151d4ccc206b83a02"
+        },
+        "fingerprint": "cbcc31e82b38988e5f6534c4da35f189b609a106800d031f5c3ffbb1b7cd86bc",
+        "output": {
+          "path": "ui/questfall-logo.avif",
+          "bytes": 11380,
+          "sha256": "e39c62ec6f7ed353a12c030e721cda03b9a165b24004f1603bfda66cfb052607"
+        }
+      }
     }
   }
 }

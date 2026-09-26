@@ -92,6 +92,9 @@ The Application's lootbox opening videos and other layout-specific graphics
 remain local. The chat composer glass button is shared UI artwork. Welcome
 reward markers use the same shared entries as other rewards; its panel
 background and other decoration remain local.
+The Questfall shield logo is shared UI artwork as `questfall_logo`, with transparent
+`tiny`, `small`, and `large` variants. Use `visualFor('questfall_logo', 'tiny')`
+for compact role labels and other favicon-sized UI.
 
 To update generated artwork, replace its source and run `bun run build:artwork`.
 For an existing legacy entry, change its active file until its master is
