@@ -1,12 +1,15 @@
 # Questfall Resource Art
 
-Shared source of truth for static resource, lootbox, attribute, and Submissions
+Shared source of truth for static resource, lootbox, attribute, equipment slot, and Submissions
 markers in Questfall Application and Admin. This package owns the artwork and
 the mapping from product designations to that artwork. The API contract owns
 public reward keys; PocketBase owns balances and game rules. Clients own labels,
 layout, and the requested visual size.
 
 `catalog.js` exports `markers`, `markerFor(key)`, and `visualFor(key, variant)`.
+It also exports `slotImages`, `slotTinyImages`, and `slotSmallImages` for the
+seven RPG categories (six equipment slots and the potion filter). Application
+uses one shared set in equipment placeholders, inventory, and Marketplace.
 Every marker has `tiny`, `small`, and `large` visual slots. Each slot can hold
 an image, a single-color symbol, or short text. `visualFor` returns the chosen
 art and its `requested` and `resolved` variants. Missing slots fall back in

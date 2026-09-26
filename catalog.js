@@ -18,6 +18,9 @@ export const lootboxImages = imageMap('lootbox');
 export const attributeImages = imageMap('attribute');
 export const attributeTinyImages = imageMap('attribute', 'tiny');
 export const attributeSmallImages = imageMap('attribute', 'small');
+export const slotImages = imageMap('slot');
+export const slotTinyImages = imageMap('slot', 'tiny');
+export const slotSmallImages = imageMap('slot', 'small');
 
 export const inventoryVariantImages = Object.freeze({
   cube: '/images/attribute-candidates/v2/inventory.png',

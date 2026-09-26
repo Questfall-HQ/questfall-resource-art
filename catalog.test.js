@@ -4,7 +4,7 @@ import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import sharp from 'sharp';
-import {markerFor, markers, visualFor} from './catalog.js';
+import {markerFor, markers, slotImages, slotTinyImages, visualFor} from './catalog.js';
 import {buildArtwork} from './scripts/build-artwork.mjs';
 
 const script = fileURLToPath(new URL('./bin/sync.mjs', import.meta.url));
@@ -24,6 +24,11 @@ test('product aliases resolve to the selected shared artwork', () => {
   expect(markerFor('trophy').symbol.viewbox).toBe('0 0 512 512');
   expect(markerFor('rating').symbol).toBeDefined();
   expect(markerFor('weekly_reset').image).toMatch(/weekly-reset\.webp$/);
+  for (const id of ['head', 'chest', 'hands', 'legs', 'feet', 'outer', 'potion']) {
+    expect(slotImages[id]).toBe(`/images/slots/${id}.avif`);
+    expect(slotTinyImages[id]).toBe(`/images/slots/${id}-tiny.avif`);
+    expect(markerFor(`slot_${id}`).group).toBe('slot');
+  }
   for (const key of ['qft', 'shards', 'gems', 'attribute_points']) {
     expect(markerFor(key).image).toBeDefined();
   }
@@ -91,6 +96,7 @@ test('normal sync excludes proposals; preview sync includes them', async () => {
     expect(await readdir(join(target, 'public/images/attributes'))).toHaveLength(18);
     expect(await readdir(join(target, 'public/images/attributes'))).not.toContain('mining.png');
     expect(await readdir(join(target, 'public/images/resources'))).toHaveLength(13);
+    expect(await readdir(join(target, 'public/images/slots'))).toHaveLength(21);
     expect(await readdir(join(target, 'public/images/resources'))).not.toContain('experience.webp');
     expect((await readdir(join(target, 'public/images/ui'))).sort()).toEqual([
       'chat-button-glass-small.avif', 'chat-button-glass-tiny.avif', 'chat-button-glass.avif',

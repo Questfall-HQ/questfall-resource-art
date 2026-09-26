@@ -303,6 +303,293 @@
         }
       }
     },
+    "slot_head": {
+      "tiny": {
+        "source": {
+          "path": "sources/slots/head.png",
+          "bytes": 330418,
+          "sha256": "7ab17c95adbfa843977b72ab31576220e01617389688579a6b6dd8d216c65f8f"
+        },
+        "fingerprint": "c1f30b983e97b287d5e80559bc95b8db0015627a5074cd3763775a884c9a499d",
+        "output": {
+          "path": "slots/head-tiny.avif",
+          "bytes": 2354,
+          "sha256": "c3504967495ec644d9ffb8085519181d708801d336a33a67f8ec6ff6825f40b6"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/slots/head.png",
+          "bytes": 330418,
+          "sha256": "7ab17c95adbfa843977b72ab31576220e01617389688579a6b6dd8d216c65f8f"
+        },
+        "fingerprint": "9373ac8fac1e195d855cb583a46c933a2a8523c8ee718be2623a9f4498a6ddd4",
+        "output": {
+          "path": "slots/head-small.avif",
+          "bytes": 5083,
+          "sha256": "f4dba61e0106cc9e13721dcaeeb9eb7a1127cce09dcfccb625f1df763309cbdc"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/slots/head.png",
+          "bytes": 330418,
+          "sha256": "7ab17c95adbfa843977b72ab31576220e01617389688579a6b6dd8d216c65f8f"
+        },
+        "fingerprint": "195128504f2b1a67d1616dfe987ce1ce974ce93c4dfb7bfe9f99c19a42b8482c",
+        "output": {
+          "path": "slots/head.avif",
+          "bytes": 11639,
+          "sha256": "4302253cbea87a72a623f2307c9ae32ba01e5092dc28fb479e91492a6fa4955b"
+        }
+      }
+    },
+    "slot_chest": {
+      "tiny": {
+        "source": {
+          "path": "sources/slots/chest.png",
+          "bytes": 399059,
+          "sha256": "9b48ca4651daa6e241f30a48b11a4e0c033baee0fec1584f3376a9e167f5004c"
+        },
+        "fingerprint": "29b5c34c2ac1b1bf98a615fd2a0e8fc0525aa0c60659114b06c4847a44a8d663",
+        "output": {
+          "path": "slots/chest-tiny.avif",
+          "bytes": 2814,
+          "sha256": "6865a8290487bae42c922038e6dd883cce9660f100e6c144c8a28f36b73bd520"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/slots/chest.png",
+          "bytes": 399059,
+          "sha256": "9b48ca4651daa6e241f30a48b11a4e0c033baee0fec1584f3376a9e167f5004c"
+        },
+        "fingerprint": "804e24be4a1ff3c37d3a71a5084787145de33eab0c960c0a1f8d943996ea5b6f",
+        "output": {
+          "path": "slots/chest-small.avif",
+          "bytes": 6021,
+          "sha256": "206f3f472625a6c230d67c92f8d2a9597bcdbcdcf773aa2c6ae9b227a446fa25"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/slots/chest.png",
+          "bytes": 399059,
+          "sha256": "9b48ca4651daa6e241f30a48b11a4e0c033baee0fec1584f3376a9e167f5004c"
+        },
+        "fingerprint": "448439fe0c3d1c610d4fa13a4c8f2fa7540667c37da49a4df18a54613c90f8b0",
+        "output": {
+          "path": "slots/chest.avif",
+          "bytes": 14677,
+          "sha256": "0287688c7247fd182b853ea55719d068b84a12b761c62266152e00b5050e84f1"
+        }
+      }
+    },
+    "slot_hands": {
+      "tiny": {
+        "source": {
+          "path": "sources/slots/hands.png",
+          "bytes": 285003,
+          "sha256": "bfd83c4c8530d435b52a4d40113d44cf4cbf8cd8d59a27bb9b0c7cf1ab978718"
+        },
+        "fingerprint": "6d5893064945d42aa08709452392879e1fa7033a4b42265d5a96917d73de3ced",
+        "output": {
+          "path": "slots/hands-tiny.avif",
+          "bytes": 2679,
+          "sha256": "26aeb330d4af55f6c97e6566f3b6292855832618d638d923551e322e3c7982a4"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/slots/hands.png",
+          "bytes": 285003,
+          "sha256": "bfd83c4c8530d435b52a4d40113d44cf4cbf8cd8d59a27bb9b0c7cf1ab978718"
+        },
+        "fingerprint": "71a5fe9b1a6731763f9c4840442b8c669aa62d27608a205ba100ecb0d0f23da2",
+        "output": {
+          "path": "slots/hands-small.avif",
+          "bytes": 6214,
+          "sha256": "e74e8a659e1f6d7f1201baad8e144f7688a85a0b8cd460c43fd3213fd4128604"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/slots/hands.png",
+          "bytes": 285003,
+          "sha256": "bfd83c4c8530d435b52a4d40113d44cf4cbf8cd8d59a27bb9b0c7cf1ab978718"
+        },
+        "fingerprint": "2a2b68cb1c3e71c8adaaf24bd5a98a599b89a1b9c01af2e766730bf6d89db0f8",
+        "output": {
+          "path": "slots/hands.avif",
+          "bytes": 14929,
+          "sha256": "b62af9c1f53fac46dc2d5cebf057b4a572c28069776e96bfbcfde9ac24ade734"
+        }
+      }
+    },
+    "slot_legs": {
+      "tiny": {
+        "source": {
+          "path": "sources/slots/legs.png",
+          "bytes": 280988,
+          "sha256": "20e9d5867dce438f6a4eea94a696ba2aa70c8a0687ee4c1f3fe3dd6325d844ee"
+        },
+        "fingerprint": "07b3287e564baa9577f8c3dde3a12b0176261de07be3fe049d4cebdc1368506b",
+        "output": {
+          "path": "slots/legs-tiny.avif",
+          "bytes": 2235,
+          "sha256": "8d0354c9345fe3cee2ad9889b8f858810b87020dbd3fec5896e490274ad3efb6"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/slots/legs.png",
+          "bytes": 280988,
+          "sha256": "20e9d5867dce438f6a4eea94a696ba2aa70c8a0687ee4c1f3fe3dd6325d844ee"
+        },
+        "fingerprint": "bca9b13628316b0ead43ac9c2f4905c48e5015ed4b7b88296ac0a5f1abeffe76",
+        "output": {
+          "path": "slots/legs-small.avif",
+          "bytes": 5164,
+          "sha256": "ab1d77c3ec4ba505e542e43b0f7b4f178ad4761a45a6129d8d828a5a171c25f3"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/slots/legs.png",
+          "bytes": 280988,
+          "sha256": "20e9d5867dce438f6a4eea94a696ba2aa70c8a0687ee4c1f3fe3dd6325d844ee"
+        },
+        "fingerprint": "e1b51631cf145b4c43612cb0cd8cb51865cffd03d29bc85137b1dad06871fdce",
+        "output": {
+          "path": "slots/legs.avif",
+          "bytes": 11770,
+          "sha256": "0c22d582b9fc1c08808c79b233589f196f8860864244b9931e664b8c3331ac92"
+        }
+      }
+    },
+    "slot_feet": {
+      "tiny": {
+        "source": {
+          "path": "sources/slots/feet.png",
+          "bytes": 286166,
+          "sha256": "848571c3e3e24a279cea25ee9ffe9a14ebc5e78348b364ebb3a5e21774bc4e8c"
+        },
+        "fingerprint": "b5081fc6c66904d709e64fe675c5639cba67ed999253283a23c13f95cd5a1112",
+        "output": {
+          "path": "slots/feet-tiny.avif",
+          "bytes": 2433,
+          "sha256": "7445ce3f060d6efccba3eeea085c570d16ae349b25fe0accd045220ba82c8b23"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/slots/feet.png",
+          "bytes": 286166,
+          "sha256": "848571c3e3e24a279cea25ee9ffe9a14ebc5e78348b364ebb3a5e21774bc4e8c"
+        },
+        "fingerprint": "e956de4174a04b973491d55849978ed77123d6cdf743027cb88b5f5bb755c0e7",
+        "output": {
+          "path": "slots/feet-small.avif",
+          "bytes": 5285,
+          "sha256": "2a3afa2753a5bd1da64b9be456bb0ef5b79f18498e042ed15ed8b0043e7a7a7e"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/slots/feet.png",
+          "bytes": 286166,
+          "sha256": "848571c3e3e24a279cea25ee9ffe9a14ebc5e78348b364ebb3a5e21774bc4e8c"
+        },
+        "fingerprint": "47214120805b6d5b8e935bf56d8dfd14ffd8acd40c4bac054f52cfbab9ab0448",
+        "output": {
+          "path": "slots/feet.avif",
+          "bytes": 13424,
+          "sha256": "eb931835b27eadee5889d2614086856c8c3fbea10e7f31c60584ccb84f8b3a33"
+        }
+      }
+    },
+    "slot_outer": {
+      "tiny": {
+        "source": {
+          "path": "sources/slots/outer.png",
+          "bytes": 369625,
+          "sha256": "c8df78d3971610a669f144c834829a2217f3104e1c0ebd48ee4010c21a9c5113"
+        },
+        "fingerprint": "809890e37b202d4c3fcd8f4d2c99cd7e48877e1763e7cc0ed1202e6c3ca59249",
+        "output": {
+          "path": "slots/outer-tiny.avif",
+          "bytes": 2248,
+          "sha256": "51034264874fff6cb532e32ce47c1a37f0b1e9d7bb9a2c57291a5e204cd31a94"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/slots/outer.png",
+          "bytes": 369625,
+          "sha256": "c8df78d3971610a669f144c834829a2217f3104e1c0ebd48ee4010c21a9c5113"
+        },
+        "fingerprint": "d8ecc0d0950750e4edd52cd94f7e85e928846235f568e73a026b6954f5ca9d65",
+        "output": {
+          "path": "slots/outer-small.avif",
+          "bytes": 4548,
+          "sha256": "ea4f39e4b6e3a9d94aef69aea64f0fef13cf14f2f4f5b57396a6545b571708ab"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/slots/outer.png",
+          "bytes": 369625,
+          "sha256": "c8df78d3971610a669f144c834829a2217f3104e1c0ebd48ee4010c21a9c5113"
+        },
+        "fingerprint": "6f6ba1ac22d205e02e06d48639bc00b03fe47ee4ddc1e2d5bba1e2dd07edf9a4",
+        "output": {
+          "path": "slots/outer.avif",
+          "bytes": 10628,
+          "sha256": "baf1d57f915d47fa4ccf29c0f189685e4810f79b370c64926b3b6fa80bebdd49"
+        }
+      }
+    },
+    "slot_potion": {
+      "tiny": {
+        "source": {
+          "path": "sources/slots/potion.png",
+          "bytes": 327192,
+          "sha256": "599b939d4712f9c86c4539783fb5405a8df01be92fa54560121bcc7f3a039796"
+        },
+        "fingerprint": "6a591bf114018fbd7d965aae0751fc25b679999f19bff051b2a34722c00de429",
+        "output": {
+          "path": "slots/potion-tiny.avif",
+          "bytes": 2559,
+          "sha256": "f4d323165e13eb37f0090a24befce98670b1bb5606fd5434b4e1045ca627b461"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/slots/potion.png",
+          "bytes": 327192,
+          "sha256": "599b939d4712f9c86c4539783fb5405a8df01be92fa54560121bcc7f3a039796"
+        },
+        "fingerprint": "831f9c9a2f8f9833fe6af64388fa339e0c63d91727b3421163e11287b63a5118",
+        "output": {
+          "path": "slots/potion-small.avif",
+          "bytes": 5787,
+          "sha256": "31cc0f3f3c0ef862751978518e7558ddad251fdb0d9e6981937defd5ef233e38"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/slots/potion.png",
+          "bytes": 327192,
+          "sha256": "599b939d4712f9c86c4539783fb5405a8df01be92fa54560121bcc7f3a039796"
+        },
+        "fingerprint": "d2f7eb21d84f29361da6554736c5fc47d44059b31d4f08cda77515c017d51c8c",
+        "output": {
+          "path": "slots/potion.avif",
+          "bytes": 14435,
+          "sha256": "cc8b8323f6287cd3a0cbe1e052f75d4412c686016c3d93c1bf9d1c50eabd76ad"
+        }
+      }
+    },
     "chat_button_glass": {
       "tiny": {
         "source": {

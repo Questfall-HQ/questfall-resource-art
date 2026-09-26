@@ -4,6 +4,9 @@ export declare const attributeImages: Readonly<Record<string, string>>;
 
 export declare const attributeTinyImages: Readonly<Record<keyof typeof attributeImages, string>>;
 export declare const attributeSmallImages: Readonly<Record<keyof typeof attributeImages, string>>;
+export declare const slotImages: Readonly<Record<string, string>>;
+export declare const slotTinyImages: Readonly<Record<keyof typeof slotImages, string>>;
+export declare const slotSmallImages: Readonly<Record<keyof typeof slotImages, string>>;
 
 export declare const inventoryVariantImages: Readonly<{
   cube: string;
@@ -34,7 +37,7 @@ export type MarkerVisual = Readonly<{
   symbol?: import('./attribute-icons.js').AttributeIcon | import('./ui-icons.js').UiIcon;
 }>;
 export type Marker = Readonly<{
-  group: 'resource' | 'lootbox' | 'attribute' | 'ui';
+  group: 'resource' | 'lootbox' | 'attribute' | 'slot' | 'ui';
   id?: string;
   image?: string;
   text?: string;

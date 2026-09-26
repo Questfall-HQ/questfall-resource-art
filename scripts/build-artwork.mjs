@@ -48,7 +48,7 @@ export async function buildArtwork({directory = root, entries = artwork, check =
   ]);
 
   for (const [key, entry] of Object.entries(entries)) {
-    if (!['resource', 'lootbox', 'attribute', 'ui'].includes(entry.group)) throw new Error(`Invalid group: ${key}`);
+    if (!['resource', 'lootbox', 'attribute', 'slot', 'ui'].includes(entry.group)) throw new Error(`Invalid group: ${key}`);
     const sourceSlots = Object.keys(entry.sources ?? {});
     const hasSource = !!entry.source || sourceSlots.length > 0;
     if (!hasSource && !entry.file) throw new Error(`Declare an artwork source or file: ${key}`);
@@ -60,7 +60,8 @@ export async function buildArtwork({directory = root, entries = artwork, check =
     }
     if (entry.group === 'attribute' && entry.name !== key.slice('attribute_'.length)) throw new Error(`Invalid attribute name: ${key}`);
     if (entry.group === 'lootbox' && !entry.name) throw new Error(`Missing lootbox name: ${key}`);
-    const directoryName = {resource: '', lootbox: 'lootboxes/', attribute: 'attributes/', ui: 'ui/'}[entry.group];
+    if (entry.group === 'slot' && entry.name !== key.slice('slot_'.length)) throw new Error(`Invalid slot name: ${key}`);
+    const directoryName = {resource: '', lootbox: 'lootboxes/', attribute: 'attributes/', slot: 'slots/', ui: 'ui/'}[entry.group];
     const location = entry.output ?? entry.file;
     if (!location.startsWith(directoryName) || (entry.group === 'resource' && location.includes('/'))) {
       throw new Error(`Asset must use the ${entry.group} directory: ${key}`);

@@ -30,6 +30,14 @@ export const artwork = Object.freeze({
   attribute_stamina: {group: 'attribute', name: 'stamina', source: 'sources/attributes/stamina.png', output: 'attributes/stamina'},
   attribute_luck: {group: 'attribute', name: 'luck', source: 'sources/attributes/luck.png', output: 'attributes/luck'},
 
+  slot_head: {group: 'slot', name: 'head', source: 'sources/slots/head.png', output: 'slots/head'},
+  slot_chest: {group: 'slot', name: 'chest', source: 'sources/slots/chest.png', output: 'slots/chest'},
+  slot_hands: {group: 'slot', name: 'hands', source: 'sources/slots/hands.png', output: 'slots/hands'},
+  slot_legs: {group: 'slot', name: 'legs', source: 'sources/slots/legs.png', output: 'slots/legs'},
+  slot_feet: {group: 'slot', name: 'feet', source: 'sources/slots/feet.png', output: 'slots/feet'},
+  slot_outer: {group: 'slot', name: 'outer', source: 'sources/slots/outer.png', output: 'slots/outer'},
+  slot_potion: {group: 'slot', name: 'potion', source: 'sources/slots/potion.png', output: 'slots/potion'},
+
   submissions: {group: 'ui', file: 'ui/submissions-object.webp', master: 'sources/ui/submissions-object.png'},
   weekly_reset: {group: 'ui', file: 'ui/weekly-reset.webp'},
   chat_button_glass: {group: 'ui', source: 'sources/ui/chat-button-glass.png', output: 'ui/chat-button-glass'},
