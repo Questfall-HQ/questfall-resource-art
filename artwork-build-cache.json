@@ -725,40 +725,40 @@
       "tiny": {
         "source": {
           "path": "sources/ui/admin-metrics/equipped-count.png",
-          "bytes": 1130882,
-          "sha256": "8cfb92db6a841709a1ceb1210ff057c0ccffa06f13487ea021df65be22dca0fe"
+          "bytes": 1570083,
+          "sha256": "9c2a833bf31f7cc4f8c561ab870a49fb747c2cb38069fba9ad262126ee211728"
         },
-        "fingerprint": "61dd754e69484b5b86ffef701ded6b2afcde84de7c60fbeb2f8b9405a31601d9",
+        "fingerprint": "ccd241c72ad1342419e4c73bd7bd0f1f842b82b47e757b0376dc4ff7acd91bcf",
         "output": {
           "path": "ui/admin-metrics/equipped-count-tiny.avif",
-          "bytes": 3455,
-          "sha256": "e3f76c54654249c84f74652eb4ab02c4408d61d76a0187e01040fe39084b498c"
+          "bytes": 4802,
+          "sha256": "95f113a09918c3f04c0fed4f9a2d59a38774732cad6d5d370e36e96e9f905468"
         }
       },
       "small": {
         "source": {
           "path": "sources/ui/admin-metrics/equipped-count.png",
-          "bytes": 1130882,
-          "sha256": "8cfb92db6a841709a1ceb1210ff057c0ccffa06f13487ea021df65be22dca0fe"
+          "bytes": 1570083,
+          "sha256": "9c2a833bf31f7cc4f8c561ab870a49fb747c2cb38069fba9ad262126ee211728"
         },
-        "fingerprint": "a7572693a652af0f0e53f2366dd246d0c85bee8ce7287533f53d575568b92e74",
+        "fingerprint": "5a3827b012108efd976d37ff3f43eb7dc61c16ed9ba237a66b648a823e6c8203",
         "output": {
           "path": "ui/admin-metrics/equipped-count-small.avif",
-          "bytes": 8519,
-          "sha256": "62b6de800a0bb0265fbe380bcdc0c2a5207434bffd1ccd59ffced09a997cb70f"
+          "bytes": 11105,
+          "sha256": "07f82e35da52fe077dfa052213e5615e199a7e38a438e5eef4998a0bba05d7bc"
         }
       },
       "large": {
         "source": {
           "path": "sources/ui/admin-metrics/equipped-count.png",
-          "bytes": 1130882,
-          "sha256": "8cfb92db6a841709a1ceb1210ff057c0ccffa06f13487ea021df65be22dca0fe"
+          "bytes": 1570083,
+          "sha256": "9c2a833bf31f7cc4f8c561ab870a49fb747c2cb38069fba9ad262126ee211728"
         },
-        "fingerprint": "40d95fe5916ae78ab9a1458411ccb3db36a25bf1374e704a7af6699eee5732fc",
+        "fingerprint": "94fbf38ce1af01d035b83414687b43c143fe5a0646d5c96df33259be91d8f84b",
         "output": {
           "path": "ui/admin-metrics/equipped-count.avif",
-          "bytes": 20604,
-          "sha256": "5f6dd4d6b7e2d7deb2f1a22bf95d7f8f446e2464ca0fcdaf38be931a2a60c160"
+          "bytes": 28540,
+          "sha256": "dda70d0a7383752d17ab5522913341b139c37fdd4161d54f00ce45b4a4f9678a"
         }
       }
     },
