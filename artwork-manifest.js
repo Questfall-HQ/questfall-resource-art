@@ -38,6 +38,10 @@ export const artwork = Object.freeze({
   slot_outer: {group: 'slot', name: 'outer', source: 'sources/slots/flat-v5/outer.png', padding: {tiny: 2}, output: 'slots/v5/outer'},
   slot_potion: {group: 'slot', name: 'potion', source: 'sources/slots/flat-v5/potion.png', padding: {tiny: 2}, output: 'slots/v5/potion'},
 
+  inventory_count: {group: 'ui', source: 'sources/ui/admin-metrics/inventory-count.png', output: 'ui/admin-metrics/inventory-count'},
+  equipped_count: {group: 'ui', source: 'sources/ui/admin-metrics/equipped-count.png', output: 'ui/admin-metrics/equipped-count'},
+  quests_7d: {group: 'ui', source: 'sources/ui/admin-metrics/accepted-quests.png', output: 'ui/admin-metrics/accepted-quests'},
+
   submissions: {group: 'ui', file: 'ui/submissions-object.webp', master: 'sources/ui/submissions-object.png'},
   weekly_reset: {group: 'ui', file: 'ui/weekly-reset.webp'},
   chat_button_glass: {group: 'ui', source: 'sources/ui/chat-button-glass.png', output: 'ui/chat-button-glass'},

@@ -680,6 +680,129 @@
         }
       }
     },
+    "inventory_count": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/admin-metrics/inventory-count.png",
+          "bytes": 1785668,
+          "sha256": "706bcf275be42e17d1357f23e149afc3cdfedc074d3e966cf6b2bbb82a96624e"
+        },
+        "fingerprint": "0a33632f726eb91921dd7599cad2ef752402f5bf0a14fec48c55a6dd2c77a3e3",
+        "output": {
+          "path": "ui/admin-metrics/inventory-count-tiny.avif",
+          "bytes": 2852,
+          "sha256": "26f30b4f88d0949c1792a4754cc9d4a31cdd810afe9e591628ba1164e4167b7d"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/admin-metrics/inventory-count.png",
+          "bytes": 1785668,
+          "sha256": "706bcf275be42e17d1357f23e149afc3cdfedc074d3e966cf6b2bbb82a96624e"
+        },
+        "fingerprint": "f69c9c4df6961fba4c882a9fe08d14fe0bbfc90297e9943d0a51d76b778c1f52",
+        "output": {
+          "path": "ui/admin-metrics/inventory-count-small.avif",
+          "bytes": 6066,
+          "sha256": "4901bc9a1507fee3dd79789f9429a66f533ebf3d6ee51d3277cac00f2cd1faa2"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/admin-metrics/inventory-count.png",
+          "bytes": 1785668,
+          "sha256": "706bcf275be42e17d1357f23e149afc3cdfedc074d3e966cf6b2bbb82a96624e"
+        },
+        "fingerprint": "71b16dd984b9d35309469a561c860c32a587e78347ef9be87599362e705ef365",
+        "output": {
+          "path": "ui/admin-metrics/inventory-count.avif",
+          "bytes": 17214,
+          "sha256": "9b1a59f0c7bedd24b8f5ffc75447a48cec4c0e8c572cc11f3e610de43ca089df"
+        }
+      }
+    },
+    "equipped_count": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/admin-metrics/equipped-count.png",
+          "bytes": 1130882,
+          "sha256": "8cfb92db6a841709a1ceb1210ff057c0ccffa06f13487ea021df65be22dca0fe"
+        },
+        "fingerprint": "61dd754e69484b5b86ffef701ded6b2afcde84de7c60fbeb2f8b9405a31601d9",
+        "output": {
+          "path": "ui/admin-metrics/equipped-count-tiny.avif",
+          "bytes": 3455,
+          "sha256": "e3f76c54654249c84f74652eb4ab02c4408d61d76a0187e01040fe39084b498c"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/admin-metrics/equipped-count.png",
+          "bytes": 1130882,
+          "sha256": "8cfb92db6a841709a1ceb1210ff057c0ccffa06f13487ea021df65be22dca0fe"
+        },
+        "fingerprint": "a7572693a652af0f0e53f2366dd246d0c85bee8ce7287533f53d575568b92e74",
+        "output": {
+          "path": "ui/admin-metrics/equipped-count-small.avif",
+          "bytes": 8519,
+          "sha256": "62b6de800a0bb0265fbe380bcdc0c2a5207434bffd1ccd59ffced09a997cb70f"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/admin-metrics/equipped-count.png",
+          "bytes": 1130882,
+          "sha256": "8cfb92db6a841709a1ceb1210ff057c0ccffa06f13487ea021df65be22dca0fe"
+        },
+        "fingerprint": "40d95fe5916ae78ab9a1458411ccb3db36a25bf1374e704a7af6699eee5732fc",
+        "output": {
+          "path": "ui/admin-metrics/equipped-count.avif",
+          "bytes": 20604,
+          "sha256": "5f6dd4d6b7e2d7deb2f1a22bf95d7f8f446e2464ca0fcdaf38be931a2a60c160"
+        }
+      }
+    },
+    "quests_7d": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/admin-metrics/accepted-quests.png",
+          "bytes": 1340780,
+          "sha256": "2015363d3ca3d1b0010585a7cb51518b3f6dc6268b94bb8aab148b7c6cb62cab"
+        },
+        "fingerprint": "99859b6a05d107991afcb0abb9853e030113cdd3566d03cef4f53a73729f5126",
+        "output": {
+          "path": "ui/admin-metrics/accepted-quests-tiny.avif",
+          "bytes": 3017,
+          "sha256": "8578844a847039a71eabcf710bdb83677ddf281dea519beff828de7c1d0c0824"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/admin-metrics/accepted-quests.png",
+          "bytes": 1340780,
+          "sha256": "2015363d3ca3d1b0010585a7cb51518b3f6dc6268b94bb8aab148b7c6cb62cab"
+        },
+        "fingerprint": "3fc64dd641cc4e3ce28a26fbc9d18ae9c696ef29e150d7969d4144a3b954f220",
+        "output": {
+          "path": "ui/admin-metrics/accepted-quests-small.avif",
+          "bytes": 5834,
+          "sha256": "c39d826b9482f123df89b57bcde4d503a4afd6e48bc313e7aecb95d54b75f50c"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/admin-metrics/accepted-quests.png",
+          "bytes": 1340780,
+          "sha256": "2015363d3ca3d1b0010585a7cb51518b3f6dc6268b94bb8aab148b7c6cb62cab"
+        },
+        "fingerprint": "290e8abde725535d46741be8c654aba4bf43899094aa722bdee45b2d2e818a14",
+        "output": {
+          "path": "ui/admin-metrics/accepted-quests.avif",
+          "bytes": 13085,
+          "sha256": "239529123fcf422d5b13c6e156d1c9f3a180db11e7ec20bb6b622a0e3c497256"
+        }
+      }
+    },
     "chat_button_glass": {
       "tiny": {
         "source": {
