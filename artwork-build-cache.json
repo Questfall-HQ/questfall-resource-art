@@ -57,6 +57,96 @@
         }
       }
     },
+    "lootbox_f": {
+      "tiny": {
+        "source": {
+          "path": "sources/lootboxes/tiny/common.png",
+          "bytes": 1606722,
+          "sha256": "c97d7693cc824e818bce3041618e0a0017eec8d17442a19875e4b47ee4bbf0c0"
+        },
+        "fingerprint": "97d9c6c015edbb360172be5abba079d7b56c27d4f3cbeb11f7d804accdb63bc6",
+        "output": {
+          "path": "lootboxes/common-tiny.avif",
+          "bytes": 2091,
+          "sha256": "559902373afae4b782920eb5404efdb2710aab19f50bb65fa54cce420060f9ce"
+        }
+      }
+    },
+    "lootbox_e": {
+      "tiny": {
+        "source": {
+          "path": "sources/lootboxes/tiny/uncommon.png",
+          "bytes": 1571994,
+          "sha256": "d8d7e83a7594d0bb076eba015261aa8956bc8f1fb46ce02bde0d562b66f3206a"
+        },
+        "fingerprint": "75e5f1ca75e59baa72c154305b6690c2c3cc83ed4ed59a24e7fdec08253f7407",
+        "output": {
+          "path": "lootboxes/uncommon-tiny.avif",
+          "bytes": 2599,
+          "sha256": "6230334eafe01be0f6bf3cb0915dc0384ac0ba47f9e1b6512ac2b90d6f37b4f5"
+        }
+      }
+    },
+    "lootbox_d": {
+      "tiny": {
+        "source": {
+          "path": "sources/lootboxes/tiny/rare.png",
+          "bytes": 1672387,
+          "sha256": "1708b323c878233b83fc949a9836185caeb00cf6b1e580aab8ff46a732ce57cc"
+        },
+        "fingerprint": "6ef02d6dd0087ab735bce3468d214e880bc628fee9b69323d5bd5952c172aac2",
+        "output": {
+          "path": "lootboxes/rare-tiny.avif",
+          "bytes": 2866,
+          "sha256": "717963a57e5a49964facee256c6c849bb5f0bd277490c14d0c07b6225c4cbd1e"
+        }
+      }
+    },
+    "lootbox_c": {
+      "tiny": {
+        "source": {
+          "path": "sources/lootboxes/tiny/epic.png",
+          "bytes": 1631092,
+          "sha256": "3e2f410ee889cf2ecddbc760028dbeef368672f38d3a0f8d281f847d41d6f760"
+        },
+        "fingerprint": "403740eab38dc008e6f4e6b51044b6fccd994101bed4cc714df0ad0272a7096d",
+        "output": {
+          "path": "lootboxes/epic-tiny.avif",
+          "bytes": 2701,
+          "sha256": "cfa88cb81be6ca568d1133618a0719cc71aef403d44a2f057dfa7ade290378ae"
+        }
+      }
+    },
+    "lootbox_b": {
+      "tiny": {
+        "source": {
+          "path": "sources/lootboxes/tiny/legendary.png",
+          "bytes": 1656614,
+          "sha256": "c86664c2b3e7368221cdf81ae585360c49b6714a3a9122ecb41b4892f38834f2"
+        },
+        "fingerprint": "598480e7d909315389d408dd4842c55f0b39c91e280a304561f4c4b6a799cdb0",
+        "output": {
+          "path": "lootboxes/legendary-tiny.avif",
+          "bytes": 2641,
+          "sha256": "349fc0dd216ce3475aad4ab618faaf7036802393a411bfcf9ddb9d142885e082"
+        }
+      }
+    },
+    "lootbox_a": {
+      "tiny": {
+        "source": {
+          "path": "sources/lootboxes/tiny/mythical.png",
+          "bytes": 1608509,
+          "sha256": "d305c7ef6a7a7f1027df02d52cf4989994fb497878564d02f2d0c1f4d59ab622"
+        },
+        "fingerprint": "57214da9baa49f28d8d12f8e513fa4ede24e1f1319895fe9012c4d4dc68024ea",
+        "output": {
+          "path": "lootboxes/mythical-tiny.avif",
+          "bytes": 2589,
+          "sha256": "da26d7ea8129468e826ab3d10c2d9c3da7b1b9251c50a84f972d83cb4046fb95"
+        }
+      }
+    },
     "attribute_inventory": {
       "tiny": {
         "source": {

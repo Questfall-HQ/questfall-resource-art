@@ -16,12 +16,12 @@ export const artwork = Object.freeze({
   attribute_points: {group: 'resource', file: 'attribute-points.svg', slot: 'tiny'},
 
   lootbox: {group: 'lootbox', name: 'generic', file: 'lootboxes/generic.avif'},
-  lootbox_f: {group: 'lootbox', name: 'common', file: 'lootboxes/common.webp'},
-  lootbox_e: {group: 'lootbox', name: 'uncommon', file: 'lootboxes/uncommon.webp'},
-  lootbox_d: {group: 'lootbox', name: 'rare', file: 'lootboxes/rare.webp'},
-  lootbox_c: {group: 'lootbox', name: 'epic', file: 'lootboxes/epic.webp'},
-  lootbox_b: {group: 'lootbox', name: 'legendary', file: 'lootboxes/legendary.webp'},
-  lootbox_a: {group: 'lootbox', name: 'mythical', file: 'lootboxes/mythical.webp'},
+  lootbox_f: {group: 'lootbox', name: 'common', file: 'lootboxes/common.webp', output: 'lootboxes/common', sources: {tiny: 'sources/lootboxes/tiny/common.png'}},
+  lootbox_e: {group: 'lootbox', name: 'uncommon', file: 'lootboxes/uncommon.webp', output: 'lootboxes/uncommon', sources: {tiny: 'sources/lootboxes/tiny/uncommon.png'}},
+  lootbox_d: {group: 'lootbox', name: 'rare', file: 'lootboxes/rare.webp', output: 'lootboxes/rare', sources: {tiny: 'sources/lootboxes/tiny/rare.png'}},
+  lootbox_c: {group: 'lootbox', name: 'epic', file: 'lootboxes/epic.webp', output: 'lootboxes/epic', sources: {tiny: 'sources/lootboxes/tiny/epic.png'}},
+  lootbox_b: {group: 'lootbox', name: 'legendary', file: 'lootboxes/legendary.webp', output: 'lootboxes/legendary', sources: {tiny: 'sources/lootboxes/tiny/legendary.png'}},
+  lootbox_a: {group: 'lootbox', name: 'mythical', file: 'lootboxes/mythical.webp', output: 'lootboxes/mythical', sources: {tiny: 'sources/lootboxes/tiny/mythical.png'}},
 
   attribute_inventory: {group: 'attribute', name: 'inventory', source: 'sources/attributes/inventory.png', output: 'attributes/inventory'},
   attribute_mining: {group: 'attribute', name: 'mining', source: 'sources/attributes/mining.png', output: 'attributes/mining'},
