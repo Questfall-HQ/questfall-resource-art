@@ -766,14 +766,14 @@
       "tiny": {
         "source": {
           "path": "sources/ui/admin-metrics/accepted-quests-tiny.png",
-          "bytes": 776119,
-          "sha256": "08778f6b8b2a799d96734d1fd347817a4e5782fd9857eccb11f4a925bef654e7"
+          "bytes": 913183,
+          "sha256": "c179ff557f564aaf7a21e4103592072d97ea6e21ab1f6549e7f48b197e279c3c"
         },
-        "fingerprint": "62defc11a44e3558fa2023c602bb353bd90a5c9c214153cdb88ad886285d13cb",
+        "fingerprint": "3e46ad4ac01df6c24a944eef509d18a34fcb072f7aa5640efca668c24b9e5f62",
         "output": {
           "path": "ui/admin-metrics/accepted-quests-tiny.avif",
-          "bytes": 2030,
-          "sha256": "01839ddfdaa508cb69dbf4fb783cb23ed2d1a67cbe54cb04c2ec38c9e90a334b"
+          "bytes": 2265,
+          "sha256": "a821dc45a8095c9769b9a0656fba857ed71350d25f0cd670ac930e91125aee44"
         }
       },
       "small": {
