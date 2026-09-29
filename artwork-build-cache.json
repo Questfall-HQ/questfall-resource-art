@@ -884,6 +884,334 @@
           "sha256": "e39c62ec6f7ed353a12c030e721cda03b9a165b24004f1603bfda66cfb052607"
         }
       }
+    },
+    "gem_f": {
+      "tiny": {
+        "source": {
+          "path": "sources/gems/gem-f.svg",
+          "bytes": 762,
+          "sha256": "f8048290726b412b99a666bbb1109db1c775018cc4872e092e9df2c57e5aa773"
+        },
+        "fingerprint": "13c4920b2f5f81ee6341e73f14d9d9c047f05add5b998cb7d7b107a498bacd6c",
+        "output": {
+          "path": "gem-f-tiny.avif",
+          "bytes": 1643,
+          "sha256": "b4472e9d9d2578f35c567357f6b478e6e59c883c221790ccaeb504f8a2e6ec40"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/gems/gem-f.svg",
+          "bytes": 762,
+          "sha256": "f8048290726b412b99a666bbb1109db1c775018cc4872e092e9df2c57e5aa773"
+        },
+        "fingerprint": "97944cca8f03a13f3964d6b0cd523b657104c8ad2a3a3fd9307f0fa02a853979",
+        "output": {
+          "path": "gem-f-small.avif",
+          "bytes": 3086,
+          "sha256": "b1efefa05f6e4d07b29a805316c5997ab486287bf679a6ceceaa563d4409fbd0"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/gems/gem-f.svg",
+          "bytes": 762,
+          "sha256": "f8048290726b412b99a666bbb1109db1c775018cc4872e092e9df2c57e5aa773"
+        },
+        "fingerprint": "27bf5cb332969728c3fc6bd6bbd3260591f99f3c6f8c819350667937e693b38c",
+        "output": {
+          "path": "gem-f.avif",
+          "bytes": 5825,
+          "sha256": "3d6cdfa6c0244731c3d531bbae6cda2721b10a9557f4adb7428c3902e3a39f8e"
+        }
+      }
+    },
+    "gem_e": {
+      "tiny": {
+        "source": {
+          "path": "sources/gems/gem-e.svg",
+          "bytes": 762,
+          "sha256": "26a3224b2d7a4dc5a463f24072dd606f87ad9c1699e1795b36359347ff5f13db"
+        },
+        "fingerprint": "356d7a160dd5f56b21515102ad01a9b647907377e2f1c53820067e07cd8e4e94",
+        "output": {
+          "path": "gem-e-tiny.avif",
+          "bytes": 2048,
+          "sha256": "78037db0064a9ffe01d131f2abf6616606dea03e400f26b9cc0774dae7efb376"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/gems/gem-e.svg",
+          "bytes": 762,
+          "sha256": "26a3224b2d7a4dc5a463f24072dd606f87ad9c1699e1795b36359347ff5f13db"
+        },
+        "fingerprint": "1e9fb6cf922ea6db8a56f9afa691785f6a474df80be10b8e9f08ba5b7052f2da",
+        "output": {
+          "path": "gem-e-small.avif",
+          "bytes": 4037,
+          "sha256": "d1d0055a3fbe77df8eba654ab3987fb2884872d2d3bb6c9871b8024d8c972176"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/gems/gem-e.svg",
+          "bytes": 762,
+          "sha256": "26a3224b2d7a4dc5a463f24072dd606f87ad9c1699e1795b36359347ff5f13db"
+        },
+        "fingerprint": "6fe19753e2872cf0ee41437cd4a7eb2a61bb6bb00aefb7a682fa948f913234c7",
+        "output": {
+          "path": "gem-e.avif",
+          "bytes": 7561,
+          "sha256": "5544f6cb12f19f5fa4eb9fb307080d585bcee80aa4dc410573a4f18267781bed"
+        }
+      }
+    },
+    "gem_d": {
+      "tiny": {
+        "source": {
+          "path": "sources/gems/gem-d.svg",
+          "bytes": 762,
+          "sha256": "c5e15acd11b1e0fb9d6ad32110e913692989e4f676c67dad93c7d939057ab524"
+        },
+        "fingerprint": "e02d67a5ebc67cad5a692dd5fdcbddb693080c94c28da2de2b1d0aa2f38c945f",
+        "output": {
+          "path": "gem-d-tiny.avif",
+          "bytes": 2048,
+          "sha256": "65c410384556c4d0a618843f7bf3746c3d36c8d77be1eeb6f96b9c70d388d346"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/gems/gem-d.svg",
+          "bytes": 762,
+          "sha256": "c5e15acd11b1e0fb9d6ad32110e913692989e4f676c67dad93c7d939057ab524"
+        },
+        "fingerprint": "e15ee44c399bc74229fcf7949dda18bd87e47e5156833dcc17a2f07ea330bff5",
+        "output": {
+          "path": "gem-d-small.avif",
+          "bytes": 4170,
+          "sha256": "cdb8c1a1a27386cc5e17a5fa4926ada0fd9e1f3afd1539644c47f41b4fe676aa"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/gems/gem-d.svg",
+          "bytes": 762,
+          "sha256": "c5e15acd11b1e0fb9d6ad32110e913692989e4f676c67dad93c7d939057ab524"
+        },
+        "fingerprint": "4060286ce94a10f4cd3f0deb4e3e6a4814328b6aec6e43c46f6476d8991eb008",
+        "output": {
+          "path": "gem-d.avif",
+          "bytes": 7504,
+          "sha256": "652cc30609bc0f6aa928b98bb62562a5a3cfe224a3677840f203f7de588ca450"
+        }
+      }
+    },
+    "gem_c": {
+      "tiny": {
+        "source": {
+          "path": "sources/gems/gem-c.svg",
+          "bytes": 762,
+          "sha256": "c544ca5649ad91e5b264c514d8ef4156c49c12f9ef3cefe21ca0dba451f42173"
+        },
+        "fingerprint": "1a68337c6f58ee74ab6fd112fd1fad2eb29f1e28d7a75e8d3340ea290c687aa1",
+        "output": {
+          "path": "gem-c-tiny.avif",
+          "bytes": 2034,
+          "sha256": "cb1b041f0fcf966e30c9724f9526bc270e75cfa13cdc5814d24be4a9c4a1f96d"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/gems/gem-c.svg",
+          "bytes": 762,
+          "sha256": "c544ca5649ad91e5b264c514d8ef4156c49c12f9ef3cefe21ca0dba451f42173"
+        },
+        "fingerprint": "16a19be372e00da5b1d4c3ae09fbfec3f6b10740d5dec86c13df74ed109328e5",
+        "output": {
+          "path": "gem-c-small.avif",
+          "bytes": 4025,
+          "sha256": "b4becf91d4c3a042b51b1f8c077bc1418a83a5dc460c8f9ae16171247a5016a5"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/gems/gem-c.svg",
+          "bytes": 762,
+          "sha256": "c544ca5649ad91e5b264c514d8ef4156c49c12f9ef3cefe21ca0dba451f42173"
+        },
+        "fingerprint": "5433fd8e9647de57d9ef4a773a403a96d2ee0204ac2c44cad61e017b589b3d38",
+        "output": {
+          "path": "gem-c.avif",
+          "bytes": 7204,
+          "sha256": "759f50b0acb812c2ae95727d31f5d3eefc54e7aca031c6dfbb24cb17909f5747"
+        }
+      }
+    },
+    "gem_b": {
+      "tiny": {
+        "source": {
+          "path": "sources/gems/gem-b.svg",
+          "bytes": 762,
+          "sha256": "d6a76be699dcfe99713f935edf8dc0123d6bfb833ce65727abd2e4cacfeb489e"
+        },
+        "fingerprint": "9c6c56054ab963f989766ecdadc0cad1c0d8178a09285a7bb3678fd6b53f4183",
+        "output": {
+          "path": "gem-b-tiny.avif",
+          "bytes": 2000,
+          "sha256": "14028762f2e426e661babb2d82773bde72549e8ccc4a7a7e7cb27c5df56229ca"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/gems/gem-b.svg",
+          "bytes": 762,
+          "sha256": "d6a76be699dcfe99713f935edf8dc0123d6bfb833ce65727abd2e4cacfeb489e"
+        },
+        "fingerprint": "20cf004e3a614c92de9e897f7aeef53a496d544fef2b0a5be10fb9f308dc7d33",
+        "output": {
+          "path": "gem-b-small.avif",
+          "bytes": 4171,
+          "sha256": "334484c79ea6bb6d43d625fd9518c80121ba157f7c388fa142960a664b86361a"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/gems/gem-b.svg",
+          "bytes": 762,
+          "sha256": "d6a76be699dcfe99713f935edf8dc0123d6bfb833ce65727abd2e4cacfeb489e"
+        },
+        "fingerprint": "d82ef9ddf2b6b71725fddc7d8c783f42c7079b665eb747b000701e4d16d9ca7b",
+        "output": {
+          "path": "gem-b.avif",
+          "bytes": 7316,
+          "sha256": "0e231acd54c6720494f0309439f9eb8a0b1fdaa91395a07c183904e0829f6efd"
+        }
+      }
+    },
+    "gem_a": {
+      "tiny": {
+        "source": {
+          "path": "sources/gems/gem-a.svg",
+          "bytes": 762,
+          "sha256": "f3650098d909f40dccac67a75d0ccd32316855e955980cbb0af37e06887b9dae"
+        },
+        "fingerprint": "61a8c407be01b78eb465c78531e4a28ac7fd9535f79ff904fd502f7818ecc7df",
+        "output": {
+          "path": "gem-a-tiny.avif",
+          "bytes": 1961,
+          "sha256": "fbe34dd41c9ded3d8f702e74b3a742dbbca02219b4aa05110fe5bf3e3fd47700"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/gems/gem-a.svg",
+          "bytes": 762,
+          "sha256": "f3650098d909f40dccac67a75d0ccd32316855e955980cbb0af37e06887b9dae"
+        },
+        "fingerprint": "383dfe8cdda4758271eb0085ba3084933b3c848bb98e98825ddff795e72f5afa",
+        "output": {
+          "path": "gem-a-small.avif",
+          "bytes": 4034,
+          "sha256": "36d04194403f4e20baee63a721b8bc074b2199a4ac5d4accf1258477f112ab5b"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/gems/gem-a.svg",
+          "bytes": 762,
+          "sha256": "f3650098d909f40dccac67a75d0ccd32316855e955980cbb0af37e06887b9dae"
+        },
+        "fingerprint": "3e25c91551973dd633bfbbad1c63a1b95053ae9a649cf5e6c4faffb5844c1e6c",
+        "output": {
+          "path": "gem-a.avif",
+          "bytes": 6968,
+          "sha256": "ef272623942b9816f1d47c63d28b453582ee8ffb8e4453c17b626cbb6e8fe26e"
+        }
+      }
+    },
+    "questfall_logo_badge": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/questfall-logo-badge.png",
+          "bytes": 766649,
+          "sha256": "55c81af7368b7012bdfeab3e97f9b818894066ec1a38ae9da964ff5d2a4a4995"
+        },
+        "fingerprint": "a07fea77cfbcea591b29b77d2e5b792a3e7fc901f6b8c8a1be79ccb9537c0ebd",
+        "output": {
+          "path": "ui/questfall-logo-badge-tiny.avif",
+          "bytes": 2454,
+          "sha256": "2f3b6ebd2733dba0a073fd6b1a804d56ed74be57423cf30b778ce56834fd7d43"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/questfall-logo-badge.png",
+          "bytes": 766649,
+          "sha256": "55c81af7368b7012bdfeab3e97f9b818894066ec1a38ae9da964ff5d2a4a4995"
+        },
+        "fingerprint": "151716501015fe25e1ea99c5e21b5ccff91b568675ccac2252da50f3dfbf28dc",
+        "output": {
+          "path": "ui/questfall-logo-badge-small.avif",
+          "bytes": 4200,
+          "sha256": "973aff9f686ff4854e846636cdd8cc9282ed449a8ee30e48796088f49ce33ae6"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/questfall-logo-badge.png",
+          "bytes": 766649,
+          "sha256": "55c81af7368b7012bdfeab3e97f9b818894066ec1a38ae9da964ff5d2a4a4995"
+        },
+        "fingerprint": "05140a290e2910c2e9f8769c529de70d80e7862f478977a7ddbf75e3c6417c96",
+        "output": {
+          "path": "ui/questfall-logo-badge.avif",
+          "bytes": 9613,
+          "sha256": "a9e298a04e5b7e4f5bef1e0d08f50fcd56ab0959806cdee09a44fe74ec109628"
+        }
+      }
+    },
+    "questfall_logo_gold": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/questfall-logo-gold.png",
+          "bytes": 78888,
+          "sha256": "8c7a30a6de503dfd1779c87d0968850e6e81f5c6ee2182393bd347735f81d796"
+        },
+        "fingerprint": "4881d9080e7234dfc0f53ceb2c0312a234e3c3f1c0e2b53f578058cd258bf68c",
+        "output": {
+          "path": "ui/questfall-logo-gold-tiny.avif",
+          "bytes": 3011,
+          "sha256": "990b6a90ccc7a67f994fccd15f9c618f81ad72bbc53392c2c18836dfb0d00679"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/questfall-logo-gold.png",
+          "bytes": 78888,
+          "sha256": "8c7a30a6de503dfd1779c87d0968850e6e81f5c6ee2182393bd347735f81d796"
+        },
+        "fingerprint": "dab13ae5dd7c4bf2dc99eda2d348e28341d2e9701127bb41ca3324380c39d3ab",
+        "output": {
+          "path": "ui/questfall-logo-gold-small.avif",
+          "bytes": 5337,
+          "sha256": "80de1e7b58be2e9a5cc89ad38db53dfd5d8c00d8716d52babf796a9c1a64ae83"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/questfall-logo-gold.png",
+          "bytes": 78888,
+          "sha256": "8c7a30a6de503dfd1779c87d0968850e6e81f5c6ee2182393bd347735f81d796"
+        },
+        "fingerprint": "e6d243aef52911462b3cf4b742ecc44aa4a4783371efeea93fc61180d62bff7a",
+        "output": {
+          "path": "ui/questfall-logo-gold.avif",
+          "bytes": 11618,
+          "sha256": "3b710cd13d74d942ba79b2788ce1f5a384ccbbf8c2a36c4dd8bfe1e18b7bf90f"
+        }
+      }
     }
   }
 }

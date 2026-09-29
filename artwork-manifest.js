@@ -46,6 +46,14 @@ export const artwork = Object.freeze({
   weekly_reset: {group: 'ui', file: 'ui/weekly-reset.webp'},
   chat_button_glass: {group: 'ui', source: 'sources/ui/chat-button-glass.png', output: 'ui/chat-button-glass'},
   questfall_logo: {group: 'ui', source: 'sources/ui/questfall-logo.png', output: 'ui/questfall-logo', padding: {tiny: 1}},
+  gem_f: {group: 'resource', source: 'sources/gems/gem-f.svg', output: 'gem-f'},
+  gem_e: {group: 'resource', source: 'sources/gems/gem-e.svg', output: 'gem-e'},
+  gem_d: {group: 'resource', source: 'sources/gems/gem-d.svg', output: 'gem-d'},
+  gem_c: {group: 'resource', source: 'sources/gems/gem-c.svg', output: 'gem-c'},
+  gem_b: {group: 'resource', source: 'sources/gems/gem-b.svg', output: 'gem-b'},
+  gem_a: {group: 'resource', source: 'sources/gems/gem-a.svg', output: 'gem-a'},
+  questfall_logo_badge: {group: 'ui', source: 'sources/ui/questfall-logo-badge.png', output: 'ui/questfall-logo-badge', padding: {tiny: 1}},
+  questfall_logo_gold: {group: 'ui', source: 'sources/ui/questfall-logo-gold.png', output: 'ui/questfall-logo-gold', padding: {tiny: 1}},
 });
 
 export const variantSettings = Object.freeze({

@@ -67,7 +67,11 @@ Bounty has a silver bolt and Mining Points have a gold bolt; XP is text.
 `personal_silver` and `space_silver` resolve to Silver, and
 `lootbox_a` through `lootbox_f` resolve to their rarity artwork. The generic
 `lootbox` has its own chest. `stamina` resolves to the Stamina attribute.
+The six rarity chests have simplified, close-framed `tiny` variants for dense
+tables; their approved full-size images remain the `large` variants.
 Traits use their parent attribute marker.
+
+The shared `help` UI symbol is the outlined question mark for contextual explanations. Render it through `visualFor('help', 'tiny')` so help controls keep the same shape across clients.
 
 QFT, Experience, Chest Shards, Gems, and Attribute Points also have shared
 markers. The current QFT image is provisional until its visual identity is
@@ -96,7 +100,17 @@ background and other decoration remain local.
 The Questfall shield logo is shared UI artwork as `questfall_logo`, with transparent
 `tiny`, `small`, and `large` variants. Use `visualFor('questfall_logo', 'tiny')`
 for compact role labels and other favicon-sized UI.
+The simplified light pickaxe shield is available as `questfall_logo_badge` for
+small role badges on dark glass surfaces.
+The gold shield from the Admin favicon is available separately as
+`questfall_logo_gold` in the same three sizes; it does not replace the purple logo.
 
 To update generated artwork, replace its source and run `bun run build:artwork`.
 For an existing legacy entry, change its active file until its master is
 available for migration. Old tags remain available for open tabs and rollbacks.
+
+### Gems F–A
+
+`gem_f` through `gem_a` provide Common to Mythical Gem artwork. Faceted SVG
+masters in `sources/gems/` build transparent AVIF in all three standard sizes.
+Inventory, Marketplace and weekly prize funds use the same rarity markers.

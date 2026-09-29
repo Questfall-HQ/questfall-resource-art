@@ -95,12 +95,14 @@ test('normal sync excludes proposals; preview sync includes them', async () => {
     expect(active.exitCode).toBe(0);
     expect(await readdir(join(target, 'public/images/attributes'))).toHaveLength(18);
     expect(await readdir(join(target, 'public/images/attributes'))).not.toContain('mining.png');
-    expect(await readdir(join(target, 'public/images/resources'))).toHaveLength(13);
+    expect(await readdir(join(target, 'public/images/resources'))).toHaveLength(31);
     expect(await readdir(join(target, 'public/images/slots/v5'))).toHaveLength(21);
     expect(await readdir(join(target, 'public/images/resources'))).not.toContain('experience.webp');
     expect((await readdir(join(target, 'public/images/ui'))).sort()).toEqual([
       'admin-metrics',
       'chat-button-glass-small.avif', 'chat-button-glass-tiny.avif', 'chat-button-glass.avif',
+      'questfall-logo-badge-small.avif', 'questfall-logo-badge-tiny.avif', 'questfall-logo-badge.avif',
+      'questfall-logo-gold-small.avif', 'questfall-logo-gold-tiny.avif', 'questfall-logo-gold.avif',
       'questfall-logo-small.avif', 'questfall-logo-tiny.avif', 'questfall-logo.avif',
       'submissions-object.webp', 'weekly-reset.webp',
     ]);
