@@ -725,55 +725,55 @@
       "tiny": {
         "source": {
           "path": "sources/ui/admin-metrics/equipped-count.png",
-          "bytes": 787747,
-          "sha256": "347fda9b6250149d314ac43a4e5c0f3f5e60a8b2700d8785c1e2518ed0fb9012"
+          "bytes": 1286460,
+          "sha256": "502e0690ca9e66557308589d657e6d31b59881afdc3b6c247495848d0bbc9ddf"
         },
-        "fingerprint": "56128fe1ebbc50b2a17dd082183175c20dd39dde056423ca6e28a28427fa93e1",
+        "fingerprint": "0e9cb2be5482a748c0b8d13d6c0c50572ee7518696d956de5aac4ae9aafb52de",
         "output": {
           "path": "ui/admin-metrics/equipped-count-tiny.avif",
-          "bytes": 2695,
-          "sha256": "0e999124c905be7a42a69811d4d6f4c4d0ef05b8ab8ff6fd444ab8163a6f97e6"
+          "bytes": 2336,
+          "sha256": "f35040b169e607bef4de79f2a46f29a640a8a4243953eab92dafb06bcbb968df"
         }
       },
       "small": {
         "source": {
           "path": "sources/ui/admin-metrics/equipped-count.png",
-          "bytes": 787747,
-          "sha256": "347fda9b6250149d314ac43a4e5c0f3f5e60a8b2700d8785c1e2518ed0fb9012"
+          "bytes": 1286460,
+          "sha256": "502e0690ca9e66557308589d657e6d31b59881afdc3b6c247495848d0bbc9ddf"
         },
-        "fingerprint": "ded692d90b2f1d288e3b1796c34b4f45424c0fca955a87aa5d3f08e916bad191",
+        "fingerprint": "393a7fe05a5cf2fd815162628aea3cb2e566fcc5a7b5d8aedb90c4fd7e9df179",
         "output": {
           "path": "ui/admin-metrics/equipped-count-small.avif",
-          "bytes": 5396,
-          "sha256": "4c995d88c5653975314f5c5e9dc01e15d43f7bd8fa001bf08316990e35f04597"
+          "bytes": 4490,
+          "sha256": "801e6186c29851e7a934765b674c305c044443dd6845c154628596f02d574760"
         }
       },
       "large": {
         "source": {
           "path": "sources/ui/admin-metrics/equipped-count.png",
-          "bytes": 787747,
-          "sha256": "347fda9b6250149d314ac43a4e5c0f3f5e60a8b2700d8785c1e2518ed0fb9012"
+          "bytes": 1286460,
+          "sha256": "502e0690ca9e66557308589d657e6d31b59881afdc3b6c247495848d0bbc9ddf"
         },
-        "fingerprint": "5206a63ebd503835ac4a13366ce005a9b40fa32bb4ed3be18ae32b2f68b83d3b",
+        "fingerprint": "71bb60c7d525c8e7fa38f83f7ddf0eb97bac032c6f67780d5dd37757a63fa5b9",
         "output": {
           "path": "ui/admin-metrics/equipped-count.avif",
-          "bytes": 11945,
-          "sha256": "b753febc1ed116cbab92025fefb1be6fe79a8f26a4128bc13ab51c7ffc9c6b5d"
+          "bytes": 10027,
+          "sha256": "ce48d553c1db70f65b1a51a06457cd2f0c5aa516c7d4a0e246241cff4ef029fb"
         }
       }
     },
     "quests_7d": {
       "tiny": {
         "source": {
-          "path": "sources/ui/admin-metrics/accepted-quests.png",
-          "bytes": 1340780,
-          "sha256": "2015363d3ca3d1b0010585a7cb51518b3f6dc6268b94bb8aab148b7c6cb62cab"
+          "path": "sources/ui/admin-metrics/accepted-quests-tiny.png",
+          "bytes": 776119,
+          "sha256": "08778f6b8b2a799d96734d1fd347817a4e5782fd9857eccb11f4a925bef654e7"
         },
-        "fingerprint": "99859b6a05d107991afcb0abb9853e030113cdd3566d03cef4f53a73729f5126",
+        "fingerprint": "62defc11a44e3558fa2023c602bb353bd90a5c9c214153cdb88ad886285d13cb",
         "output": {
           "path": "ui/admin-metrics/accepted-quests-tiny.avif",
-          "bytes": 3017,
-          "sha256": "8578844a847039a71eabcf710bdb83677ddf281dea519beff828de7c1d0c0824"
+          "bytes": 2030,
+          "sha256": "01839ddfdaa508cb69dbf4fb783cb23ed2d1a67cbe54cb04c2ec38c9e90a334b"
         }
       },
       "small": {

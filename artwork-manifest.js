@@ -40,7 +40,7 @@ export const artwork = Object.freeze({
 
   inventory_count: {group: 'ui', source: 'sources/ui/admin-metrics/inventory-count.png', output: 'ui/admin-metrics/inventory-count'},
   equipped_count: {group: 'ui', source: 'sources/ui/admin-metrics/equipped-count.png', output: 'ui/admin-metrics/equipped-count'},
-  quests_7d: {group: 'ui', source: 'sources/ui/admin-metrics/accepted-quests.png', output: 'ui/admin-metrics/accepted-quests'},
+  quests_7d: {group: 'ui', source: 'sources/ui/admin-metrics/accepted-quests.png', sources: {tiny: 'sources/ui/admin-metrics/accepted-quests-tiny.png'}, output: 'ui/admin-metrics/accepted-quests'},
 
   submissions: {group: 'ui', file: 'ui/submissions-object.webp', master: 'sources/ui/submissions-object.png'},
   weekly_reset: {group: 'ui', file: 'ui/weekly-reset.webp'},
