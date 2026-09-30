@@ -1,6 +1,539 @@
 {
   "version": 1,
   "entries": {
+    "daily_quest_completed": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/quest-completed.png",
+          "bytes": 1231690,
+          "sha256": "63e5f5b0774d3faeaf5f5492b5361706433ea30f1f39762b2c3a927a14947849"
+        },
+        "fingerprint": "daa2651c0032a962b327ef14f69355c146874e4ef3f83a9b1fb26ea67b411223",
+        "output": {
+          "path": "ui/daily-actions-v1/quest-completed-tiny.avif",
+          "bytes": 2696,
+          "sha256": "6f8372068ce167e7fa98ffdef0d74c66ecc29b3e797d5ce3b093f3d3c83a580c"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/quest-completed.png",
+          "bytes": 1231690,
+          "sha256": "63e5f5b0774d3faeaf5f5492b5361706433ea30f1f39762b2c3a927a14947849"
+        },
+        "fingerprint": "dbf522ae7e436fbd83f8abafa8288c7ceb96a40e3076ff069fcbbb52f680e5bf",
+        "output": {
+          "path": "ui/daily-actions-v1/quest-completed-small.avif",
+          "bytes": 5704,
+          "sha256": "961c58ae5ea51ec73f9ea0de69794e0b50170fd7da73daa428f7cd272d5589fc"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/quest-completed.png",
+          "bytes": 1231690,
+          "sha256": "63e5f5b0774d3faeaf5f5492b5361706433ea30f1f39762b2c3a927a14947849"
+        },
+        "fingerprint": "fa651611f9655585d65247ea3d031f7bef71772659c98b1495b3005be5771b60",
+        "output": {
+          "path": "ui/daily-actions-v1/quest-completed.avif",
+          "bytes": 13039,
+          "sha256": "30f131e942b61937451051d5fbba61027fd2b35188a9e0a80b22a7038c84f86b"
+        }
+      }
+    },
+    "daily_lootbox_opened": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/lootbox-opened.png",
+          "bytes": 1087263,
+          "sha256": "37be12d67df5eb7c97bf0ec972e31cd849a55f989bf7e0bfc3aa3356fe874e8f"
+        },
+        "fingerprint": "d6ea76a46bf92474a296bbf664946c21e9ab893a6c3e68920c98a4144e8fb03f",
+        "output": {
+          "path": "ui/daily-actions-v1/lootbox-opened-tiny.avif",
+          "bytes": 2209,
+          "sha256": "8ae084f7fd7e7bb621e51ed89ace5def34e6f26ccca4f9ed7895b2b89c875958"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/lootbox-opened.png",
+          "bytes": 1087263,
+          "sha256": "37be12d67df5eb7c97bf0ec972e31cd849a55f989bf7e0bfc3aa3356fe874e8f"
+        },
+        "fingerprint": "79a69975013c530a16a4dc5b638fe52aed9e25716502a2c089a3c9819f37f0d2",
+        "output": {
+          "path": "ui/daily-actions-v1/lootbox-opened-small.avif",
+          "bytes": 4893,
+          "sha256": "17d36174a64d772d9720eeb098b1f8ea1eb253497befedb22e7b2879ab676e3d"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/lootbox-opened.png",
+          "bytes": 1087263,
+          "sha256": "37be12d67df5eb7c97bf0ec972e31cd849a55f989bf7e0bfc3aa3356fe874e8f"
+        },
+        "fingerprint": "c4d32e433552effb03743fe2db357fde7c17390517cd7c52b07f34d1fbd7b822",
+        "output": {
+          "path": "ui/daily-actions-v1/lootbox-opened.avif",
+          "bytes": 10861,
+          "sha256": "a1db7443daf288e0797fe5d1b8b3961d708ac0083580e6705fe036066926111e"
+        }
+      }
+    },
+    "daily_lootbox_purchased": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/lootbox-purchased.png",
+          "bytes": 1172581,
+          "sha256": "9257c6e71832468a3f510b99549d6781024cb55a34cb6f44a4fc052539f497ae"
+        },
+        "fingerprint": "f90274b8f3222a6f2245788154605a48e9a59dd8442adaefe049da79eae4a82b",
+        "output": {
+          "path": "ui/daily-actions-v1/lootbox-purchased-tiny.avif",
+          "bytes": 2178,
+          "sha256": "f7170447b615127c26be6ffdebf1b88091819745707900bc931d0b047445edf3"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/lootbox-purchased.png",
+          "bytes": 1172581,
+          "sha256": "9257c6e71832468a3f510b99549d6781024cb55a34cb6f44a4fc052539f497ae"
+        },
+        "fingerprint": "0120d946d753fc88e137f3fe530365ad0126fa5085089fad258f6a5ff66ec7b8",
+        "output": {
+          "path": "ui/daily-actions-v1/lootbox-purchased-small.avif",
+          "bytes": 4403,
+          "sha256": "a14c6b895bc51d0cfad24fc80263bbd284cc21aa841dd4c62b6dc1ee2f3ffb3a"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/lootbox-purchased.png",
+          "bytes": 1172581,
+          "sha256": "9257c6e71832468a3f510b99549d6781024cb55a34cb6f44a4fc052539f497ae"
+        },
+        "fingerprint": "880dcac354c8762e4cf207024241ec56ecc4cc3fb480a02fee237f46c1cd73dd",
+        "output": {
+          "path": "ui/daily-actions-v1/lootbox-purchased.avif",
+          "bytes": 9952,
+          "sha256": "33f943b94fafcb4f974292f08e27783520db2b42b200e7189214769d1195a12c"
+        }
+      }
+    },
+    "daily_item_bought": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/item-bought.png",
+          "bytes": 1069814,
+          "sha256": "f86c5638834530dc250999a974338ff6daea93d904db26c681e1abed7d9d410c"
+        },
+        "fingerprint": "b7eae3454ceaa9b412369648079a073bda14b835296928025a97b6d2170a728f",
+        "output": {
+          "path": "ui/daily-actions-v1/item-bought-tiny.avif",
+          "bytes": 2349,
+          "sha256": "b82a1074809b01dfa9f870a285d74976946f9f365765f7f4cf8a2bed028613c4"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/item-bought.png",
+          "bytes": 1069814,
+          "sha256": "f86c5638834530dc250999a974338ff6daea93d904db26c681e1abed7d9d410c"
+        },
+        "fingerprint": "e31039275a6486bae0ddabe948be5d94b6707ee1a85b0ae784f5c9a440faeb10",
+        "output": {
+          "path": "ui/daily-actions-v1/item-bought-small.avif",
+          "bytes": 4918,
+          "sha256": "d260e1da66c0c64e8de7f57df6cba5cec728fcd2ec5bfef4f4d4b012e3ca7be6"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/item-bought.png",
+          "bytes": 1069814,
+          "sha256": "f86c5638834530dc250999a974338ff6daea93d904db26c681e1abed7d9d410c"
+        },
+        "fingerprint": "b4a825dd59bf1f3b2e4013470af67e61a390fdf3c185645c175ef23502ef9ba2",
+        "output": {
+          "path": "ui/daily-actions-v1/item-bought.avif",
+          "bytes": 10770,
+          "sha256": "16ab2f833895c570d1d05f63b7fec6070c6c1ce183812956d9e95e0962371ca3"
+        }
+      }
+    },
+    "daily_item_sold": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/item-sold.png",
+          "bytes": 1106245,
+          "sha256": "a073d50d7d76d7684d4c745686fefcff2a8173afb9acbad1bb080571938c02af"
+        },
+        "fingerprint": "a667c34c92770ae4c265f64807f3ca11f85ee74acb9cb4cdf3623853f37d2c95",
+        "output": {
+          "path": "ui/daily-actions-v1/item-sold-tiny.avif",
+          "bytes": 2346,
+          "sha256": "243c4b6d34c46e0120e38bf90d52dd7b30e9d03423c2f562688d40e14b5960f7"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/item-sold.png",
+          "bytes": 1106245,
+          "sha256": "a073d50d7d76d7684d4c745686fefcff2a8173afb9acbad1bb080571938c02af"
+        },
+        "fingerprint": "4da90086f145e7758072b483936185c596526f95b74cabef66df6f732c2c5d41",
+        "output": {
+          "path": "ui/daily-actions-v1/item-sold-small.avif",
+          "bytes": 5114,
+          "sha256": "d00d2173aeb620000e1e5adf715df16737fc37bf7eea4d9a52e155278adcf236"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/item-sold.png",
+          "bytes": 1106245,
+          "sha256": "a073d50d7d76d7684d4c745686fefcff2a8173afb9acbad1bb080571938c02af"
+        },
+        "fingerprint": "72c910b140e57b8b8576f2c8438abc4b9948059bef49ba6dc782ffdec2fd0e5e",
+        "output": {
+          "path": "ui/daily-actions-v1/item-sold.avif",
+          "bytes": 11255,
+          "sha256": "594e680da35cd0782fc70f9adfbde13d9ce46807eed2932cd4100daeca9b52b2"
+        }
+      }
+    },
+    "daily_item_listed": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/item-listed.png",
+          "bytes": 1171603,
+          "sha256": "6edcc47418bf847bc0885134fd3b861c5d4089bf7e887a560b5f9e71be45eab6"
+        },
+        "fingerprint": "fb9ee1d6b28e6d2fb954df8a887b1621f5455e472de2960eecbe65c87ebf7b89",
+        "output": {
+          "path": "ui/daily-actions-v1/item-listed-tiny.avif",
+          "bytes": 2487,
+          "sha256": "8440a2b8c9845d1035738cbef698bef53700067a50adb725ae1ee710f5fb068f"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/item-listed.png",
+          "bytes": 1171603,
+          "sha256": "6edcc47418bf847bc0885134fd3b861c5d4089bf7e887a560b5f9e71be45eab6"
+        },
+        "fingerprint": "36010ca87e879d796692265d3da3051ca19e72e192ddd99b56ca5e16502e1079",
+        "output": {
+          "path": "ui/daily-actions-v1/item-listed-small.avif",
+          "bytes": 5231,
+          "sha256": "214cecc8eb82d80f27d8520911ccd79ec4089002b33fbe47a0c319935cfc7bf6"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/item-listed.png",
+          "bytes": 1171603,
+          "sha256": "6edcc47418bf847bc0885134fd3b861c5d4089bf7e887a560b5f9e71be45eab6"
+        },
+        "fingerprint": "1169ff3dbd357fb0497fe7a07e4ef3d754bf31bb4fa2e358055238099517b14f",
+        "output": {
+          "path": "ui/daily-actions-v1/item-listed.avif",
+          "bytes": 11769,
+          "sha256": "8efafa9ff335835689238f08625cd1c80af95e48f102982e8070a70161970e65"
+        }
+      }
+    },
+    "daily_item_scrapped": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/item-scrapped.png",
+          "bytes": 1069984,
+          "sha256": "8102ba201e7306cc0773180d484510900b94cb1266fb34377c95f15d173c7664"
+        },
+        "fingerprint": "b2ed9da0724e2a7933cb3c828c28b8629d2cdc1d9199c16580d290f7bc0609e9",
+        "output": {
+          "path": "ui/daily-actions-v1/item-scrapped-tiny.avif",
+          "bytes": 2762,
+          "sha256": "9c81bd771b16e97de26b5ef3fbde4ceb636860c9d74a6144fa8c9596cd145d5e"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/item-scrapped.png",
+          "bytes": 1069984,
+          "sha256": "8102ba201e7306cc0773180d484510900b94cb1266fb34377c95f15d173c7664"
+        },
+        "fingerprint": "61390f0e0e954c12b0132813fd1303b08b80f6d1a04b9db344133b8b1c93a75d",
+        "output": {
+          "path": "ui/daily-actions-v1/item-scrapped-small.avif",
+          "bytes": 6087,
+          "sha256": "1b61d6f0703598b9d8f6b298808e7e9955955d59b29a3621250ba1a5ca0f5635"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/item-scrapped.png",
+          "bytes": 1069984,
+          "sha256": "8102ba201e7306cc0773180d484510900b94cb1266fb34377c95f15d173c7664"
+        },
+        "fingerprint": "8f2858eb2b85b93405fd1cb962964e7e6b47fc0ffa19150aab9818ebf7db86be",
+        "output": {
+          "path": "ui/daily-actions-v1/item-scrapped.avif",
+          "bytes": 13259,
+          "sha256": "b81026f2a577109f5ea04cf021d56697e0547f20a1247622f7d749170182f56f"
+        }
+      }
+    },
+    "daily_item_upgraded": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/item-upgraded.png",
+          "bytes": 1023406,
+          "sha256": "11ef349ff8b3284179b6b75ea194a39a15e6ec137568db789570fe669e9350af"
+        },
+        "fingerprint": "edc3f1dc7091fa01d1dc5d9cdabe12813de40a52a5ac7a473fc03b95cfece1ba",
+        "output": {
+          "path": "ui/daily-actions-v1/item-upgraded-tiny.avif",
+          "bytes": 2276,
+          "sha256": "3cefbbc6b4fad983e1d45bd016a905b4b0679d1a760e3be77d9ec14954bb755c"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/item-upgraded.png",
+          "bytes": 1023406,
+          "sha256": "11ef349ff8b3284179b6b75ea194a39a15e6ec137568db789570fe669e9350af"
+        },
+        "fingerprint": "db4f599bac639670680337d27c4a7036ee0a895fe37b4012cdb4b7629eca328d",
+        "output": {
+          "path": "ui/daily-actions-v1/item-upgraded-small.avif",
+          "bytes": 4732,
+          "sha256": "ce24d96dc27a5b228755dba56bb47ed675d0883b1dabd185467f78cf0e27f5d8"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/item-upgraded.png",
+          "bytes": 1023406,
+          "sha256": "11ef349ff8b3284179b6b75ea194a39a15e6ec137568db789570fe669e9350af"
+        },
+        "fingerprint": "a743efaee009f3e35297f7e94244043fed9a7e4a8f69c982bd6f1e9ce265d695",
+        "output": {
+          "path": "ui/daily-actions-v1/item-upgraded.avif",
+          "bytes": 10171,
+          "sha256": "0c85c25d89b2cd24a6c80266de9b78d39b74a1bca6c6ca64f94a24f2735868e4"
+        }
+      }
+    },
+    "daily_item_equipped": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/item-equipped.png",
+          "bytes": 1031343,
+          "sha256": "283d974faf3bac8f00a0499fe42ea7f9736a81f256cc9b1746837f2424887c79"
+        },
+        "fingerprint": "b4ed1a2113a9921d505370d2224726dd95ec01befcb8a70ae4a5298ea881ada1",
+        "output": {
+          "path": "ui/daily-actions-v1/item-equipped-tiny.avif",
+          "bytes": 2470,
+          "sha256": "eeaa3f43780d9f9090a8f81a465f453361a70e783c891150cf94682b35e22e51"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/item-equipped.png",
+          "bytes": 1031343,
+          "sha256": "283d974faf3bac8f00a0499fe42ea7f9736a81f256cc9b1746837f2424887c79"
+        },
+        "fingerprint": "5558adc491c69231e7168ae2dc54e010132311ad4ba3f732bc0710829137bb50",
+        "output": {
+          "path": "ui/daily-actions-v1/item-equipped-small.avif",
+          "bytes": 5088,
+          "sha256": "59e25517b7f4c6c2ffcb2e572ef9e06983b65c3e97c947be4fa936e98482cbf9"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/item-equipped.png",
+          "bytes": 1031343,
+          "sha256": "283d974faf3bac8f00a0499fe42ea7f9736a81f256cc9b1746837f2424887c79"
+        },
+        "fingerprint": "5f1d8bfaa740db09668455e304c206b8121a8ed2826751972ca9cd913e0c6e47",
+        "output": {
+          "path": "ui/daily-actions-v1/item-equipped.avif",
+          "bytes": 11248,
+          "sha256": "203bf814d443b8e1f38148656c0f892dc7cbe22634823ea5b4060eccb40890d7"
+        }
+      }
+    },
+    "daily_gold_converted": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/gold-converted.png",
+          "bytes": 983086,
+          "sha256": "a748644dbfb7fc6fa2e7898df97f3c17c1576654586095b00bff9a91346fc958"
+        },
+        "fingerprint": "6d3cc5066c2f641cfa6604ef2e6e0c48a2534df083caf494759bf6b8612d5218",
+        "output": {
+          "path": "ui/daily-actions-v1/gold-converted-tiny.avif",
+          "bytes": 1784,
+          "sha256": "606753b5b9c89542ca3c86aade83df0bf68f7585b2b0a11d3550964181592265"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/gold-converted.png",
+          "bytes": 983086,
+          "sha256": "a748644dbfb7fc6fa2e7898df97f3c17c1576654586095b00bff9a91346fc958"
+        },
+        "fingerprint": "04a43e51e704019fc5224aa7258b724986d187d7eb93885cf4fb1c06ad94c183",
+        "output": {
+          "path": "ui/daily-actions-v1/gold-converted-small.avif",
+          "bytes": 3857,
+          "sha256": "0e66030d6777e9df2539a850b897e8986f2e621abb2f213d44596f154ef89f48"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/gold-converted.png",
+          "bytes": 983086,
+          "sha256": "a748644dbfb7fc6fa2e7898df97f3c17c1576654586095b00bff9a91346fc958"
+        },
+        "fingerprint": "6cf5725a07a4f48c88c6deafd8ad698e7b186db9116510ec728152cafc118770",
+        "output": {
+          "path": "ui/daily-actions-v1/gold-converted.avif",
+          "bytes": 7276,
+          "sha256": "fce6b0bacf2fb7e206fc8113c8c68907c13db186c73e2e8a0a363fc3c488334b"
+        }
+      }
+    },
+    "daily_character_leveled_up": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/character-leveled-up.png",
+          "bytes": 1192043,
+          "sha256": "c4508e8c312f6e560b2044b1bcdea1abd576a9d0f0375b2c7fe0fa1060fba669"
+        },
+        "fingerprint": "02f43653740f1282f2eeea22ac7625899a4d7a2c30508c728ee180e37d441e48",
+        "output": {
+          "path": "ui/daily-actions-v1/character-leveled-up-tiny.avif",
+          "bytes": 2440,
+          "sha256": "182ebaf2e0190c5f4e14ff166ba2e6a23934f4eaf6af8ce8eaa9d27b1364c20f"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/character-leveled-up.png",
+          "bytes": 1192043,
+          "sha256": "c4508e8c312f6e560b2044b1bcdea1abd576a9d0f0375b2c7fe0fa1060fba669"
+        },
+        "fingerprint": "ddd71c1fe464a0fea1d585e87eee7b74297b02cbd664d0d54a6ff78984b85873",
+        "output": {
+          "path": "ui/daily-actions-v1/character-leveled-up-small.avif",
+          "bytes": 4718,
+          "sha256": "212db9ff52adec8cb12fa81e82a20cd3608d6aa2d074fedc5883329b4c71cbc0"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/character-leveled-up.png",
+          "bytes": 1192043,
+          "sha256": "c4508e8c312f6e560b2044b1bcdea1abd576a9d0f0375b2c7fe0fa1060fba669"
+        },
+        "fingerprint": "4894b68f8952278b7d64da2060c7f63dc86ae7eb7f52c70d231d794efc10a4cd",
+        "output": {
+          "path": "ui/daily-actions-v1/character-leveled-up.avif",
+          "bytes": 10950,
+          "sha256": "6054518699e78ccb693c2fed2e3f5045bb43986763a4849c7b776d435e6938de"
+        }
+      }
+    },
+    "daily_character_attribute_spent": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/character-attribute-spent.png",
+          "bytes": 825595,
+          "sha256": "e699104aa3cf3696c0413aa76dae032a1c8232458a67ba8e95c93423736ac9df"
+        },
+        "fingerprint": "f3fd17a4107431f61c58188f109bbe95ae0bed7ffc215e3bcd57f96354bfcd74",
+        "output": {
+          "path": "ui/daily-actions-v1/character-attribute-spent-tiny.avif",
+          "bytes": 2528,
+          "sha256": "c88164d1c55240f9422cd646ae48528d9282e20c3e994bee86f46beb6fac0fe1"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/character-attribute-spent.png",
+          "bytes": 825595,
+          "sha256": "e699104aa3cf3696c0413aa76dae032a1c8232458a67ba8e95c93423736ac9df"
+        },
+        "fingerprint": "4de6bfc307ad930759b2230ae9f766679b1b685dd31241b37a21f5274764fbb0",
+        "output": {
+          "path": "ui/daily-actions-v1/character-attribute-spent-small.avif",
+          "bytes": 4827,
+          "sha256": "d8a14fb18f8a74cc971691e014bcf17093c6d479126a5824f8bf4ee872cf5a4f"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/character-attribute-spent.png",
+          "bytes": 825595,
+          "sha256": "e699104aa3cf3696c0413aa76dae032a1c8232458a67ba8e95c93423736ac9df"
+        },
+        "fingerprint": "c181d1416f6903c5bd515e6e0999027cd868b92ed1022b0f5c7b2ab6aa65129c",
+        "output": {
+          "path": "ui/daily-actions-v1/character-attribute-spent.avif",
+          "bytes": 9966,
+          "sha256": "aba93022fe32312ec0ab7571eb97b62baf060841165664e53d4cab0fe8c8755f"
+        }
+      }
+    },
+    "daily_moderation_correct": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/moderation-correct.png",
+          "bytes": 946608,
+          "sha256": "5c6f5112d531905da1e7e47cd6776af5072e6538e2ba4a440d7f63222f4370f7"
+        },
+        "fingerprint": "0ad228bf99142d475017ba5f4d48872f3e5e5a15b85a08d9ce55818f40789c2d",
+        "output": {
+          "path": "ui/daily-actions-v1/moderation-correct-tiny.avif",
+          "bytes": 3280,
+          "sha256": "6cdbbc19e99e6210623c3d0643bc641d2484242ffdcca07d7f11aeb9cfffd327"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/moderation-correct.png",
+          "bytes": 946608,
+          "sha256": "5c6f5112d531905da1e7e47cd6776af5072e6538e2ba4a440d7f63222f4370f7"
+        },
+        "fingerprint": "dcd854a219f3488eca76b368ac70cac976f408b99f9c6408ba7235cbd7eeef14",
+        "output": {
+          "path": "ui/daily-actions-v1/moderation-correct-small.avif",
+          "bytes": 6466,
+          "sha256": "59ffb08e7c48d333dd54f43fc9d74148a804e4c3aaeb3ec55f4c760fd1af06b0"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/daily-actions-v2/moderation-correct.png",
+          "bytes": 946608,
+          "sha256": "5c6f5112d531905da1e7e47cd6776af5072e6538e2ba4a440d7f63222f4370f7"
+        },
+        "fingerprint": "673e393f592ccf3faf95bb270c570d1d59ea004f73c5ae26ed5406e0c52a2f5f",
+        "output": {
+          "path": "ui/daily-actions-v1/moderation-correct.avif",
+          "bytes": 13755,
+          "sha256": "a255b2a1b62c331642b6f9d49170b9f7c4cf3ae1422139d5b819050df41b3d60"
+        }
+      }
+    },
     "gold": {
       "tiny": {
         "source": {
@@ -54,6 +587,908 @@
           "path": "silver-small.avif",
           "bytes": 4725,
           "sha256": "bbad6f33cdebe294ab9d9094c9f307681b12946fb21d271805dbac57e390cefe"
+        }
+      }
+    },
+    "gem_f": {
+      "tiny": {
+        "source": {
+          "path": "sources/gems/gem-f.png",
+          "bytes": 1335467,
+          "sha256": "e59b9d491787856704d92c92dd6bd8e184d788c6f14a4d8708c8b1e5a9d75ce8"
+        },
+        "fingerprint": "0ae4c818ed9030fa89c04a5f765ea8be313f0326e1b8a5513728d3945d2d4a4a",
+        "output": {
+          "path": "gem-f-tiny.avif",
+          "bytes": 2249,
+          "sha256": "3df704094bdc2ac30276387341872fa835dddcc1c9894b4d9aca9ddb8542906b"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/gems/gem-f.png",
+          "bytes": 1335467,
+          "sha256": "e59b9d491787856704d92c92dd6bd8e184d788c6f14a4d8708c8b1e5a9d75ce8"
+        },
+        "fingerprint": "abe577fb4b30d19099f8cb6f25e3bbd8c4faf761c07abd35014f68626a9341c5",
+        "output": {
+          "path": "gem-f-small.avif",
+          "bytes": 5511,
+          "sha256": "868720cc37df0f21efd281abd18129cab883769d57f681fd6563acb77b28f8a6"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/gems/gem-f.png",
+          "bytes": 1335467,
+          "sha256": "e59b9d491787856704d92c92dd6bd8e184d788c6f14a4d8708c8b1e5a9d75ce8"
+        },
+        "fingerprint": "1c1e9e56245db6726b7df165e262aa7c2e19848b909a5258ba6982c3293c474e",
+        "output": {
+          "path": "gem-f.avif",
+          "bytes": 14516,
+          "sha256": "760601161cac327f91f14cb3f6f8c4e4cb57567b1c7db52c517bea5b53a84c09"
+        }
+      }
+    },
+    "gem_e": {
+      "tiny": {
+        "source": {
+          "path": "sources/gems/gem-e.png",
+          "bytes": 1411733,
+          "sha256": "f7fc690afe8ce33fc37db76aa9fe26a52affcf631489e706eb8b3f383c69b86b"
+        },
+        "fingerprint": "6600cfb2e5f7476c33580b7c5ca0cfc4ddf449cff908173c1b9a71ebc6096023",
+        "output": {
+          "path": "gem-e-tiny.avif",
+          "bytes": 2606,
+          "sha256": "122e8646bf82e0a30a76f9f6e476d8dfefb0fbba1d2e745388aa69fc14107362"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/gems/gem-e.png",
+          "bytes": 1411733,
+          "sha256": "f7fc690afe8ce33fc37db76aa9fe26a52affcf631489e706eb8b3f383c69b86b"
+        },
+        "fingerprint": "b797ab3ecc6799f1c2674956ceef39cab4dee190a80910f6ddb9e5336301c2f3",
+        "output": {
+          "path": "gem-e-small.avif",
+          "bytes": 6383,
+          "sha256": "cc290600eb16a2e32e88d34edba973349904d874da1fddf34f574c95fc9568b6"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/gems/gem-e.png",
+          "bytes": 1411733,
+          "sha256": "f7fc690afe8ce33fc37db76aa9fe26a52affcf631489e706eb8b3f383c69b86b"
+        },
+        "fingerprint": "17070f924b797f5f7177ab91b001d9de31a29a75431a769c7258b5bdf367b8d6",
+        "output": {
+          "path": "gem-e.avif",
+          "bytes": 16973,
+          "sha256": "1a064d9956d701a82676d49cc2f3850181b368eaf2043530e6b303fcaf892601"
+        }
+      }
+    },
+    "gem_d": {
+      "tiny": {
+        "source": {
+          "path": "sources/gems/gem-d.png",
+          "bytes": 1333952,
+          "sha256": "8809f8a9262413005270d2406a88a70dd0248ae9e1589106c2730d93b93fc778"
+        },
+        "fingerprint": "35637afada38d826e049ee42c09884cdeb284e7f28a4df35c3a5001e314e13bf",
+        "output": {
+          "path": "gem-d-tiny.avif",
+          "bytes": 2862,
+          "sha256": "3d33e7e11ed02bd5d8b07fdc8feb88766badde00328584c49ddb1d6b01b042e0"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/gems/gem-d.png",
+          "bytes": 1333952,
+          "sha256": "8809f8a9262413005270d2406a88a70dd0248ae9e1589106c2730d93b93fc778"
+        },
+        "fingerprint": "bc60515ed5d1a7591d07df50df99d7aca1122022d2f3c6274548ad2784120dfd",
+        "output": {
+          "path": "gem-d-small.avif",
+          "bytes": 7175,
+          "sha256": "a1490ac87def5be6a257133cb1dd40f06c391518ce1f2f407c4dbe10795fe45d"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/gems/gem-d.png",
+          "bytes": 1333952,
+          "sha256": "8809f8a9262413005270d2406a88a70dd0248ae9e1589106c2730d93b93fc778"
+        },
+        "fingerprint": "8884ea8a8dd3b68d740417937eda825105c09f24a4c183f331881a605f8ce5bb",
+        "output": {
+          "path": "gem-d.avif",
+          "bytes": 19254,
+          "sha256": "04bea9809b3e5566f95d27ac5987b1bd7d9230502ad96c78718da49b23d19d5e"
+        }
+      }
+    },
+    "gem_c": {
+      "tiny": {
+        "source": {
+          "path": "sources/gems/gem-c.png",
+          "bytes": 1422568,
+          "sha256": "4f56476a1563d2f2547478fb640964b3401ff419cc7deab7adbbf9041a0a4a75"
+        },
+        "fingerprint": "f447747e776d6b5d54a1cee2b8a7e2fa0faff3240c7a4217ceedbaeff8a0cca3",
+        "output": {
+          "path": "gem-c-tiny.avif",
+          "bytes": 2721,
+          "sha256": "9404d64855f1f02926586bd35f1c29b376a0caf8d8d62868af6949a03044d717"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/gems/gem-c.png",
+          "bytes": 1422568,
+          "sha256": "4f56476a1563d2f2547478fb640964b3401ff419cc7deab7adbbf9041a0a4a75"
+        },
+        "fingerprint": "4dff3301d6b21157dde22c37f451de527ad9ce13542fc3b059325351096b286c",
+        "output": {
+          "path": "gem-c-small.avif",
+          "bytes": 6789,
+          "sha256": "1a7085b5b4d462b97f919bc5eaddfbd9e05f2f4c00cff58a0c25654ce789db65"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/gems/gem-c.png",
+          "bytes": 1422568,
+          "sha256": "4f56476a1563d2f2547478fb640964b3401ff419cc7deab7adbbf9041a0a4a75"
+        },
+        "fingerprint": "29df654189673d0248de21e8abee708da370fb0eb39c5b8520e182c30bb90f07",
+        "output": {
+          "path": "gem-c.avif",
+          "bytes": 18194,
+          "sha256": "afe7d7c99a929df274c563b80d75f3a76633051c1fdf67902b60dbbdadfb21f5"
+        }
+      }
+    },
+    "gem_b": {
+      "tiny": {
+        "source": {
+          "path": "sources/gems/gem-b.png",
+          "bytes": 1384278,
+          "sha256": "dc1c21d397f6a0d0720034ebea04e3056688b3c64a85bc083151a6ce5f813f38"
+        },
+        "fingerprint": "6e0ee7fb58f38a9a8b6dd550d572d082c9f3b847343be48e6eee096298785469",
+        "output": {
+          "path": "gem-b-tiny.avif",
+          "bytes": 2905,
+          "sha256": "7be011b9bb0d9e8f321fa6e41ea09f05a07906a18425a211a8c3a175b8819e22"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/gems/gem-b.png",
+          "bytes": 1384278,
+          "sha256": "dc1c21d397f6a0d0720034ebea04e3056688b3c64a85bc083151a6ce5f813f38"
+        },
+        "fingerprint": "4669b86750d6a1225309154908fe640f032a2d2427b8806912ce99f67b804e6a",
+        "output": {
+          "path": "gem-b-small.avif",
+          "bytes": 7326,
+          "sha256": "da477e6be6c7ab94374051083ce4616a8c8316360e6c80539a6135b2b78a6ce1"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/gems/gem-b.png",
+          "bytes": 1384278,
+          "sha256": "dc1c21d397f6a0d0720034ebea04e3056688b3c64a85bc083151a6ce5f813f38"
+        },
+        "fingerprint": "428611601ba69c9e1d0aad614634fdbb8724909a09cb26943329c62f052bf864",
+        "output": {
+          "path": "gem-b.avif",
+          "bytes": 19801,
+          "sha256": "0d8ab2f3da0dfa2551b589456ac2aff27002a560ccddb1d634ae8b1780b5efe6"
+        }
+      }
+    },
+    "gem_a": {
+      "tiny": {
+        "source": {
+          "path": "sources/gems/gem-a.png",
+          "bytes": 1390122,
+          "sha256": "258f59a0a8a88c85083788a4dd4ce5346b2b797fe9a5c69cd8ca88b3d58cc3fa"
+        },
+        "fingerprint": "87b94a0de762e5ef4cc8af124688a31d54921b19e20e9e73d1eed5ca67afba80",
+        "output": {
+          "path": "gem-a-tiny.avif",
+          "bytes": 2741,
+          "sha256": "58b7b2bc5b47267c28c2778898f0aa2418d58469a1fdb2b8cf16e23683ef6bea"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/gems/gem-a.png",
+          "bytes": 1390122,
+          "sha256": "258f59a0a8a88c85083788a4dd4ce5346b2b797fe9a5c69cd8ca88b3d58cc3fa"
+        },
+        "fingerprint": "8e1294d78969edff49fe8f06b91ce2bf8c785da82d64e3a28be741f06a1376f5",
+        "output": {
+          "path": "gem-a-small.avif",
+          "bytes": 6845,
+          "sha256": "cd98df61690eaf4d48f9bc0542d026ef6eddf138370f8586253d551b6debbba6"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/gems/gem-a.png",
+          "bytes": 1390122,
+          "sha256": "258f59a0a8a88c85083788a4dd4ce5346b2b797fe9a5c69cd8ca88b3d58cc3fa"
+        },
+        "fingerprint": "17546a2b76af9b06bbe2deb74be735a444d6a2ff59bde6e8ad9d2a6c5f4bb7df",
+        "output": {
+          "path": "gem-a.avif",
+          "bytes": 18310,
+          "sha256": "49c1b760ae45d51a34f0d16019ad6d6bd310bfb8b5dffcf92fe9387e3414ffc5"
+        }
+      }
+    },
+    "dice_e": {
+      "tiny": {
+        "source": {
+          "path": "sources/dice/dice-e.png",
+          "bytes": 1319527,
+          "sha256": "1fd639644e8343666ff11e935b461eea25a58f79b5f53e759f4365347ff65299"
+        },
+        "fingerprint": "27ccf739f56a137c2e06a3e007602a8b0c99da67f93a48b1cc53b816ac722892",
+        "output": {
+          "path": "dice-e-tiny.avif",
+          "bytes": 2488,
+          "sha256": "d73e80a8f0b3849d33761c742f1049cbb56f2c3eb2e425ef2210dd40d2fb27e0"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/dice/dice-e.png",
+          "bytes": 1319527,
+          "sha256": "1fd639644e8343666ff11e935b461eea25a58f79b5f53e759f4365347ff65299"
+        },
+        "fingerprint": "9fad3f6ef6d092ee0d361cb4f4ace15d8bed9d8873c4c98ab34cfeef0f9b3497",
+        "output": {
+          "path": "dice-e-small.avif",
+          "bytes": 5029,
+          "sha256": "196678e82e533b10fa8be19dcf6e4ee70c61cddaf48227b861cf039a897133be"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/dice/dice-e.png",
+          "bytes": 1319527,
+          "sha256": "1fd639644e8343666ff11e935b461eea25a58f79b5f53e759f4365347ff65299"
+        },
+        "fingerprint": "f7fd339de950e395b77aeaeb1513ee4123987e61f905c969e7500fec5846e26d",
+        "output": {
+          "path": "dice-e.avif",
+          "bytes": 12076,
+          "sha256": "1e5fc265faafd3e666858e12fe4f0c451ec65459b1d4a6256fc86233b718d4f1"
+        }
+      }
+    },
+    "dice_d": {
+      "tiny": {
+        "source": {
+          "path": "sources/dice/dice-d.png",
+          "bytes": 1377230,
+          "sha256": "e40f56ae2bacb1de60cbf15d601434d1b8262751777a2c11677cef341dcd5f7c"
+        },
+        "fingerprint": "7aeb54b12a1e42daebaeee16f709f7c7cb7eaf4638082ba593c86b317e8b8409",
+        "output": {
+          "path": "dice-d-tiny.avif",
+          "bytes": 2851,
+          "sha256": "5eccc2893eaae00b6f4f0eccf5b64d6beb5b9d10555a35d3c83d50c7363a684e"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/dice/dice-d.png",
+          "bytes": 1377230,
+          "sha256": "e40f56ae2bacb1de60cbf15d601434d1b8262751777a2c11677cef341dcd5f7c"
+        },
+        "fingerprint": "2d84ae8a2863822cca4d04ead00e3452116cfad5af73278b4f4a55a3b1ed0938",
+        "output": {
+          "path": "dice-d-small.avif",
+          "bytes": 5842,
+          "sha256": "cd45d8fbeb96595d50b41cb14e953a0927e1b26bc8d3d2d475f5ad9479889ed8"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/dice/dice-d.png",
+          "bytes": 1377230,
+          "sha256": "e40f56ae2bacb1de60cbf15d601434d1b8262751777a2c11677cef341dcd5f7c"
+        },
+        "fingerprint": "776cc1228b651f4db41a202a4969989b4aff3d5be03d42d07c49ea5bc6ca60d6",
+        "output": {
+          "path": "dice-d.avif",
+          "bytes": 14084,
+          "sha256": "e170b2186fe2ce83fbe3912144a568c44b9a353d66274ff6f8d1364ee74514ec"
+        }
+      }
+    },
+    "dice_c": {
+      "tiny": {
+        "source": {
+          "path": "sources/dice/dice-c.png",
+          "bytes": 1382519,
+          "sha256": "97be8e8a598df67cbedba1ad6a793731b0bfc6e2f517fbbb8f3263ae0679d177"
+        },
+        "fingerprint": "0c1a8ef14c3b6a2ec77dd9d8fa526f9c8e21ce4f01db8a5610a8fbeec6e2ead7",
+        "output": {
+          "path": "dice-c-tiny.avif",
+          "bytes": 2827,
+          "sha256": "0f219170ac0aa997278a5753b94d0d1fe6f6f4e264d89f63f249b33cfa03681c"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/dice/dice-c.png",
+          "bytes": 1382519,
+          "sha256": "97be8e8a598df67cbedba1ad6a793731b0bfc6e2f517fbbb8f3263ae0679d177"
+        },
+        "fingerprint": "12f4c01f735e772d4a451f05db70a71fcf629b5f9c5d58a9a0ad6d365166bfb9",
+        "output": {
+          "path": "dice-c-small.avif",
+          "bytes": 5503,
+          "sha256": "3f4faff8ed4bb410a8192207009420e8fbdb2ddc15ff3dd79a1e3106be58c8d8"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/dice/dice-c.png",
+          "bytes": 1382519,
+          "sha256": "97be8e8a598df67cbedba1ad6a793731b0bfc6e2f517fbbb8f3263ae0679d177"
+        },
+        "fingerprint": "258ca216fae43c753aa34c535dc5529f6e84313fe4971e2a99c4ecd482921709",
+        "output": {
+          "path": "dice-c.avif",
+          "bytes": 13774,
+          "sha256": "dad827a356d55519300d745513573c18d82a4dbe81ed5464ddac03a39a2de56f"
+        }
+      }
+    },
+    "dice_b": {
+      "tiny": {
+        "source": {
+          "path": "sources/dice/dice-b.png",
+          "bytes": 1444447,
+          "sha256": "fa252852a51e028b5ecb521f965f6ea5aadf0c84ba8b2e3f7f3d7438457c7276"
+        },
+        "fingerprint": "25d4c9343eed18bc6b0ce1dde3d4a8ddf3ddad5d77b6392653ff4f3152397e94",
+        "output": {
+          "path": "dice-b-tiny.avif",
+          "bytes": 2853,
+          "sha256": "0ebd17cc17fd390e488668fe9f5cb7d9d4c491af6631cb718fa7d8f7de1f2e77"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/dice/dice-b.png",
+          "bytes": 1444447,
+          "sha256": "fa252852a51e028b5ecb521f965f6ea5aadf0c84ba8b2e3f7f3d7438457c7276"
+        },
+        "fingerprint": "3907483dc03671760313bb993dc0a5ad7b09f6b71658fbcf410f1b7f7bf4088d",
+        "output": {
+          "path": "dice-b-small.avif",
+          "bytes": 5962,
+          "sha256": "b66b1e0dfc4a19588a3687d887682a13e9e565051ac0d652dfba14b21214ae67"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/dice/dice-b.png",
+          "bytes": 1444447,
+          "sha256": "fa252852a51e028b5ecb521f965f6ea5aadf0c84ba8b2e3f7f3d7438457c7276"
+        },
+        "fingerprint": "caccf50f4c3eb0e304e200cf07d8576ae513ae5f500898482115e35ddbbd932c",
+        "output": {
+          "path": "dice-b.avif",
+          "bytes": 14695,
+          "sha256": "94f02c4d82163878a2f8f06731075cd60f59b72a7960d93fefb7ae8b6e561e75"
+        }
+      }
+    },
+    "dice_a": {
+      "tiny": {
+        "source": {
+          "path": "sources/dice/dice-a.png",
+          "bytes": 1448930,
+          "sha256": "ce3e87d74dfb319fdd2aebf90d0a8c926d1ea3a3922374b12ec7efb0f35a04a1"
+        },
+        "fingerprint": "96659db27150b0398e26ed046b607e0154d636b1416639f2a2a8fbfe51a7ec78",
+        "output": {
+          "path": "dice-a-tiny.avif",
+          "bytes": 2656,
+          "sha256": "496488c95de05386fade15a2bf7aa5492dc9a4c126552cc0bf6f57c51c09d3df"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/dice/dice-a.png",
+          "bytes": 1448930,
+          "sha256": "ce3e87d74dfb319fdd2aebf90d0a8c926d1ea3a3922374b12ec7efb0f35a04a1"
+        },
+        "fingerprint": "74f6463e49984456308e46d2091e804aafb51728b10ba2a240f853c9c95928d3",
+        "output": {
+          "path": "dice-a-small.avif",
+          "bytes": 5501,
+          "sha256": "28588a39ccc3368c9bf9adc3459858f29862a89c1cd62813ce346d39d781a310"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/dice/dice-a.png",
+          "bytes": 1448930,
+          "sha256": "ce3e87d74dfb319fdd2aebf90d0a8c926d1ea3a3922374b12ec7efb0f35a04a1"
+        },
+        "fingerprint": "ffd75f91d9b87fd0ab0b761dfdf8bd6e50fb85a4d2f7e974ec538721d2537bb3",
+        "output": {
+          "path": "dice-a.avif",
+          "bytes": 13039,
+          "sha256": "ad4bf0e0c5bfb664d586c5110dcba476bd3c033076899a57c918607a7226097d"
+        }
+      }
+    },
+    "dice_cracked_e": {
+      "tiny": {
+        "source": {
+          "path": "sources/dice/cracked/dice-e.png",
+          "bytes": 1568792,
+          "sha256": "fa56b5ade2310c56d14b782eed2b56ffdd3646732f671d693056e8cd96407bb0"
+        },
+        "fingerprint": "c2712e8b2b0e1c787e875699ae8016871f1ce7058142c5cddca3eac94bf7e607",
+        "output": {
+          "path": "dice-cracked-e-tiny.avif",
+          "bytes": 3313,
+          "sha256": "7f3d236742458a705b0c63c52eae51f989b981210496ba470c7e8db19e0702a6"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/dice/cracked/dice-e.png",
+          "bytes": 1568792,
+          "sha256": "fa56b5ade2310c56d14b782eed2b56ffdd3646732f671d693056e8cd96407bb0"
+        },
+        "fingerprint": "b5d485a1b92a8cd157add42a44161d5927a8ecc3c4984513ee3405890d025ed9",
+        "output": {
+          "path": "dice-cracked-e-small.avif",
+          "bytes": 6776,
+          "sha256": "86ee6191f511662978c9c0943fb15e12f600ca6de0155c95dd30f083b355d53c"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/dice/cracked/dice-e.png",
+          "bytes": 1568792,
+          "sha256": "fa56b5ade2310c56d14b782eed2b56ffdd3646732f671d693056e8cd96407bb0"
+        },
+        "fingerprint": "2bac1ffd0c84796e9dfa904c9dc31eca4948d2f8b460db99f13c07ba8d1a9783",
+        "output": {
+          "path": "dice-cracked-e.avif",
+          "bytes": 16603,
+          "sha256": "36d0e54eaa8e5ff0c5e15b6af5ce18531d14f5fe693fbe1b95e34099795ebcc4"
+        }
+      }
+    },
+    "dice_cracked_d": {
+      "tiny": {
+        "source": {
+          "path": "sources/dice/cracked/dice-d.png",
+          "bytes": 1387648,
+          "sha256": "5c9998e401472307160651d8c7868130e6607a937a5964c5acec8c5b54a7b156"
+        },
+        "fingerprint": "f95960094c3d375fd315ca8a752be1131de43feb743a3489fc8ecccde7af586a",
+        "output": {
+          "path": "dice-cracked-d-tiny.avif",
+          "bytes": 3392,
+          "sha256": "becad3ddb947f110f5b42164faa0383e299cc46cbfe10418417e0c4c7c5dcec6"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/dice/cracked/dice-d.png",
+          "bytes": 1387648,
+          "sha256": "5c9998e401472307160651d8c7868130e6607a937a5964c5acec8c5b54a7b156"
+        },
+        "fingerprint": "378b47c975dd60713ae37cde71390a091fdcd839537512260cac987adbbeca00",
+        "output": {
+          "path": "dice-cracked-d-small.avif",
+          "bytes": 7400,
+          "sha256": "0fefa52a819baa62af3436059eefdb903e01eb836280c63c8f36a7ed7cd629ca"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/dice/cracked/dice-d.png",
+          "bytes": 1387648,
+          "sha256": "5c9998e401472307160651d8c7868130e6607a937a5964c5acec8c5b54a7b156"
+        },
+        "fingerprint": "17385827cc78e9a7c7b5bdf5b05527f55b50146414678fd90adc3b06286fc3e4",
+        "output": {
+          "path": "dice-cracked-d.avif",
+          "bytes": 17696,
+          "sha256": "eab64bc9a7552379c758fb183f1dfe493c791f2d46da9ad46651018bca65f552"
+        }
+      }
+    },
+    "dice_cracked_c": {
+      "tiny": {
+        "source": {
+          "path": "sources/dice/cracked/dice-c.png",
+          "bytes": 1451483,
+          "sha256": "14764f7c32a30b35837fc176ca41e89b93054d28d644ca9d91adef3e5d56df53"
+        },
+        "fingerprint": "9f6973e6de99f202a2bcfea657ef8d423ea7c1e89e4e14caf0c1026eb8b5fc87",
+        "output": {
+          "path": "dice-cracked-c-tiny.avif",
+          "bytes": 3501,
+          "sha256": "03589bf8d5c46bd30c398fc241e5e9353bc22fafdcfdb4b5eb567b41b323af74"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/dice/cracked/dice-c.png",
+          "bytes": 1451483,
+          "sha256": "14764f7c32a30b35837fc176ca41e89b93054d28d644ca9d91adef3e5d56df53"
+        },
+        "fingerprint": "a59733dfe014d32debf8c022f3cac75f50c2c56169bb489455936c7bf1dceda6",
+        "output": {
+          "path": "dice-cracked-c-small.avif",
+          "bytes": 7217,
+          "sha256": "70a12d4700c8bcc62a58257eb77e91604afa86798e32c780e5382a78b9ddfbf8"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/dice/cracked/dice-c.png",
+          "bytes": 1451483,
+          "sha256": "14764f7c32a30b35837fc176ca41e89b93054d28d644ca9d91adef3e5d56df53"
+        },
+        "fingerprint": "698e5c37990aa85f15c0845ea84a51a11524ad63899c87b4f07082c25435775d",
+        "output": {
+          "path": "dice-cracked-c.avif",
+          "bytes": 17551,
+          "sha256": "7bd76cd8ebaae15226f5d4d49242f58f333460f244345bd72de7927eff9598d5"
+        }
+      }
+    },
+    "dice_cracked_b": {
+      "tiny": {
+        "source": {
+          "path": "sources/dice/cracked/dice-b.png",
+          "bytes": 1637345,
+          "sha256": "790e281f1823f896c39d04d10889fb2973b7c1ba19243071723c37f3b3ff3e19"
+        },
+        "fingerprint": "6301b4dc4770b30ad9a1a01284ce787aebe03c0a0a638ee14fc961285c875dff",
+        "output": {
+          "path": "dice-cracked-b-tiny.avif",
+          "bytes": 3410,
+          "sha256": "88d979a27f5774c1667ba81cfbb268907fac2007281fd2016b5ab4d7f1012c1e"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/dice/cracked/dice-b.png",
+          "bytes": 1637345,
+          "sha256": "790e281f1823f896c39d04d10889fb2973b7c1ba19243071723c37f3b3ff3e19"
+        },
+        "fingerprint": "954bb9de4ffe27060c8cf1b639819182d549ada6fc5f7c9f629f4c0b95e16f7a",
+        "output": {
+          "path": "dice-cracked-b-small.avif",
+          "bytes": 7664,
+          "sha256": "3aa15624389d6bbb0e521ebc49cb84d673c69867997f0ec80f60f201bac61e5d"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/dice/cracked/dice-b.png",
+          "bytes": 1637345,
+          "sha256": "790e281f1823f896c39d04d10889fb2973b7c1ba19243071723c37f3b3ff3e19"
+        },
+        "fingerprint": "ce62db6ff0f7e49d0c7de1a1b9b4acb4fcaa6af9dcadb34cd51b0b02af66b608",
+        "output": {
+          "path": "dice-cracked-b.avif",
+          "bytes": 18920,
+          "sha256": "1f859ff03f74df39e0f02d29daade8a70158c7249698d1d43bf032f074cd4ccb"
+        }
+      }
+    },
+    "dice_cracked_a": {
+      "tiny": {
+        "source": {
+          "path": "sources/dice/cracked/dice-a.png",
+          "bytes": 1414172,
+          "sha256": "84728d48340fa0c563ec5975a1f9890b27edd989da33ce7f43668f35c0fe4f41"
+        },
+        "fingerprint": "fa04bcd4e9b0aeb0aea2dcb42f94a07ac074d1acc9fb0375beb8e3719222cebf",
+        "output": {
+          "path": "dice-cracked-a-tiny.avif",
+          "bytes": 3352,
+          "sha256": "7308e91d2e03c8635d34914ddbb17cf68ddd4f98f2b12143b1fb2ad4221b7e18"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/dice/cracked/dice-a.png",
+          "bytes": 1414172,
+          "sha256": "84728d48340fa0c563ec5975a1f9890b27edd989da33ce7f43668f35c0fe4f41"
+        },
+        "fingerprint": "ec0dd8e5e940183d34e5c9ffa1d831c4abeb5948b00cf157ac526ae17de9689e",
+        "output": {
+          "path": "dice-cracked-a-small.avif",
+          "bytes": 7117,
+          "sha256": "eeb1d059caf069c69d23a84719b0de3e239d13327f6df48bb84dfee0161d9760"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/dice/cracked/dice-a.png",
+          "bytes": 1414172,
+          "sha256": "84728d48340fa0c563ec5975a1f9890b27edd989da33ce7f43668f35c0fe4f41"
+        },
+        "fingerprint": "5df078c9224838e99ab992606a193400d59ddf1619eed90a85faa38bb923fbf1",
+        "output": {
+          "path": "dice-cracked-a.avif",
+          "bytes": 17175,
+          "sha256": "6d9e1cc756c50b4a8597a06b799d0608f00558690fe4139601e21d84a4f2a320"
+        }
+      }
+    },
+    "gem_cracked_f": {
+      "tiny": {
+        "source": {
+          "path": "sources/gems/cracked/gem-f.png",
+          "bytes": 1555197,
+          "sha256": "84b79e9d7ad0afdfa7d889c5cf0e0b9ba8b6be0e312c05860e66e5a956dd9fe3"
+        },
+        "fingerprint": "2c4b0c9a53957978303f64b775dc7e158decd4dfc27daf941b0d25ce94884b6c",
+        "output": {
+          "path": "gem-cracked-f-tiny.avif",
+          "bytes": 2609,
+          "sha256": "d03c6cddb5cd8f09b0120bd3652c2152d6940831e0d4f20c2ea2a0ee88ce3188"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/gems/cracked/gem-f.png",
+          "bytes": 1555197,
+          "sha256": "84b79e9d7ad0afdfa7d889c5cf0e0b9ba8b6be0e312c05860e66e5a956dd9fe3"
+        },
+        "fingerprint": "6770ac176b1fa21e697c5e7c5bc30bb78cae85a43ae656af12f2c0e665fb587e",
+        "output": {
+          "path": "gem-cracked-f-small.avif",
+          "bytes": 5766,
+          "sha256": "b5d195400f25b1a8e0f4b00757a8ce4fb9e7fc9e51f1711aeb8df151b0f94f98"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/gems/cracked/gem-f.png",
+          "bytes": 1555197,
+          "sha256": "84b79e9d7ad0afdfa7d889c5cf0e0b9ba8b6be0e312c05860e66e5a956dd9fe3"
+        },
+        "fingerprint": "9718c289f780654fc90985ba4ef9c48f79619c157eb3fdf2f9e908daaaf8745e",
+        "output": {
+          "path": "gem-cracked-f.avif",
+          "bytes": 16734,
+          "sha256": "c4ac4442b49988ddb28a827945e7f543a623d3dfbb6e228e5c20f668b8200b2c"
+        }
+      }
+    },
+    "gem_cracked_e": {
+      "tiny": {
+        "source": {
+          "path": "sources/gems/cracked/gem-e.png",
+          "bytes": 1473259,
+          "sha256": "f9eb43140c47fab4bfd452bb337fa7aac854a5d0733e99513d4aad67dd6a6c7e"
+        },
+        "fingerprint": "39daca5db15dbddf982deef44e67cb46240d3a8a6ccc74d86c7860003f8bed90",
+        "output": {
+          "path": "gem-cracked-e-tiny.avif",
+          "bytes": 2983,
+          "sha256": "04ed2d7159252ead6ca7a974c5abf25cf2a3f671a6fd471654e8de13d550cc2a"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/gems/cracked/gem-e.png",
+          "bytes": 1473259,
+          "sha256": "f9eb43140c47fab4bfd452bb337fa7aac854a5d0733e99513d4aad67dd6a6c7e"
+        },
+        "fingerprint": "2a1048cdae3e3301c80912256eb54867d90dd35ae6b8333bdaf7f74332253c74",
+        "output": {
+          "path": "gem-cracked-e-small.avif",
+          "bytes": 7073,
+          "sha256": "320a15bbafef572ce9e8bcfeeaa7b5ffcd5d247fb770d0b2a37563e3a959f9cd"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/gems/cracked/gem-e.png",
+          "bytes": 1473259,
+          "sha256": "f9eb43140c47fab4bfd452bb337fa7aac854a5d0733e99513d4aad67dd6a6c7e"
+        },
+        "fingerprint": "2bc05646a4fa583004086937573519e866fefba514c6e5be05b5100b06309699",
+        "output": {
+          "path": "gem-cracked-e.avif",
+          "bytes": 19311,
+          "sha256": "75be170af8e6bc272f7d8ce1b80d1626c3cc4985a96e2f6494805bd51e26792e"
+        }
+      }
+    },
+    "gem_cracked_d": {
+      "tiny": {
+        "source": {
+          "path": "sources/gems/cracked/gem-d.png",
+          "bytes": 1429212,
+          "sha256": "ee89cf963540c8251e5cfdc2f7ed3565306028f170663810ab480f283bd4c6f7"
+        },
+        "fingerprint": "539e0f783d08a52bfbe297115e44a2c7dd6cd729721f37d207e73b6e39da4597",
+        "output": {
+          "path": "gem-cracked-d-tiny.avif",
+          "bytes": 3320,
+          "sha256": "5f74037cfbd3e5cced7245be44b8b8ff86c8facc0e067b3cb5e63713a7f045f4"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/gems/cracked/gem-d.png",
+          "bytes": 1429212,
+          "sha256": "ee89cf963540c8251e5cfdc2f7ed3565306028f170663810ab480f283bd4c6f7"
+        },
+        "fingerprint": "d38cc07d9931e29ea9fa518cf25a8cdfcaeb7cb57df29670577179d2c428e6b0",
+        "output": {
+          "path": "gem-cracked-d-small.avif",
+          "bytes": 7953,
+          "sha256": "e7ce025380f24b47207fff10b3ddaeef19ba6c5b2abd1d0c6e7571cfd83b5fa8"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/gems/cracked/gem-d.png",
+          "bytes": 1429212,
+          "sha256": "ee89cf963540c8251e5cfdc2f7ed3565306028f170663810ab480f283bd4c6f7"
+        },
+        "fingerprint": "deb9ba72567a3ef9b0a4f0aeb9e0298828094e9bf2eed5ede8856884be51441b",
+        "output": {
+          "path": "gem-cracked-d.avif",
+          "bytes": 22387,
+          "sha256": "32715b7193f17e2864b4f742be288c0fe1dcd3ffc955ef50425aecfcac648dc9"
+        }
+      }
+    },
+    "gem_cracked_c": {
+      "tiny": {
+        "source": {
+          "path": "sources/gems/cracked/gem-c.png",
+          "bytes": 1530400,
+          "sha256": "4d780989e1c32bb57aa5cb647213b9fe36cff091119f75abf5f5cb674f6313dd"
+        },
+        "fingerprint": "cbab1d7714f2b28610f42f4df53aabfb2bafca74de5a465d8497351024d45735",
+        "output": {
+          "path": "gem-cracked-c-tiny.avif",
+          "bytes": 2981,
+          "sha256": "d0d13e63fb8d995fc27ac16d5cabf582200c1aa1a4dd0b2b3e5eb3623ccac728"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/gems/cracked/gem-c.png",
+          "bytes": 1530400,
+          "sha256": "4d780989e1c32bb57aa5cb647213b9fe36cff091119f75abf5f5cb674f6313dd"
+        },
+        "fingerprint": "ac62cfbf76ea49fe3afdf4498496e14a993a841f35fa5ff152209f90b0c102b9",
+        "output": {
+          "path": "gem-cracked-c-small.avif",
+          "bytes": 6989,
+          "sha256": "f8192537ab4d79bdc8d4ccd47c5ffbeccacc79bc8dfc9c7c7065cd2b5410480d"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/gems/cracked/gem-c.png",
+          "bytes": 1530400,
+          "sha256": "4d780989e1c32bb57aa5cb647213b9fe36cff091119f75abf5f5cb674f6313dd"
+        },
+        "fingerprint": "e10b288d84f7a83f8db30dabb10ff6db44b71d8dae1f7e593e558845785c004c",
+        "output": {
+          "path": "gem-cracked-c.avif",
+          "bytes": 19978,
+          "sha256": "b0e315e07c7d1f47322eec5dd9ad8031e74cbf8ba7270ef03df5a5a2c027f48c"
+        }
+      }
+    },
+    "gem_cracked_b": {
+      "tiny": {
+        "source": {
+          "path": "sources/gems/cracked/gem-b.png",
+          "bytes": 1480796,
+          "sha256": "7cf1ffbdcd9d8dec984657ad8be76ab318f856378be5e6b0e3bb8e611d5275e9"
+        },
+        "fingerprint": "3595b12e083eabf1f3ea4637a74c29641bff70b2a7d63e6a301729e25353e809",
+        "output": {
+          "path": "gem-cracked-b-tiny.avif",
+          "bytes": 3263,
+          "sha256": "74275d6efc74dc66d57244811b85d3eabba0b2ddd8134ecf2d2ae62f88679a75"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/gems/cracked/gem-b.png",
+          "bytes": 1480796,
+          "sha256": "7cf1ffbdcd9d8dec984657ad8be76ab318f856378be5e6b0e3bb8e611d5275e9"
+        },
+        "fingerprint": "4c7dbda0c3e62417426dcd71e1ce0ef75dfc36518a1ba67ec6090452f6c60aa5",
+        "output": {
+          "path": "gem-cracked-b-small.avif",
+          "bytes": 7866,
+          "sha256": "c7784f041afb065da20186a2cb5133fd8580acab7d0514460d7ae3c51a9371fe"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/gems/cracked/gem-b.png",
+          "bytes": 1480796,
+          "sha256": "7cf1ffbdcd9d8dec984657ad8be76ab318f856378be5e6b0e3bb8e611d5275e9"
+        },
+        "fingerprint": "bad06d3e18c64a6df584bd2e3236dc6d01548cc518b239610aad8220f6f32010",
+        "output": {
+          "path": "gem-cracked-b.avif",
+          "bytes": 22620,
+          "sha256": "d0b3cd1bc85e226646c2a4527d93ca20ab2ad29e71a262a5c72696680cbd3b87"
+        }
+      }
+    },
+    "gem_cracked_a": {
+      "tiny": {
+        "source": {
+          "path": "sources/gems/cracked/gem-a.png",
+          "bytes": 1529089,
+          "sha256": "a09489c3bfc17c89c35d1db114fed1da535fe68640daa978ced1ffc0e93e709f"
+        },
+        "fingerprint": "36591283bdc8f2b7a5d4882a22d6ded8d88b6fbd04404cdcb97ea86dc394d8ba",
+        "output": {
+          "path": "gem-cracked-a-tiny.avif",
+          "bytes": 3082,
+          "sha256": "40107f7ff6dbe08f3c307953a60723ba8b75d4ef04253de9688891052f0e732b"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/gems/cracked/gem-a.png",
+          "bytes": 1529089,
+          "sha256": "a09489c3bfc17c89c35d1db114fed1da535fe68640daa978ced1ffc0e93e709f"
+        },
+        "fingerprint": "6160cedf7fb7636ec3248b0ea628124e31fa36a0220f09a7750c81bbd18d5432",
+        "output": {
+          "path": "gem-cracked-a-small.avif",
+          "bytes": 7240,
+          "sha256": "910e4d8c3014fc9745a4e638f9d0390fb6eb349952a06703a5467a1d59fc7f31"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/gems/cracked/gem-a.png",
+          "bytes": 1529089,
+          "sha256": "a09489c3bfc17c89c35d1db114fed1da535fe68640daa978ced1ffc0e93e709f"
+        },
+        "fingerprint": "47314dab9e24aecb2200043b91520dcd9509a5e111f2f7c1bc940cd4b408e68c",
+        "output": {
+          "path": "gem-cracked-a.avif",
+          "bytes": 20525,
+          "sha256": "3742db955b6cae10d68b506cfd851f302518dedb0102a09905400bda2cb0c631"
         }
       }
     },
@@ -844,6 +2279,334 @@
         }
       }
     },
+    "reward_gift": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/reward-gift-v1.png",
+          "bytes": 436282,
+          "sha256": "85ccd1be1b591c9361405ebe3038f88ca7f8ad2ca6025a6629663ade908113a7"
+        },
+        "fingerprint": "75dbb9ccc466ede05a107b314012bd7bb542622c4de43a0061c1284b98865cc8",
+        "output": {
+          "path": "ui/reward-gift-v1-tiny.avif",
+          "bytes": 2958,
+          "sha256": "559292cc0a566345b73aff7d33b753a6435c5cbe74a66ce48abbbfbb503226f2"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/reward-gift-v1.png",
+          "bytes": 436282,
+          "sha256": "85ccd1be1b591c9361405ebe3038f88ca7f8ad2ca6025a6629663ade908113a7"
+        },
+        "fingerprint": "da3cabac24a5d5c8506e30ef026bbb829139d54163429ff266bf24a0a0b6491e",
+        "output": {
+          "path": "ui/reward-gift-v1-small.avif",
+          "bytes": 6357,
+          "sha256": "f71e141c89f8f69070cca686103431360360cbaf44148ec6c102a6735a487ae0"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/reward-gift-v1.png",
+          "bytes": 436282,
+          "sha256": "85ccd1be1b591c9361405ebe3038f88ca7f8ad2ca6025a6629663ade908113a7"
+        },
+        "fingerprint": "cea9a2ee0ca334369d57df957fb07d2d3a4f4794b732c30342a5e612a0daa231",
+        "output": {
+          "path": "ui/reward-gift-v1.avif",
+          "bytes": 13326,
+          "sha256": "8f8f2e0ffdd8dcfc4757566cc7a63eb825b8ec7e015bf2096177089d60c8ccc2"
+        }
+      }
+    },
+    "inbox_rail_body": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/inbox-rail-v1/body.png",
+          "bytes": 1269277,
+          "sha256": "99dfca2da2d79b6975046b564f264c96cd4ab9611abfd7631baeca9ad6e14f7e"
+        },
+        "fingerprint": "7382df57bca79a1c850012d93e3f7ee44698ee58dc15a795c283e6752ebbf16d",
+        "output": {
+          "path": "ui/inbox-rail-v1/body-tiny.avif",
+          "bytes": 1786,
+          "sha256": "6bc13387843e0257ff64857eefec8f047e99604c879bdcab8534818cc9f1db42"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/inbox-rail-v1/body.png",
+          "bytes": 1269277,
+          "sha256": "99dfca2da2d79b6975046b564f264c96cd4ab9611abfd7631baeca9ad6e14f7e"
+        },
+        "fingerprint": "474f06d18873e608cbcce05a7cf9ab78e437e2df7f9663f87e8a035ef3e79076",
+        "output": {
+          "path": "ui/inbox-rail-v1/body-small.avif",
+          "bytes": 3808,
+          "sha256": "451764747c2fc725a471464657724d58b09d78ebbfdebf1f9703adea36798f15"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/inbox-rail-v1/body.png",
+          "bytes": 1269277,
+          "sha256": "99dfca2da2d79b6975046b564f264c96cd4ab9611abfd7631baeca9ad6e14f7e"
+        },
+        "fingerprint": "5a2035b0c203016b29e5ecc4ccb1a03df912262513fdae9cc864569e82ddf576",
+        "output": {
+          "path": "ui/inbox-rail-v1/body.avif",
+          "bytes": 5890,
+          "sha256": "5cc99c1a53a92017b7ad967793df039110ab842de96faff79476ab937ff35507"
+        }
+      }
+    },
+    "inbox_rail_counter": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/inbox-rail-v1/counter.png",
+          "bytes": 1669157,
+          "sha256": "d52a219761bf4c94d1987975cec768b3c4fcbd70326150ad4707d5c5908fd1f4"
+        },
+        "fingerprint": "b85bd55a6fed61061e52e14e69ae29c62cacd764bada09372f5eaa5593194fc2",
+        "output": {
+          "path": "ui/inbox-rail-v1/counter-tiny.avif",
+          "bytes": 1422,
+          "sha256": "092d64089af76c056e73d2d5f6c08ba1e92d79dfc9f9eef1d9bf936b9630b566"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/inbox-rail-v1/counter.png",
+          "bytes": 1669157,
+          "sha256": "d52a219761bf4c94d1987975cec768b3c4fcbd70326150ad4707d5c5908fd1f4"
+        },
+        "fingerprint": "37413776fb5c614273316afeb70cf4a40867f49bb8ffb13d76d4b74f29b6c5e0",
+        "output": {
+          "path": "ui/inbox-rail-v1/counter-small.avif",
+          "bytes": 2955,
+          "sha256": "61716ce54fc3098d5af0c3cf6672bc9405cacf0e68fe6dbd93a2bd750c79bbe1"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/inbox-rail-v1/counter.png",
+          "bytes": 1669157,
+          "sha256": "d52a219761bf4c94d1987975cec768b3c4fcbd70326150ad4707d5c5908fd1f4"
+        },
+        "fingerprint": "11da589dd668aeba63055a341608f38c7e43c91e7391f8c1e34ae9f5150bc0fe",
+        "output": {
+          "path": "ui/inbox-rail-v1/counter.avif",
+          "bytes": 7066,
+          "sha256": "ea2cc2bd8e7af5f6d204c895be8b5d6bf569904141c4e52a1b10bca4220619d1"
+        }
+      }
+    },
+    "inbox_clover_idle": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/inbox-clover-v1/idle.png",
+          "bytes": 1149281,
+          "sha256": "e6f24a04b37c6c003e428e001ca50de5cd0e3fb2a62e83c6b4d1f173ddbe0929"
+        },
+        "fingerprint": "252f7584400eb2ca164324f0569d41e38213a73cc1d9fa686ad9566dec1d20d4",
+        "output": {
+          "path": "ui/inbox-clover-v1/idle-tiny.avif",
+          "bytes": 2697,
+          "sha256": "1c4cef334fbe7ae50b67d8bf7ec376b52cfea3bf6159b50f50f5cf61bd29ce85"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/inbox-clover-v1/idle.png",
+          "bytes": 1149281,
+          "sha256": "e6f24a04b37c6c003e428e001ca50de5cd0e3fb2a62e83c6b4d1f173ddbe0929"
+        },
+        "fingerprint": "d53041bdcacef6f5e4792696506e6c9a8de13d4aba5c89419c32cba48b316207",
+        "output": {
+          "path": "ui/inbox-clover-v1/idle-small.avif",
+          "bytes": 6363,
+          "sha256": "9b6b24323f4bab3f9ff4baaf578efb4723d74620ac16d594186dfb20364a0aaa"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/inbox-clover-v1/idle.png",
+          "bytes": 1149281,
+          "sha256": "e6f24a04b37c6c003e428e001ca50de5cd0e3fb2a62e83c6b4d1f173ddbe0929"
+        },
+        "fingerprint": "56556f4b16df0a0bfecba512c16f58432da0fed1c54bc6b4d937f6f8e24ed0fe",
+        "output": {
+          "path": "ui/inbox-clover-v1/idle.avif",
+          "bytes": 15190,
+          "sha256": "3d899dc6fd5d2b18a7093a8c8618ff6deeed03d93889ce67e057444293802cf0"
+        }
+      }
+    },
+    "inbox_clover_chat_unread": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/inbox-clover-v1/chat-unread.png",
+          "bytes": 1148011,
+          "sha256": "4badcb969e9811bf2c5b5a9cf2fe37a599200746c685a7d4deaca4e6255a6dfb"
+        },
+        "fingerprint": "fea76facc7275bbf10d9e5a52e43aa9bc8f258bf3771ed21915ad2e709736a22",
+        "output": {
+          "path": "ui/inbox-clover-v1/chat-unread-tiny.avif",
+          "bytes": 2848,
+          "sha256": "fb5bff2221ed415bf2571f5ce9249eeac51bf66a6da373bed3cd56178dbd6f13"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/inbox-clover-v1/chat-unread.png",
+          "bytes": 1148011,
+          "sha256": "4badcb969e9811bf2c5b5a9cf2fe37a599200746c685a7d4deaca4e6255a6dfb"
+        },
+        "fingerprint": "15fcdf90fe119d5c87bb815d03eabb5b7a09153b39391bd3ab91bef91b75ce66",
+        "output": {
+          "path": "ui/inbox-clover-v1/chat-unread-small.avif",
+          "bytes": 6107,
+          "sha256": "058a232bb239529863867a1420f88a30e18b185ee900a4a33dc39bf2062f0917"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/inbox-clover-v1/chat-unread.png",
+          "bytes": 1148011,
+          "sha256": "4badcb969e9811bf2c5b5a9cf2fe37a599200746c685a7d4deaca4e6255a6dfb"
+        },
+        "fingerprint": "723dfd590d0e47e3efff269df65f587f7b337f876eaff8cf771a0ce9a64119b8",
+        "output": {
+          "path": "ui/inbox-clover-v1/chat-unread.avif",
+          "bytes": 15159,
+          "sha256": "4784cd59752be800a1a01262ed01101f5cc08eb26d983040fbe0e1d9035e0dc2"
+        }
+      }
+    },
+    "inbox_tile_idle": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/inbox-tile-v1/idle.png",
+          "bytes": 1744523,
+          "sha256": "ae53f873cca11ace01e4b3a799671298422d88dfde453d4e458ca4141a776561"
+        },
+        "fingerprint": "036b2e652d45956d5541d1dd1e2eac2987ee9318f84d549199e25a1471fd8aee",
+        "output": {
+          "path": "ui/inbox-tile-v1/idle-tiny.avif",
+          "bytes": 1472,
+          "sha256": "054f659921b31449312251d4b0d6a87a2150ab05b43ac9ff679578b2bb1ced34"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/inbox-tile-v1/idle.png",
+          "bytes": 1744523,
+          "sha256": "ae53f873cca11ace01e4b3a799671298422d88dfde453d4e458ca4141a776561"
+        },
+        "fingerprint": "67195d84ad8bd726bd4ba5243dc7b46713e65cd6f6568b44c7a8bc3364334aba",
+        "output": {
+          "path": "ui/inbox-tile-v1/idle-small.avif",
+          "bytes": 2913,
+          "sha256": "65386b97bc1065903ea7d93dada3f838903e783f5bf5fe0bda60f07cc2142447"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/inbox-tile-v1/idle.png",
+          "bytes": 1744523,
+          "sha256": "ae53f873cca11ace01e4b3a799671298422d88dfde453d4e458ca4141a776561"
+        },
+        "fingerprint": "c572f3930b18442e16d79e842ac32da61a36412675de06b4d9f1282eb8a48af6",
+        "output": {
+          "path": "ui/inbox-tile-v1/idle.avif",
+          "bytes": 6689,
+          "sha256": "094007c68166d1eed3b205c807a442584c2bfd13fc1404b344c1b293a77e5931"
+        }
+      }
+    },
+    "inbox_tile_chat_unread": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/inbox-tile-v1/chat-unread.png",
+          "bytes": 1529604,
+          "sha256": "a4def3a157f8a450341428c00016be3ef4e877d293063a38688fda47c80d4846"
+        },
+        "fingerprint": "d84593485f0ee0955221f1fc17c5c05c140c5d5c9ea646c0397601001ca62050",
+        "output": {
+          "path": "ui/inbox-tile-v1/chat-unread-tiny.avif",
+          "bytes": 1555,
+          "sha256": "26cec65401cdaa3b94be18c1608d7d66d0b262cd55aaeb4b92f6b7930535eb2e"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/inbox-tile-v1/chat-unread.png",
+          "bytes": 1529604,
+          "sha256": "a4def3a157f8a450341428c00016be3ef4e877d293063a38688fda47c80d4846"
+        },
+        "fingerprint": "d19e0e519470654e00d598b69957b6530db07d16cd4c5df93ba402062de0c869",
+        "output": {
+          "path": "ui/inbox-tile-v1/chat-unread-small.avif",
+          "bytes": 2912,
+          "sha256": "c2f8f190d4ce613e68f03640621ec6c1fbef12b0378103805332462230532934"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/inbox-tile-v1/chat-unread.png",
+          "bytes": 1529604,
+          "sha256": "a4def3a157f8a450341428c00016be3ef4e877d293063a38688fda47c80d4846"
+        },
+        "fingerprint": "4f15519d6060f010179be6b0ee955c7d476eb6a67339199f742fb4d8ef8bbad2",
+        "output": {
+          "path": "ui/inbox-tile-v1/chat-unread.avif",
+          "bytes": 7815,
+          "sha256": "a4f7f1c16346a8f7f09e740180e086c00e30c6b34787eb3d738d0120f0056820"
+        }
+      }
+    },
+    "glass_action_button": {
+      "tiny": {
+        "source": {
+          "path": "sources/ui/glass-action-button.png",
+          "bytes": 876576,
+          "sha256": "5e902d0dde64a918b120a6a99b895bf068314d3078f70d0831b1426969170052"
+        },
+        "fingerprint": "6889d729f30e99d07de92d111aa44f889d8bb42916895a67a331cfdc6463cb25",
+        "output": {
+          "path": "ui/glass-action-button-tiny.avif",
+          "bytes": 1110,
+          "sha256": "f9581b801cd3e111229579f490cd3299c53838a19d2f768b902fd14b65abe0cc"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/ui/glass-action-button.png",
+          "bytes": 876576,
+          "sha256": "5e902d0dde64a918b120a6a99b895bf068314d3078f70d0831b1426969170052"
+        },
+        "fingerprint": "991b9b62de2e3b67cb5cdb6205da011c51a947fd8a338732028285801aa7ae59",
+        "output": {
+          "path": "ui/glass-action-button-small.avif",
+          "bytes": 2258,
+          "sha256": "d8c021c04227a4daf79afc48174e6f455a0c556218f406acb214e19ed7f8fc8f"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/ui/glass-action-button.png",
+          "bytes": 876576,
+          "sha256": "5e902d0dde64a918b120a6a99b895bf068314d3078f70d0831b1426969170052"
+        },
+        "fingerprint": "be55304c67f0aed5ea7e6a8759a3b7ffa9635a6e7966f8c2d93d3584b129c0b8",
+        "output": {
+          "path": "ui/glass-action-button.avif",
+          "bytes": 4943,
+          "sha256": "29fabc76fc36aeb620b1582f7b27e7093c89e51d425762d64b0fd2f0f3260fa6"
+        }
+      }
+    },
     "questfall_logo": {
       "tiny": {
         "source": {
@@ -882,252 +2645,6 @@
           "path": "ui/questfall-logo.avif",
           "bytes": 11380,
           "sha256": "e39c62ec6f7ed353a12c030e721cda03b9a165b24004f1603bfda66cfb052607"
-        }
-      }
-    },
-    "gem_f": {
-      "tiny": {
-        "source": {
-          "path": "sources/gems/gem-f.svg",
-          "bytes": 762,
-          "sha256": "f8048290726b412b99a666bbb1109db1c775018cc4872e092e9df2c57e5aa773"
-        },
-        "fingerprint": "13c4920b2f5f81ee6341e73f14d9d9c047f05add5b998cb7d7b107a498bacd6c",
-        "output": {
-          "path": "gem-f-tiny.avif",
-          "bytes": 1643,
-          "sha256": "b4472e9d9d2578f35c567357f6b478e6e59c883c221790ccaeb504f8a2e6ec40"
-        }
-      },
-      "small": {
-        "source": {
-          "path": "sources/gems/gem-f.svg",
-          "bytes": 762,
-          "sha256": "f8048290726b412b99a666bbb1109db1c775018cc4872e092e9df2c57e5aa773"
-        },
-        "fingerprint": "97944cca8f03a13f3964d6b0cd523b657104c8ad2a3a3fd9307f0fa02a853979",
-        "output": {
-          "path": "gem-f-small.avif",
-          "bytes": 3086,
-          "sha256": "b1efefa05f6e4d07b29a805316c5997ab486287bf679a6ceceaa563d4409fbd0"
-        }
-      },
-      "large": {
-        "source": {
-          "path": "sources/gems/gem-f.svg",
-          "bytes": 762,
-          "sha256": "f8048290726b412b99a666bbb1109db1c775018cc4872e092e9df2c57e5aa773"
-        },
-        "fingerprint": "27bf5cb332969728c3fc6bd6bbd3260591f99f3c6f8c819350667937e693b38c",
-        "output": {
-          "path": "gem-f.avif",
-          "bytes": 5825,
-          "sha256": "3d6cdfa6c0244731c3d531bbae6cda2721b10a9557f4adb7428c3902e3a39f8e"
-        }
-      }
-    },
-    "gem_e": {
-      "tiny": {
-        "source": {
-          "path": "sources/gems/gem-e.svg",
-          "bytes": 762,
-          "sha256": "26a3224b2d7a4dc5a463f24072dd606f87ad9c1699e1795b36359347ff5f13db"
-        },
-        "fingerprint": "356d7a160dd5f56b21515102ad01a9b647907377e2f1c53820067e07cd8e4e94",
-        "output": {
-          "path": "gem-e-tiny.avif",
-          "bytes": 2048,
-          "sha256": "78037db0064a9ffe01d131f2abf6616606dea03e400f26b9cc0774dae7efb376"
-        }
-      },
-      "small": {
-        "source": {
-          "path": "sources/gems/gem-e.svg",
-          "bytes": 762,
-          "sha256": "26a3224b2d7a4dc5a463f24072dd606f87ad9c1699e1795b36359347ff5f13db"
-        },
-        "fingerprint": "1e9fb6cf922ea6db8a56f9afa691785f6a474df80be10b8e9f08ba5b7052f2da",
-        "output": {
-          "path": "gem-e-small.avif",
-          "bytes": 4037,
-          "sha256": "d1d0055a3fbe77df8eba654ab3987fb2884872d2d3bb6c9871b8024d8c972176"
-        }
-      },
-      "large": {
-        "source": {
-          "path": "sources/gems/gem-e.svg",
-          "bytes": 762,
-          "sha256": "26a3224b2d7a4dc5a463f24072dd606f87ad9c1699e1795b36359347ff5f13db"
-        },
-        "fingerprint": "6fe19753e2872cf0ee41437cd4a7eb2a61bb6bb00aefb7a682fa948f913234c7",
-        "output": {
-          "path": "gem-e.avif",
-          "bytes": 7561,
-          "sha256": "5544f6cb12f19f5fa4eb9fb307080d585bcee80aa4dc410573a4f18267781bed"
-        }
-      }
-    },
-    "gem_d": {
-      "tiny": {
-        "source": {
-          "path": "sources/gems/gem-d.svg",
-          "bytes": 762,
-          "sha256": "c5e15acd11b1e0fb9d6ad32110e913692989e4f676c67dad93c7d939057ab524"
-        },
-        "fingerprint": "e02d67a5ebc67cad5a692dd5fdcbddb693080c94c28da2de2b1d0aa2f38c945f",
-        "output": {
-          "path": "gem-d-tiny.avif",
-          "bytes": 2048,
-          "sha256": "65c410384556c4d0a618843f7bf3746c3d36c8d77be1eeb6f96b9c70d388d346"
-        }
-      },
-      "small": {
-        "source": {
-          "path": "sources/gems/gem-d.svg",
-          "bytes": 762,
-          "sha256": "c5e15acd11b1e0fb9d6ad32110e913692989e4f676c67dad93c7d939057ab524"
-        },
-        "fingerprint": "e15ee44c399bc74229fcf7949dda18bd87e47e5156833dcc17a2f07ea330bff5",
-        "output": {
-          "path": "gem-d-small.avif",
-          "bytes": 4170,
-          "sha256": "cdb8c1a1a27386cc5e17a5fa4926ada0fd9e1f3afd1539644c47f41b4fe676aa"
-        }
-      },
-      "large": {
-        "source": {
-          "path": "sources/gems/gem-d.svg",
-          "bytes": 762,
-          "sha256": "c5e15acd11b1e0fb9d6ad32110e913692989e4f676c67dad93c7d939057ab524"
-        },
-        "fingerprint": "4060286ce94a10f4cd3f0deb4e3e6a4814328b6aec6e43c46f6476d8991eb008",
-        "output": {
-          "path": "gem-d.avif",
-          "bytes": 7504,
-          "sha256": "652cc30609bc0f6aa928b98bb62562a5a3cfe224a3677840f203f7de588ca450"
-        }
-      }
-    },
-    "gem_c": {
-      "tiny": {
-        "source": {
-          "path": "sources/gems/gem-c.svg",
-          "bytes": 762,
-          "sha256": "c544ca5649ad91e5b264c514d8ef4156c49c12f9ef3cefe21ca0dba451f42173"
-        },
-        "fingerprint": "1a68337c6f58ee74ab6fd112fd1fad2eb29f1e28d7a75e8d3340ea290c687aa1",
-        "output": {
-          "path": "gem-c-tiny.avif",
-          "bytes": 2034,
-          "sha256": "cb1b041f0fcf966e30c9724f9526bc270e75cfa13cdc5814d24be4a9c4a1f96d"
-        }
-      },
-      "small": {
-        "source": {
-          "path": "sources/gems/gem-c.svg",
-          "bytes": 762,
-          "sha256": "c544ca5649ad91e5b264c514d8ef4156c49c12f9ef3cefe21ca0dba451f42173"
-        },
-        "fingerprint": "16a19be372e00da5b1d4c3ae09fbfec3f6b10740d5dec86c13df74ed109328e5",
-        "output": {
-          "path": "gem-c-small.avif",
-          "bytes": 4025,
-          "sha256": "b4becf91d4c3a042b51b1f8c077bc1418a83a5dc460c8f9ae16171247a5016a5"
-        }
-      },
-      "large": {
-        "source": {
-          "path": "sources/gems/gem-c.svg",
-          "bytes": 762,
-          "sha256": "c544ca5649ad91e5b264c514d8ef4156c49c12f9ef3cefe21ca0dba451f42173"
-        },
-        "fingerprint": "5433fd8e9647de57d9ef4a773a403a96d2ee0204ac2c44cad61e017b589b3d38",
-        "output": {
-          "path": "gem-c.avif",
-          "bytes": 7204,
-          "sha256": "759f50b0acb812c2ae95727d31f5d3eefc54e7aca031c6dfbb24cb17909f5747"
-        }
-      }
-    },
-    "gem_b": {
-      "tiny": {
-        "source": {
-          "path": "sources/gems/gem-b.svg",
-          "bytes": 762,
-          "sha256": "d6a76be699dcfe99713f935edf8dc0123d6bfb833ce65727abd2e4cacfeb489e"
-        },
-        "fingerprint": "9c6c56054ab963f989766ecdadc0cad1c0d8178a09285a7bb3678fd6b53f4183",
-        "output": {
-          "path": "gem-b-tiny.avif",
-          "bytes": 2000,
-          "sha256": "14028762f2e426e661babb2d82773bde72549e8ccc4a7a7e7cb27c5df56229ca"
-        }
-      },
-      "small": {
-        "source": {
-          "path": "sources/gems/gem-b.svg",
-          "bytes": 762,
-          "sha256": "d6a76be699dcfe99713f935edf8dc0123d6bfb833ce65727abd2e4cacfeb489e"
-        },
-        "fingerprint": "20cf004e3a614c92de9e897f7aeef53a496d544fef2b0a5be10fb9f308dc7d33",
-        "output": {
-          "path": "gem-b-small.avif",
-          "bytes": 4171,
-          "sha256": "334484c79ea6bb6d43d625fd9518c80121ba157f7c388fa142960a664b86361a"
-        }
-      },
-      "large": {
-        "source": {
-          "path": "sources/gems/gem-b.svg",
-          "bytes": 762,
-          "sha256": "d6a76be699dcfe99713f935edf8dc0123d6bfb833ce65727abd2e4cacfeb489e"
-        },
-        "fingerprint": "d82ef9ddf2b6b71725fddc7d8c783f42c7079b665eb747b000701e4d16d9ca7b",
-        "output": {
-          "path": "gem-b.avif",
-          "bytes": 7316,
-          "sha256": "0e231acd54c6720494f0309439f9eb8a0b1fdaa91395a07c183904e0829f6efd"
-        }
-      }
-    },
-    "gem_a": {
-      "tiny": {
-        "source": {
-          "path": "sources/gems/gem-a.svg",
-          "bytes": 762,
-          "sha256": "f3650098d909f40dccac67a75d0ccd32316855e955980cbb0af37e06887b9dae"
-        },
-        "fingerprint": "61a8c407be01b78eb465c78531e4a28ac7fd9535f79ff904fd502f7818ecc7df",
-        "output": {
-          "path": "gem-a-tiny.avif",
-          "bytes": 1961,
-          "sha256": "fbe34dd41c9ded3d8f702e74b3a742dbbca02219b4aa05110fe5bf3e3fd47700"
-        }
-      },
-      "small": {
-        "source": {
-          "path": "sources/gems/gem-a.svg",
-          "bytes": 762,
-          "sha256": "f3650098d909f40dccac67a75d0ccd32316855e955980cbb0af37e06887b9dae"
-        },
-        "fingerprint": "383dfe8cdda4758271eb0085ba3084933b3c848bb98e98825ddff795e72f5afa",
-        "output": {
-          "path": "gem-a-small.avif",
-          "bytes": 4034,
-          "sha256": "36d04194403f4e20baee63a721b8bc074b2199a4ac5d4accf1258477f112ab5b"
-        }
-      },
-      "large": {
-        "source": {
-          "path": "sources/gems/gem-a.svg",
-          "bytes": 762,
-          "sha256": "f3650098d909f40dccac67a75d0ccd32316855e955980cbb0af37e06887b9dae"
-        },
-        "fingerprint": "3e25c91551973dd633bfbbad1c63a1b95053ae9a649cf5e6c4faffb5844c1e6c",
-        "output": {
-          "path": "gem-a.avif",
-          "bytes": 6968,
-          "sha256": "ef272623942b9816f1d47c63d28b453582ee8ffb8e4453c17b626cbb6e8fe26e"
         }
       }
     },

@@ -1,0 +1,61 @@
+{
+  "name": "inbox-tile-v1",
+  "created": "2026-09-30",
+  "generator": "built-in image_gen",
+  "reference": "/Users/fedor/Projects/questfall/design/inbox-launcher-square-2026-09-30/01-solid-tile.png",
+  "intendedDisplayCssPx": 46,
+  "canvas": {
+    "width": 1254,
+    "height": 1254
+  },
+  "states": [
+    {
+      "state": "idle",
+      "source": "/Users/fedor/.codex/generated_images/01a0efa9-fe36-7001-8c00-a89781f69993/exec-49c92f14-0571-43dd-abe9-e45084e74797.png",
+      "file": "idle.png",
+      "format": "png",
+      "width": 1254,
+      "height": 1254,
+      "channels": 4,
+      "hasAlpha": true,
+      "bytes": 1744523,
+      "sha256": "ae53f873cca11ace01e4b3a799671298422d88dfde453d4e458ca4141a776561",
+      "alpha": {
+        "transparentPixels": 335939,
+        "partialPixels": 1234943,
+        "opaquePixels": 1634,
+        "threshold128Bounds": {
+          "x": 67,
+          "y": 66,
+          "width": 1120,
+          "height": 1116
+        }
+      }
+    },
+    {
+      "state": "chat-unread",
+      "source": "/Users/fedor/.codex/generated_images/01a0efa9-fe36-7001-8c00-a89781f69993/exec-2bb233ac-2a5a-4447-bb3a-8adedf5b2410.png",
+      "file": "chat-unread.png",
+      "format": "png",
+      "width": 1254,
+      "height": 1254,
+      "channels": 4,
+      "hasAlpha": true,
+      "bytes": 1529604,
+      "sha256": "a4def3a157f8a450341428c00016be3ef4e877d293063a38688fda47c80d4846",
+      "alpha": {
+        "transparentPixels": 328676,
+        "partialPixels": 1241923,
+        "opaquePixels": 1917,
+        "threshold128Bounds": {
+          "x": 66,
+          "y": 63,
+          "width": 1123,
+          "height": 1121
+        }
+      }
+    }
+  ],
+  "alignmentNote": "The edit retains the same canvas and geometry visually. Alpha128 bounds drift by at most3 source pixels per edge, below0.12 CSS pixel at46px. Generated editing is not pixel-exact; right-side RGBA mean absolute difference is recorded for transparency.",
+  "rightInteriorRgbaMeanAbsoluteDifference": 1.4691938775510205
+}

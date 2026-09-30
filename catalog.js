@@ -62,6 +62,7 @@ export const markers = Object.freeze({
   ...imageMarkers,
   experience: {group: 'resource', text: 'XP', variants: {tiny: {text: 'XP'}}},
   attribute_boost: {...symbolMarker('attribute', attributeIcons.boost), id: 'boost'},
+  consumables: symbolMarker('ui', uiIcons.consumables),
   help: symbolMarker('ui', uiIcons.help),
   moderation: symbolMarker('ui', uiIcons.moderation),
   trophy: symbolMarker('ui', uiIcons.trophy),

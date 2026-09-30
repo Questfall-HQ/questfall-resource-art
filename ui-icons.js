@@ -1,6 +1,41 @@
-// Shared interface symbols use Font Awesome Free silhouettes.
+// Shared interface symbols use Font Awesome Free silhouettes unless marked original.
 // Source and license: third-party/fontawesome-free/LICENSE.txt.
 export const uiIcons = Object.freeze({
+  // Tabler outline icons, unchanged paths. License and pinned SVGs: third-party/tabler-icons/.
+  inbox_chat: {
+    viewbox: '0 0 24 24',
+    paths: [
+      'M12 11v.01',
+      'M8 11v.01',
+      'M16 11v.01',
+      'M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3l12 0',
+    ],
+  },
+  inbox_tracker: {
+    viewbox: '0 0 24 24',
+    paths: [
+      'M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0',
+      'M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6',
+    ],
+  },
+  inbox_daily: {
+    viewbox: '0 0 24 24',
+    paths: [
+      'M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12',
+      'M16 3v4',
+      'M8 3v4',
+      'M4 11h16',
+      'M11 15h1',
+      'M12 15v3',
+    ],
+  },
+  // Original Questfall drawstring supply pouch.
+  consumables: {
+    viewbox: '0 0 24 24',
+    paths: [
+      'M8 2h8l-2 4h-4L8 2Zm1 5h6c.6 0 1 .4 1 1s-.4 1-1 1H9c-.6 0-1-.4-1-1s.4-1 1-1Zm-.5 3h7c2.3 2.3 4.5 5.1 4.5 7.5 0 3-2.8 4.5-8 4.5s-8-1.5-8-4.5c0-2.4 2.2-5.2 4.5-7.5Zm3.5 2-3 4 3 4 3-4-3-4Z',
+    ],
+  },
   help: {
     viewbox: '0 0 512 512',
     paths: [

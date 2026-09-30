@@ -76,6 +76,11 @@ test('size variants select optimized artwork and predictable fallbacks', async (
     }
     expect(visualFor(coin, 'large')).toMatchObject({image: `/images/resources/${coin}.avif`, resolved: 'large'});
   }
+  for (const rarity of ['e','d','c','b','a']) {
+    expect(visualFor(`dice_${rarity}`, 'tiny').image).toBe(`/images/resources/dice-${rarity}-tiny.avif`);
+    expect(visualFor(`dice_${rarity}`, 'large').image).toBe(`/images/resources/dice-${rarity}.avif`);
+    expect(visualFor(`dice_cracked_${rarity}`, 'small').image).toBe(`/images/resources/dice-cracked-${rarity}-small.avif`);
+  }
   expect(visualFor('attribute_points', 'large')).toMatchObject({image: markers.attribute_points.image, resolved: 'tiny'});
   expect(visualFor('xp', 'large')).toMatchObject({text: 'XP', resolved: 'tiny'});
   expect(visualFor('missing', 'tiny')).toBeNull();
@@ -95,15 +100,19 @@ test('normal sync excludes proposals; preview sync includes them', async () => {
     expect(active.exitCode).toBe(0);
     expect(await readdir(join(target, 'public/images/attributes'))).toHaveLength(18);
     expect(await readdir(join(target, 'public/images/attributes'))).not.toContain('mining.png');
-    expect(await readdir(join(target, 'public/images/resources'))).toHaveLength(31);
+    expect(await readdir(join(target, 'public/images/resources'))).toHaveLength(79);
     expect(await readdir(join(target, 'public/images/slots/v5'))).toHaveLength(21);
     expect(await readdir(join(target, 'public/images/resources'))).not.toContain('experience.webp');
     expect((await readdir(join(target, 'public/images/ui'))).sort()).toEqual([
       'admin-metrics',
       'chat-button-glass-small.avif', 'chat-button-glass-tiny.avif', 'chat-button-glass.avif',
+      'daily-actions-v1',
+      'glass-action-button-small.avif', 'glass-action-button-tiny.avif', 'glass-action-button.avif',
+      'inbox-clover-v1', 'inbox-rail-v1', 'inbox-tile-v1',
       'questfall-logo-badge-small.avif', 'questfall-logo-badge-tiny.avif', 'questfall-logo-badge.avif',
       'questfall-logo-gold-small.avif', 'questfall-logo-gold-tiny.avif', 'questfall-logo-gold.avif',
       'questfall-logo-small.avif', 'questfall-logo-tiny.avif', 'questfall-logo.avif',
+      'reward-gift-v1-small.avif', 'reward-gift-v1-tiny.avif', 'reward-gift-v1.avif',
       'submissions-object.webp', 'weekly-reset.webp',
     ]);
     expect(readdir(join(target, 'public/images/ui-candidates/v1'))).rejects.toThrow();
@@ -171,6 +180,60 @@ test('artwork build skips unchanged sources and rebuilds only changed or missing
 
     await rm(join(target, 'assets/sample-tiny.avif'));
     expect((await buildArtwork({directory: target, entries, inventory: false})).built).toEqual(['sample/tiny']);
+  } finally {
+    await rm(target, {recursive: true, force: true});
+  }
+});
+
+test('wide UI artwork keeps its button proportions across AVIF variants', async () => {
+  const target = await mkdtemp(join(tmpdir(), 'questfall-artwork-button-'));
+  const entries = {button: {
+    group: 'ui', source: 'sources/ui/button.png', output: 'ui/button',
+    dimensions: {tiny: [128, 38], small: [256, 76], large: [512, 152]},
+    padding: {tiny: 2, small: 3, large: 6},
+  }};
+  try {
+    await mkdir(join(target, 'sources/ui'), {recursive: true});
+    await writeFile(join(target, 'sources/ui/button.png'), await sharp({
+      create: {width: 1200, height: 350, channels: 4, background: '#534070dd'},
+    }).png().toBuffer());
+    expect((await buildArtwork({directory: target, entries, inventory: false})).built).toEqual([
+      'button/tiny', 'button/small', 'button/large',
+    ]);
+    for (const [variant, [width, height]] of Object.entries(entries.button.dimensions)) {
+      const name = variant === 'large' ? 'button.avif' : `button-${variant}.avif`;
+      const metadata = await sharp(join(target, 'assets/ui', name)).metadata();
+      expect([metadata.width, metadata.height, metadata.hasAlpha]).toEqual([width, height, true]);
+    }
+    await buildArtwork({directory: target, entries, inventory: false, check: true});
+  } finally {
+    await rm(target, {recursive: true, force: true});
+  }
+});
+
+test('aligned UI states preserve the source canvas and invalidate the cache when trim changes', async () => {
+  const target = await mkdtemp(join(tmpdir(), 'questfall-artwork-canvas-'));
+  const entries = {plate: {
+    group: 'ui', sources: {tiny: 'sources/ui/plate.png'}, output: 'ui/plate', trim: false,
+    dimensions: {tiny: [64, 80]}, padding: {tiny: 0},
+  }};
+  try {
+    await mkdir(join(target, 'sources/ui'), {recursive: true});
+    const square = await sharp({create: {width: 100, height: 100, channels: 4, background: '#9a74ffff'}}).png().toBuffer();
+    await writeFile(join(target, 'sources/ui/plate.png'), await sharp({
+      create: {width: 512, height: 640, channels: 4, background: '#00000000'},
+    }).composite([{input: square, left: 40, top: 60}]).png().toBuffer());
+    expect((await buildArtwork({directory: target, entries, inventory: false})).built).toEqual(['plate/tiny']);
+    const {data, info} = await sharp(join(target, 'assets/ui/plate-tiny.avif')).raw().toBuffer({resolveWithObject: true});
+    const alpha = (x, y) => data[(y * info.width + x) * info.channels + 3];
+    expect(alpha(10, 12)).toBeGreaterThan(200);
+    expect(alpha(32, 40)).toBe(0);
+    expect(alpha(0, 0)).toBe(0);
+    expect((await buildArtwork({directory: target, entries, inventory: false})).built).toEqual([]);
+    entries.plate.trim = true;
+    expect((await buildArtwork({directory: target, entries, inventory: false})).built).toEqual(['plate/tiny']);
+    const trimmed = await sharp(join(target, 'assets/ui/plate-tiny.avif')).raw().toBuffer();
+    expect(trimmed[(40 * 64 + 32) * 4 + 3]).toBeGreaterThan(200);
   } finally {
     await rm(target, {recursive: true, force: true});
   }

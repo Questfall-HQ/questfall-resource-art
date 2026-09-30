@@ -34,6 +34,14 @@ current display is 80 CSS px on the preview stand, so 256 px covers a 3×
 display. Source images are never copied to clients. A variant can use its own
 source via `sources: {tiny: 'sources/...png'}` when a small image needs different
 art. Per-variant `padding` is available for optical size adjustments.
+UI state images that share one canvas can use `trim: false` to preserve their
+alignment and transparent margins. The active inbox rail uses a continuous
+smoked-glass body at 44 × 148 CSS px and a separate translucent counter plate.
+Clients rotate and resize the body to fit the launcher. Chat uses a speech
+bubble, Tracker an eye, and Daily a calendar. Live counts cover the entire
+icon; zero counts leave quiet grey icons visible, and generic unread chat
+lights only the chat icon. Shared Tabler outline paths and their MIT license
+are preserved under `third-party/tabler-icons/`. Earlier tile and clover art is retained.
 
 `artwork-build-cache.json` records the SHA-256 and byte size of each source,
 the conversion recipe, and the SHA-256 of each output. `bun run build:artwork`
@@ -97,6 +105,14 @@ The Application's lootbox opening videos and other layout-specific graphics
 remain local. The chat composer glass button is shared UI artwork. Welcome
 reward markers use the same shared entries as other rewards; its panel
 background and other decoration remain local.
+The textless glass action button is shared UI artwork at
+`/images/ui/glass-action-button-small.avif` for compact buttons. Its wide
+variants keep a 128×38, 256×76, or 512×152 canvas; overlay the label in the
+client so the image can be reused for other actions. UI artwork may declare
+`dimensions` per variant to keep a non-square source's intended proportions.
+The `reward_gift` marker is the small lavender isometric present used before
+Daily rewards. Its transparent master and generation brief live in `sources/ui/`;
+request its `tiny` variant for the 22 CSS px marker.
 The Questfall shield logo is shared UI artwork as `questfall_logo`, with transparent
 `tiny`, `small`, and `large` variants. Use `visualFor('questfall_logo', 'tiny')`
 for compact role labels and other favicon-sized UI.
@@ -111,6 +127,36 @@ available for migration. Old tags remain available for open tabs and rollbacks.
 
 ### Gems F–A
 
-`gem_f` through `gem_a` provide Common to Mythical Gem artwork. Faceted SVG
-masters in `sources/gems/` build transparent AVIF in all three standard sizes.
+`gem_f` through `gem_a` provide Common to Mythical Gem artwork. Generated glass
+PNG masters in `sources/gems/` build transparent AVIF in all three standard sizes.
 Inventory, Marketplace and weekly prize funds use the same rarity markers.
+
+`gem_cracked_f` through `gem_cracked_a` are generated consumption illustrations
+with a wide central fracture and two separated halves, using the same glass
+material as intact Gems. Masters live in `sources/gems/cracked/`, including
+the generation prompts. Use them for crafting ingredient costs, not owned items.
+
+`dice_cracked_e` through `dice_cracked_a` illustrate the Dice consumed by perk
+rerolling. Their two separated ceramic halves retain the rarity color and
+2–6 pips. Masters live in `sources/dice/cracked/`. The matching intact Dice
+visuals are active as `dice_e` through `dice_a` from `sources/dice/`.
+
+The current 2.12.0 changes are a local working iteration. Application and Admin
+use `file:../questfall-resource-art` while Fedor collects further changes. Before
+the eventual release, publish an immutable artwork tag, pin that same exact tag
+in both clients, reinstall from GitHub and rerun the required checks. No package
+tag or application deployment was published for this iteration.
+
+`consumables` is an original single-color supply-pouch SVG symbol for the combined
+Potion/Gem/Dice inventory category. Render it through `resource-icon` / `visualFor`.
+
+The `@questfall/resource-art/daily-actions` entrypoint exports `dailyActionMarkers`
+and `dailyActionFor(action, variant)` for generated action icons. Request the
+`small` variant for 54 CSS px task illustrations (40–48 px on narrow screens).
+The active set uses broad silhouettes and one oversized action sign, without
+weapons, hands, ornaments or small particles. Transparent masters and all built-in
+image generation prompts live in `sources/ui/daily-actions-v2/`. The rejected
+first study remains in `sources/ui/daily-actions-v1/`. Optimized 64/128/256 px
+AVIF variants replace the existing `/images/ui/daily-actions-v1/` assets; both
+Daily image components request `?v=2` to invalidate previously cached artwork.
+Admin's `/content/resources` preview displays the main Daily sample at 54 px.

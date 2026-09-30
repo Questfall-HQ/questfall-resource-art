@@ -1,0 +1,20 @@
+{
+  "generator": "built-in image_gen",
+  "source": "exec-dd1410a9-e7e8-4973-b060-9b684da426f1.png",
+  "file": "counter.png",
+  "width": 960,
+  "height": 960,
+  "channels": 4,
+  "hasAlpha": true,
+  "sha256": "d52a219761bf4c94d1987975cec768b3c4fcbd70326150ad4707d5c5908fd1f4",
+  "crop": {
+    "left": 148,
+    "top": 148,
+    "width": 960,
+    "height": 960
+  },
+  "intendedCssPixels": [
+    34,
+    34
+  ]
+}

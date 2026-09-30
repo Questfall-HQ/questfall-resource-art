@@ -1,0 +1,57 @@
+{
+  "name": "inbox-rail-v1",
+  "created": "2026-09-30",
+  "generator": "built-in image_gen",
+  "reference": "/Users/fedor/.codex/generated_images/01a0ef69-fe81-7fa3-a56f-59bfbffb1110/exec-522b0678-d1a6-4fc4-a521-138e4e354201.png",
+  "originalGeneration": "/Users/fedor/.codex/generated_images/01a0efa9-fe36-7001-8c00-a89781f69993/exec-4b954287-02a1-4d09-82b6-6ff541981c5c.png",
+  "selectedGeneration": "/Users/fedor/.codex/generated_images/01a0efa9-fe36-7001-8c00-a89781f69993/exec-1db44442-efaa-47fa-97bd-1f4aae744486.png",
+  "postprocess": "Extract transparent outer padding only; no drawing, alpha manipulation, color changes or resampling",
+  "crop": {
+    "left": 293,
+    "top": 28,
+    "width": 440,
+    "height": 1480
+  },
+  "file": "body.png",
+  "format": "png",
+  "width": 440,
+  "height": 1480,
+  "channels": 4,
+  "hasAlpha": true,
+  "intendedDisplayCssPx": {
+    "width": 44,
+    "height": 148
+  },
+  "intendedAvifDimensions": [
+    {
+      "width": 88,
+      "height": 296
+    },
+    {
+      "width": 132,
+      "height": 444
+    }
+  ],
+  "bytes": 1269277,
+  "sha256": "99dfca2da2d79b6975046b564f264c96cd4ab9611abfd7631baeca9ad6e14f7e",
+  "alpha": {
+    "transparentPixels": 73189,
+    "partialPixels": 578011,
+    "opaquePixels": 0,
+    "min": 0,
+    "max": 254,
+    "centerRgba": [
+      60,
+      63,
+      73,
+      214
+    ],
+    "threshold16Bounds": {
+      "x": 18,
+      "y": 28,
+      "width": 405,
+      "height": 1416
+    }
+  },
+  "notes": "One blank continuous smoked-grey glass body. No icons, counters, inner seams or boxes. Master canvas44:148 exactly; visible glass has subtle transparent margins. Preserve canvas using trim:false and zero padding when building shared variants."
+}

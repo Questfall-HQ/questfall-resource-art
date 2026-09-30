@@ -21,13 +21,16 @@ const allFiles = async directory => {
   return files;
 };
 
-const artifact = async (path, variant) => {
+const dimensionsFor = (entry, variant) => entry.dimensions?.[variant] ?? [variantSettings[variant].size, variantSettings[variant].size];
+
+const artifact = async (path, variant, entry) => {
   if (!(await exists(path))) return null;
   const bytes = await readFile(path);
   const metadata = await sharp(bytes).metadata();
   const settings = variantSettings[variant];
-  if (metadata.format !== 'heif' || metadata.width !== settings.size ||
-      metadata.height !== settings.size || !metadata.hasAlpha || bytes.length > settings.maxBytes) {
+  const [width, height] = dimensionsFor(entry, variant);
+  if (metadata.format !== 'heif' || metadata.width !== width ||
+      metadata.height !== height || !metadata.hasAlpha || bytes.length > settings.maxBytes) {
     throw new Error(`Invalid ${variant} AVIF: ${path} (${metadata.width}x${metadata.height}, ${bytes.length} bytes)`);
   }
   return {bytes: bytes.length, sha256: hash(bytes)};
@@ -57,6 +60,14 @@ export async function buildArtwork({directory = root, entries = artwork, check =
     if (hasSource && !entry.output) throw new Error(`Missing output stem: ${key}`);
     if (sourceSlots.some(slot => !variantSettings[slot] || (entry.file && slot === (entry.slot ?? 'large')))) {
       throw new Error(`Invalid or duplicate variant source: ${key}`);
+    }
+    if (entry.dimensions && (entry.group !== 'ui' || Object.keys(entry.dimensions).some(slot =>
+      !variantSettings[slot] || entry.dimensions[slot].length !== 2 ||
+      entry.dimensions[slot].some(size => !Number.isInteger(size) || size < 1)))) {
+      throw new Error(`Invalid UI artwork dimensions: ${key}`);
+    }
+    if (entry.trim != null && (entry.group !== 'ui' || typeof entry.trim !== 'boolean')) {
+      throw new Error(`Invalid UI artwork trim: ${key}`);
     }
     if (entry.group === 'attribute' && entry.name !== key.slice('attribute_'.length)) throw new Error(`Invalid attribute name: ${key}`);
     if (entry.group === 'lootbox' && !entry.name) throw new Error(`Missing lootbox name: ${key}`);
@@ -93,13 +104,16 @@ export async function buildArtwork({directory = root, entries = artwork, check =
       const sourceBytes = await readFile(sourcePath);
       const sourceInfo = {path: source, bytes: sourceBytes.length, sha256: hash(sourceBytes)};
       const padding = entry.padding?.[variant] ?? settings.padding;
-      const recipe = {source: sourceInfo.sha256, output: file, size: settings.size, padding,
+      const [width, height] = dimensionsFor(entry, variant);
+      const recipe = {source: sourceInfo.sha256, output: file,
+        ...(entry.dimensions ? {width, height} : {size: settings.size}), padding,
+        ...(entry.trim === false ? {trim: false} : {}),
         quality: settings.quality, sharp: packageData.devDependencies.sharp};
       const fingerprint = hash(JSON.stringify(recipe));
       const prior = previous.entries?.[key]?.[variant];
       let output;
       try {
-        output = await artifact(outputPath, variant);
+        output = await artifact(outputPath, variant, entry);
       } catch (error) {
         if (check) throw error;
         output = null;
@@ -111,18 +125,20 @@ export async function buildArtwork({directory = root, entries = artwork, check =
         continue;
       }
       if (!current) {
-        const inner = settings.size - 2 * padding;
-        if (!Number.isInteger(padding) || inner < 1) throw new Error(`Invalid ${variant} padding: ${key}`);
-        const {info} = await sharp(sourceBytes).trim({background: '#00000000'}).toBuffer({resolveWithObject: true});
-        if (Math.max(info.width, info.height) < inner) throw new Error(`Source is too small for ${variant}: ${source}`);
+        const innerWidth = width - 2 * padding;
+        const innerHeight = height - 2 * padding;
+        if (!Number.isInteger(padding) || innerWidth < 1 || innerHeight < 1) throw new Error(`Invalid ${variant} padding: ${key}`);
+        const image = sharp(sourceBytes);
+        if (entry.trim !== false) image.trim({background: '#00000000'});
+        const {info} = await image.clone().toBuffer({resolveWithObject: true});
+        if (Math.max(info.width, info.height) < Math.max(innerWidth, innerHeight)) throw new Error(`Source is too small for ${variant}: ${source}`);
         await mkdir(dirname(outputPath), {recursive: true});
-        await sharp(sourceBytes)
-          .trim({background: '#00000000'})
-          .resize(inner, inner, {fit: 'contain', background: '#00000000'})
+        await image
+          .resize(innerWidth, innerHeight, {fit: entry.dimensions ? 'fill' : 'contain', background: '#00000000'})
           .extend({top: padding, right: padding, bottom: padding, left: padding, background: '#00000000'})
           .avif({quality: settings.quality, effort: 6, chromaSubsampling: '4:4:4'})
           .toFile(outputPath);
-        output = await artifact(outputPath, variant);
+        output = await artifact(outputPath, variant, entry);
         changes.push(`${key}/${variant}`);
       }
       next.entries[key][variant] = {source: sourceInfo, fingerprint, output: {path: file, ...output}};

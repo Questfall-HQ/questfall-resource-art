@@ -1,0 +1,34 @@
+{
+  "size": [
+    1122,
+    1402
+  ],
+  "mode": "RGBA",
+  "transparent_pixels": 700731,
+  "partial_alpha_pixels": 872313,
+  "idle_alpha_bbox": [
+    0,
+    9,
+    1119,
+    1378
+  ],
+  "chat_unread_alpha_bbox": [
+    0,
+    19,
+    1108,
+    1378
+  ],
+  "silhouette_iou_at_half_alpha": 0.927338,
+  "generator": "built-in ImageGen",
+  "asset_scope": "backplates only; no application behavior changed",
+  "files": {
+    "idle.png": {
+      "bytes": 1149281,
+      "sha256": "e6f24a04b37c6c003e428e001ca50de5cd0e3fb2a62e83c6b4d1f173ddbe0929"
+    },
+    "chat-unread.png": {
+      "bytes": 1148011,
+      "sha256": "4badcb969e9811bf2c5b5a9cf2fe37a599200746c685a7d4deaca4e6255a6dfb"
+    }
+  }
+}

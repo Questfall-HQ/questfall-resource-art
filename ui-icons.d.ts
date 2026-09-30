@@ -4,6 +4,10 @@ export interface UiIcon {
 }
 
 export declare const uiIcons: Readonly<{
+  inbox_chat: UiIcon;
+  inbox_tracker: UiIcon;
+  inbox_daily: UiIcon;
+  consumables: UiIcon;
   help: UiIcon;
   moderation: UiIcon;
   trophy: UiIcon;
