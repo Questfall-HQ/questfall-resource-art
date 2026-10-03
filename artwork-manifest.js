@@ -81,6 +81,7 @@ export const artwork = Object.freeze({
   weekly_reset: {group: 'ui', file: 'ui/weekly-reset.webp'},
   chat_button_glass: {group: 'ui', source: 'sources/ui/chat-button-glass.png', output: 'ui/chat-button-glass'},
   reward_gift: {group: 'ui', source: 'sources/ui/reward-gift-v1.png', output: 'ui/reward-gift-v1'},
+  tracker_moderation: {group: 'ui', source: 'sources/ui/tracker-moderation-v1.png', output: 'ui/tracker-moderation-v1'},
   inbox_rail_body: {
     group: 'ui', source: 'sources/ui/inbox-rail-v1/body.png', output: 'ui/inbox-rail-v1/body',
     dimensions: {tiny: [44, 148], small: [88, 296], large: [132, 444]},

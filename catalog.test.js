@@ -113,7 +113,9 @@ test('normal sync excludes proposals; preview sync includes them', async () => {
       'questfall-logo-gold-small.avif', 'questfall-logo-gold-tiny.avif', 'questfall-logo-gold.avif',
       'questfall-logo-small.avif', 'questfall-logo-tiny.avif', 'questfall-logo.avif',
       'reward-gift-v1-small.avif', 'reward-gift-v1-tiny.avif', 'reward-gift-v1.avif',
-      'submissions-object.webp', 'weekly-reset.webp',
+      'submissions-object.webp',
+      'tracker-moderation-v1-small.avif', 'tracker-moderation-v1-tiny.avif', 'tracker-moderation-v1.avif',
+      'weekly-reset.webp',
     ]);
     expect(readdir(join(target, 'public/images/ui-candidates/v1'))).rejects.toThrow();
 

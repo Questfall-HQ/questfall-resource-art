@@ -54,8 +54,15 @@ never rewrites files. Legacy entries remain explicitly grandfathered until
 their source artwork can be recovered and migrated. New images must use the
 source-to-AVIF pipeline; SVG symbols and text are separate visual types.
 
-To add an image, put its master file in `sources/`, add one manifest entry, then
-run:
+## Adding and updating artwork
+
+Put the master file in `sources/<group>/` and add a manifest entry with
+`group`, `source` and `output`, for example
+`new_resource: {group: 'resource', source: 'sources/resources/new-resource.png', output: 'new-resource'}`.
+For an attribute, use `group: 'attribute'`, `name` and output `attributes/<name>`.
+Per-size `sources` and `padding` work as described above. Update generated
+artwork by replacing its master; never edit generated `assets/` files by hand.
+Then run:
 
 ```sh
 bun run build:artwork
@@ -63,9 +70,13 @@ bun run check:artwork
 bun test
 ```
 
-Review the three sizes on Admin's `/system/resources` stand. Commit both the
-source and generated AVIFs with the cache, tag the package, then update its
-exact tag in Application and Admin. Both clients only copy ready-to-use assets.
+Review the three sizes on Admin's `/content/resources` stand. Commit both the source and
+generated AVIFs with the cache. At release, publish an immutable package tag,
+pin that same exact tag in Application and Admin, reinstall from GitHub and run
+their required release checks. Both clients only copy ready-to-use assets.
+
+### Existing artwork
+
 Gold and Silver use dedicated, simpler `tiny` and matte `small` AVIFs; their approved
 large coin artwork remains in the legacy `file` slot. For an existing legacy
 entry, `file` can coexist with `sources` for the other size slots. Attribute Points
