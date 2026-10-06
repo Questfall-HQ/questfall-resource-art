@@ -5,11 +5,11 @@ import {uiIcons} from './ui-icons.js';
 // Public paths stay stable across clients; replace artwork only in this package.
 const imageMap = (group, variant = 'large') => Object.freeze(Object.fromEntries(
   Object.entries(artwork)
-    .filter(([, entry]) => entry.group === group)
+    .filter(([, entry]) => entry.group === group && !entry.retired)
     .map(([key, entry]) => {
       const files = filesFor(entry);
       const file = files[variant] ?? files.large ?? files.small ?? files.tiny;
-      return [entry.name ?? key, publicPath(entry, file)];
+      return [entry.name ?? entry.designation ?? key, publicPath(entry, file)];
     }),
 ));
 
@@ -49,13 +49,13 @@ export const uiImages = imageMap('ui');
 // Each designation has three visual slots. Missing slots fall back through
 // visualFor(), so artwork can be added gradually without changing clients.
 const symbolMarker = (group, symbol) => ({group, symbol, variants: {tiny: {symbol}}});
-const imageMarkers = Object.fromEntries(Object.entries(artwork).map(([key, entry]) => {
+const imageMarkers = Object.fromEntries(Object.entries(artwork).filter(([,entry]) => !entry.retired).map(([key, entry]) => {
   const files = filesFor(entry);
   const variants = Object.fromEntries(Object.entries(files).map(([slot, file]) => [slot, {image: publicPath(entry, file)}]));
   const image = variants.large?.image ?? variants.small?.image ?? variants.tiny?.image;
   const id = entry.group === 'attribute' ? {id: entry.name} : {};
   const symbol = entry.group === 'attribute' ? {symbol: attributeIcons[entry.name]} : {};
-  return [key, {group: entry.group, ...id, image, ...symbol, variants}];
+  return [entry.designation ?? key, {group: entry.group, ...id, image, ...symbol, variants}];
 }));
 
 export const markers = Object.freeze({

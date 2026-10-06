@@ -84,6 +84,8 @@ test('size variants select optimized artwork and predictable fallbacks', async (
   expect(visualFor('attribute_points', 'large')).toMatchObject({image: markers.attribute_points.image, resolved: 'tiny'});
   expect(visualFor('xp', 'large')).toMatchObject({text: 'XP', resolved: 'tiny'});
   expect(visualFor('missing', 'tiny')).toBeNull();
+  expect(visualFor('qft', 'small').image).toBe('/images/resources/qft-v1-small.avif');
+  expect(markers.qft_legacy).toBeUndefined();
   for (const key of Object.keys(markers)) {
     expect(visualFor(key, 'tiny')).not.toBeNull();
     expect(visualFor(key, 'small')).not.toBeNull();
@@ -100,7 +102,7 @@ test('normal sync excludes proposals; preview sync includes them', async () => {
     expect(active.exitCode).toBe(0);
     expect(await readdir(join(target, 'public/images/attributes'))).toHaveLength(18);
     expect(await readdir(join(target, 'public/images/attributes'))).not.toContain('mining.png');
-    expect(await readdir(join(target, 'public/images/resources'))).toHaveLength(79);
+    expect(await readdir(join(target, 'public/images/resources'))).toHaveLength(82);
     expect(await readdir(join(target, 'public/images/slots/v5'))).toHaveLength(21);
     expect(await readdir(join(target, 'public/images/resources'))).not.toContain('experience.webp');
     expect((await readdir(join(target, 'public/images/ui'))).sort()).toEqual([
