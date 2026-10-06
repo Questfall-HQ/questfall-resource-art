@@ -93,8 +93,11 @@ Traits use their parent attribute marker.
 The shared `help` UI symbol is the outlined question mark for contextual explanations. Render it through `visualFor('help', 'tiny')` so help controls keep the same shape across clients.
 
 QFT, Experience, Chest Shards, Gems, and Attribute Points also have shared
-markers. The current QFT image is provisional until its visual identity is
-finalized. Chest Shards use the matte violet puzzle piece; the Weekly Reset
+markers. QFT uses the selected Round Q: a large gold Q on a violet coin face,
+with transparent master `sources/resources/qft-v2.png` and versioned
+`qft-v2` AVIFs in all three sizes. The earlier pickaxe coin remains available
+under its previous paths for existing clients. Chest Shards use the matte violet
+puzzle piece; the Weekly Reset
 hourglass is a shared UI image. Moderation's double check, the rating star, and
 the trophy used for Mining and Season are shared single-color UI symbols. `xp` and `chest_shards` are aliases
 for Experience and Chest Shards. The earlier Experience book remains in

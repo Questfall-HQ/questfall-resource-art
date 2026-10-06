@@ -631,6 +631,47 @@
         }
       }
     },
+    "qft_v2": {
+      "tiny": {
+        "source": {
+          "path": "sources/resources/qft-v2.png",
+          "bytes": 1314618,
+          "sha256": "ae03a3416fae3b9f21e2083081942984007b967005c276e2686ff70aea8657bc"
+        },
+        "fingerprint": "b20be8b2f347bb61ce2b20204199bfb37366c0c904643827ad5a2ee7d6e045d5",
+        "output": {
+          "path": "qft-v2-tiny.avif",
+          "bytes": 2648,
+          "sha256": "47f71582a04c91c67e8bb56d792f3503472bba0479247d758c11db9077da4b37"
+        }
+      },
+      "small": {
+        "source": {
+          "path": "sources/resources/qft-v2.png",
+          "bytes": 1314618,
+          "sha256": "ae03a3416fae3b9f21e2083081942984007b967005c276e2686ff70aea8657bc"
+        },
+        "fingerprint": "ef68c8372d3a86255750bbd0706eb0188e370b497ff1eea7a7a041beeea3a9a7",
+        "output": {
+          "path": "qft-v2-small.avif",
+          "bytes": 5445,
+          "sha256": "d84a51a7793e79fdc8b14501bcf1d97f62a63a95b4a249009dea0a8485fb39b3"
+        }
+      },
+      "large": {
+        "source": {
+          "path": "sources/resources/qft-v2.png",
+          "bytes": 1314618,
+          "sha256": "ae03a3416fae3b9f21e2083081942984007b967005c276e2686ff70aea8657bc"
+        },
+        "fingerprint": "e3237c6505cbd624ee227978a5d3a10db87188cd2c07ed7de5e2ec4fbeacb541",
+        "output": {
+          "path": "qft-v2.avif",
+          "bytes": 13044,
+          "sha256": "93f1236c90a1a8bc590c43d30b78ebe6a1d4c9e78dd276eedeb0c6256470f56e"
+        }
+      }
+    },
     "gem_f": {
       "tiny": {
         "source": {
