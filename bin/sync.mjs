@@ -1,19 +1,23 @@
-import {copyFile, mkdir, rm} from 'node:fs/promises';
+import {copyFile, mkdir, readFile, rm} from 'node:fs/promises';
 import {basename, dirname, join} from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {artwork, filesFor, publicPath} from '../artwork-manifest.js';
+import {activeFiles} from '../artwork-manifest.js';
 import {attributeImages, inventoryVariantImages, uiCandidateImages} from '../catalog.js';
 
 const source = fileURLToPath(new URL('../assets/', import.meta.url));
 const copied = new Set();
-for (const entry of Object.values(artwork)) {
-  for (const file of Object.values(filesFor(entry))) {
-    const target = join(process.cwd(), 'public', publicPath(entry, file));
+for (const {file, path} of activeFiles()) {
+    const target = join(process.cwd(), 'public', path);
     if (copied.has(target)) continue;
+    copied.add(target);
+    const expected = await readFile(join(source, file));
+    const existing = await readFile(target).catch(error => {
+      if (error.code !== 'ENOENT') throw error;
+      return null;
+    });
+    if (existing?.equals(expected)) continue;
     await mkdir(dirname(target), {recursive: true});
     await copyFile(join(source, file), target);
-    copied.add(target);
-  }
 }
 console.log(`Synced ${copied.size} active resource-art files`);
 

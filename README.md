@@ -1,10 +1,21 @@
 # Questfall Resource Art
 
-Shared source of truth for static resource, lootbox, attribute, equipment slot, and Submissions
+Shared source of truth for resource, lootbox, attribute, equipment slot, Founder NFT, and Submissions
 markers in Questfall Application and Admin. This package owns the artwork and
 the mapping from product designations to that artwork. The API contract owns
 public reward keys; PocketBase owns balances and game rules. Clients own labels,
 layout, and the requested visual size.
+
+`nftMedia` exports the approved poster and animation for each of the six Founder
+rarities. The original AVIF posters and MP4 videos live in `sources/nfts/`.
+Encoded media entries in `artwork-manifest.js` preserve their bytes and geometry;
+the build copies them into `assets/nfts/` and records source/output hashes in
+the same build cache. `check:artwork` validates AVIF/GIF images and MP4 containers,
+checks exact copies, and rejects incomplete or unlisted outputs. These are
+existing encoded originals, rather than PNG masters or resized resource icons.
+Clients keep the established `/nfts/<rarity>.avif` and `.mp4` URLs and obtain
+both paths from the package. Normal sync copies media together with artwork
+and preserves file signatures when the installed bytes are already current.
 
 `catalog.js` exports `markers`, `markerFor(key)`, and `visualFor(key, variant)`.
 It also exports `slotImages`, `slotTinyImages`, and `slotSmallImages` for the
@@ -107,7 +118,7 @@ The legacy `image`, `symbol`, and `text` properties on `markerFor` remain for
 existing consumers; new components should use `visualFor`.
 
 Active files live under `assets/` and are copied into each client's
-`public/images` by:
+`public/images` and `public/nfts` by:
 
 ```sh
 bun node_modules/@questfall/resource-art/bin/sync.mjs

@@ -4,10 +4,45 @@ import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import sharp from 'sharp';
-import {markerFor, markers, slotImages, slotTinyImages, visualFor} from './catalog.js';
+import {markerFor, markers, slotImages, slotTinyImages, visualFor, nftMedia} from './catalog.js';
+import {activeFiles, media} from './artwork-manifest.js';
 import {buildArtwork} from './scripts/build-artwork.mjs';
 
 const script = fileURLToPath(new URL('./bin/sync.mjs', import.meta.url));
+
+test('NFT posters and animations preserve their public URLs and original encoded bytes', async () => {
+  for (const name of ['common', 'uncommon', 'rare', 'epic', 'legendary', 'mythical']) {
+    expect(nftMedia[name]).toEqual({image: `/nfts/${name}.avif`, video: `/nfts/${name}.mp4`});
+  }
+  for (const entry of Object.values(media)) {
+    const source = await readFile(new URL(entry.source, import.meta.url));
+    const asset = await readFile(new URL('assets/' + entry.output, import.meta.url));
+    expect(asset.equals(source)).toBe(true);
+    expect(activeFiles()).toContainEqual({file: entry.output, path: '/' + entry.output});
+  }
+});
+
+test('encoded media checks reject corruption and rebuild without changing approved bytes', async () => {
+  const target = await mkdtemp(join(tmpdir(), 'questfall-nft-media-'));
+  const entry = media.nft_common_video;
+  try {
+    await mkdir(join(target, 'sources/nfts'), {recursive: true});
+    const source = await readFile(new URL(entry.source, import.meta.url));
+    await writeFile(join(target, entry.source), source);
+    const options = {directory: target, entries: {}, mediaEntries: {clip: entry}};
+    expect((await buildArtwork(options)).built).toEqual(['clip/original']);
+    expect((await buildArtwork(options)).built).toEqual([]);
+    await buildArtwork({...options, check: true});
+    await writeFile(join(target, 'assets', entry.output), source.subarray(0, 32));
+    await expect(buildArtwork({...options, check: true})).rejects.toThrow('clip/original');
+    await buildArtwork(options);
+    expect((await readFile(join(target, 'assets', entry.output))).equals(source)).toBe(true);
+    await writeFile(join(target, entry.source), source.subarray(0, 32));
+    await expect(buildArtwork(options)).rejects.toThrow('MP4');
+  } finally {
+    await rm(target, {recursive: true, force: true});
+  }
+});
 
 test('product aliases resolve to the selected shared artwork', () => {
   expect(markerFor('quest_bounty')).not.toBe(markers.mining_points);
@@ -100,6 +135,13 @@ test('normal sync excludes proposals; preview sync includes them', async () => {
     await writeFile(join(target, 'public/images/attributes/mining.png'), 'legacy package artwork');
     const active = Bun.spawnSync(['bun', script], {cwd: target});
     expect(active.exitCode).toBe(0);
+    expect(await readdir(join(target, 'public/nfts'))).toHaveLength(12);
+    const poster = join(target, 'public/nfts/common.avif');
+    const before = await stat(poster);
+    expect(Bun.spawnSync(['bun', script], {cwd: target}).exitCode).toBe(0);
+    const after = await stat(poster);
+    expect(after.mtimeMs).toBe(before.mtimeMs);
+    expect(after.ctimeMs).toBe(before.ctimeMs);
     expect(await readdir(join(target, 'public/images/attributes'))).toHaveLength(18);
     expect(await readdir(join(target, 'public/images/attributes'))).not.toContain('mining.png');
     expect(await readdir(join(target, 'public/images/resources'))).toHaveLength(85);

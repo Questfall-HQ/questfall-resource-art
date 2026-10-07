@@ -1,5 +1,5 @@
 import {attributeIcons} from './attribute-icons.js';
-import {artwork, filesFor, publicPath} from './artwork-manifest.js';
+import {artwork, filesFor, publicPath, media} from './artwork-manifest.js';
 import {uiIcons} from './ui-icons.js';
 
 // Public paths stay stable across clients; replace artwork only in this package.
@@ -21,6 +21,14 @@ export const attributeSmallImages = imageMap('attribute', 'small');
 export const slotImages = imageMap('slot');
 export const slotTinyImages = imageMap('slot', 'tiny');
 export const slotSmallImages = imageMap('slot', 'small');
+
+export const nftMedia = Object.freeze(Object.fromEntries(
+  [...new Set(Object.values(media).map(entry => entry.name))].map(name => [name,
+    Object.freeze(Object.fromEntries(Object.values(media)
+      .filter(entry => entry.group === 'nft' && entry.name === name)
+      .map(entry => [entry.type, '/' + entry.output]))),
+  ]),
+));
 
 export const inventoryVariantImages = Object.freeze({
   cube: '/images/attribute-candidates/v2/inventory.png',

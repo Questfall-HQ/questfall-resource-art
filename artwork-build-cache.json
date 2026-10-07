@@ -2852,6 +2852,186 @@
           "sha256": "3b710cd13d74d942ba79b2788ce1f5a384ccbbf8c2a36c4dd8bfe1e18b7bf90f"
         }
       }
+    },
+    "nft_common_image": {
+      "original": {
+        "source": {
+          "path": "sources/nfts/common.avif",
+          "bytes": 19223,
+          "sha256": "54219ffe79efa134a2a4f78b812781e2ae4a1bff4031685f7363c8213c605d5e"
+        },
+        "fingerprint": "8ae5c05874f190d46b3482a32be0c60973e13c59acaf11ad5f7342db546513fa",
+        "output": {
+          "path": "nfts/common.avif",
+          "bytes": 19223,
+          "sha256": "54219ffe79efa134a2a4f78b812781e2ae4a1bff4031685f7363c8213c605d5e"
+        }
+      }
+    },
+    "nft_common_video": {
+      "original": {
+        "source": {
+          "path": "sources/nfts/common.mp4",
+          "bytes": 664871,
+          "sha256": "93d6ec4e73fa51b0ef6fe3ba6821c399fd628a2a500c86be4e96d4beb171b518"
+        },
+        "fingerprint": "f738822249f83c3772e08dc88d8832389ce342833094e65af89b56052b0b5157",
+        "output": {
+          "path": "nfts/common.mp4",
+          "bytes": 664871,
+          "sha256": "93d6ec4e73fa51b0ef6fe3ba6821c399fd628a2a500c86be4e96d4beb171b518"
+        }
+      }
+    },
+    "nft_uncommon_image": {
+      "original": {
+        "source": {
+          "path": "sources/nfts/uncommon.avif",
+          "bytes": 31705,
+          "sha256": "eb50f9fde329afbeb9f386ce5ec1bb4f4ea158746d9fc88d79d831742a6d21b3"
+        },
+        "fingerprint": "86601350d7af367e367717e524f6719097f1fc926b46fc20ef0ff2437d7fe370",
+        "output": {
+          "path": "nfts/uncommon.avif",
+          "bytes": 31705,
+          "sha256": "eb50f9fde329afbeb9f386ce5ec1bb4f4ea158746d9fc88d79d831742a6d21b3"
+        }
+      }
+    },
+    "nft_uncommon_video": {
+      "original": {
+        "source": {
+          "path": "sources/nfts/uncommon.mp4",
+          "bytes": 1298480,
+          "sha256": "ec8e7f5104a66b6fbaa2c9c16dd5a5ce418f6f41b31628a73d87b52a31f7ffdb"
+        },
+        "fingerprint": "7fc0427f215ed16160d117482f19f0816cc8210f531adb8fde4a665686d33ba1",
+        "output": {
+          "path": "nfts/uncommon.mp4",
+          "bytes": 1298480,
+          "sha256": "ec8e7f5104a66b6fbaa2c9c16dd5a5ce418f6f41b31628a73d87b52a31f7ffdb"
+        }
+      }
+    },
+    "nft_rare_image": {
+      "original": {
+        "source": {
+          "path": "sources/nfts/rare.avif",
+          "bytes": 23959,
+          "sha256": "34b66f1e5354cb69fcd3a60511fdea23676590f68723c3e761d4580edea62766"
+        },
+        "fingerprint": "dfb6de7b36f48da269139aaab4c71a89afabbe28780cabe5cdcae0f9cb983505",
+        "output": {
+          "path": "nfts/rare.avif",
+          "bytes": 23959,
+          "sha256": "34b66f1e5354cb69fcd3a60511fdea23676590f68723c3e761d4580edea62766"
+        }
+      }
+    },
+    "nft_rare_video": {
+      "original": {
+        "source": {
+          "path": "sources/nfts/rare.mp4",
+          "bytes": 912167,
+          "sha256": "a941a6590faf25fa9d1e4148563f1bd478cfd03bd1389e42f0e570bc8a06ce57"
+        },
+        "fingerprint": "66ca9d226e92149426944730fde3ace67b2153df25ab012e97cbf6541fd74480",
+        "output": {
+          "path": "nfts/rare.mp4",
+          "bytes": 912167,
+          "sha256": "a941a6590faf25fa9d1e4148563f1bd478cfd03bd1389e42f0e570bc8a06ce57"
+        }
+      }
+    },
+    "nft_epic_image": {
+      "original": {
+        "source": {
+          "path": "sources/nfts/epic.avif",
+          "bytes": 22446,
+          "sha256": "5fa72f12d71908bf6bcf2010ac6f5f069905edfb93d66abd376d136aa10d7f8f"
+        },
+        "fingerprint": "1ed785e12244f31d5a77382b0b7e7b861f86637e34277db3bb5cec06d9019bc0",
+        "output": {
+          "path": "nfts/epic.avif",
+          "bytes": 22446,
+          "sha256": "5fa72f12d71908bf6bcf2010ac6f5f069905edfb93d66abd376d136aa10d7f8f"
+        }
+      }
+    },
+    "nft_epic_video": {
+      "original": {
+        "source": {
+          "path": "sources/nfts/epic.mp4",
+          "bytes": 976254,
+          "sha256": "c00ae61debdad28c4fd3ff6c29b29d0d35e1964c2e0b60939cc153d2f3640051"
+        },
+        "fingerprint": "e38354ad114daeeec601ee0be343a01e59d2670a1d37fceda4700454dbe16e7b",
+        "output": {
+          "path": "nfts/epic.mp4",
+          "bytes": 976254,
+          "sha256": "c00ae61debdad28c4fd3ff6c29b29d0d35e1964c2e0b60939cc153d2f3640051"
+        }
+      }
+    },
+    "nft_legendary_image": {
+      "original": {
+        "source": {
+          "path": "sources/nfts/legendary.avif",
+          "bytes": 30343,
+          "sha256": "a81ff7f37bd40e3c926b7abc912d8569117e438cc534a1247b8aad71a5060a61"
+        },
+        "fingerprint": "c39b7e8c83f8d51879a24c2955516d71c895f5e1e22549b0b0b0e1a56dbc7ac5",
+        "output": {
+          "path": "nfts/legendary.avif",
+          "bytes": 30343,
+          "sha256": "a81ff7f37bd40e3c926b7abc912d8569117e438cc534a1247b8aad71a5060a61"
+        }
+      }
+    },
+    "nft_legendary_video": {
+      "original": {
+        "source": {
+          "path": "sources/nfts/legendary.mp4",
+          "bytes": 1014979,
+          "sha256": "a2890a61d7581b13e5de26b02089d52954ef03ec7bc4410871e1b1377d5242f1"
+        },
+        "fingerprint": "16f7d11246572e33c9aa9e52ad45ca6f6b31ab3f080928bc8a077cc1739de237",
+        "output": {
+          "path": "nfts/legendary.mp4",
+          "bytes": 1014979,
+          "sha256": "a2890a61d7581b13e5de26b02089d52954ef03ec7bc4410871e1b1377d5242f1"
+        }
+      }
+    },
+    "nft_mythical_image": {
+      "original": {
+        "source": {
+          "path": "sources/nfts/mythical.avif",
+          "bytes": 32487,
+          "sha256": "aecda1cf71be94a34876ce154dc56356de0636b7057efad8fc64f74f8059e065"
+        },
+        "fingerprint": "1899d6d8fc28fe03c04adfd35508c7cd95b9ca66e558201fe73c6b9f33e631fd",
+        "output": {
+          "path": "nfts/mythical.avif",
+          "bytes": 32487,
+          "sha256": "aecda1cf71be94a34876ce154dc56356de0636b7057efad8fc64f74f8059e065"
+        }
+      }
+    },
+    "nft_mythical_video": {
+      "original": {
+        "source": {
+          "path": "sources/nfts/mythical.mp4",
+          "bytes": 1336487,
+          "sha256": "64a2aa5a66493df12af98e9ba3f971c927f7ef90a63a81f2984eeeb926ca8048"
+        },
+        "fingerprint": "46e88441b34bac2a1adea2646277f5c17346af9def8d9ceee2af88596001872c",
+        "output": {
+          "path": "nfts/mythical.mp4",
+          "bytes": 1336487,
+          "sha256": "64a2aa5a66493df12af98e9ba3f971c927f7ef90a63a81f2984eeeb926ca8048"
+        }
+      }
     }
   }
 }

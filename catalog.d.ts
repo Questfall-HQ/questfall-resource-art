@@ -7,6 +7,8 @@ export declare const attributeSmallImages: Readonly<Record<keyof typeof attribut
 export declare const slotImages: Readonly<Record<string, string>>;
 export declare const slotTinyImages: Readonly<Record<keyof typeof slotImages, string>>;
 export declare const slotSmallImages: Readonly<Record<keyof typeof slotImages, string>>;
+export type NFTRarity = 'common' | 'uncommon' | 'rare' | 'epic' | 'legendary' | 'mythical';
+export declare const nftMedia: Readonly<Record<NFTRarity, Readonly<{image: string; video: string}>>>;
 
 export declare const inventoryVariantImages: Readonly<{
   cube: string;

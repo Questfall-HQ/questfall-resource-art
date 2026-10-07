@@ -3,7 +3,7 @@ import {readFile, readdir, mkdir, stat, writeFile} from 'node:fs/promises';
 import {dirname, join, relative} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import sharp from 'sharp';
-import {artwork, filesFor, variantSettings} from '../artwork-manifest.js';
+import {artwork, filesFor, variantSettings, media} from '../artwork-manifest.js';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const cacheFile = 'artwork-build-cache.json';
@@ -36,7 +36,42 @@ const artifact = async (path, variant, entry) => {
   return {bytes: bytes.length, sha256: hash(bytes)};
 };
 
-export async function buildArtwork({directory = root, entries = artwork, check = false, inventory = true} = {}) {
+const validateMedia = async (bytes, entry) => {
+  if (entry.type === 'image' && /\.(avif|gif)$/.test(entry.output)) {
+    const info = await sharp(bytes, {animated: true}).metadata();
+    const format = entry.output.endsWith('.avif') ? 'heif' : 'gif';
+    if (info.format !== format || !info.width || !info.height ||
+        Math.max(info.width, info.height) > 4096 || bytes.length > 2_000_000) {
+      throw new Error('Invalid encoded image: ' + entry.source);
+    }
+    return;
+  }
+  if (entry.type !== 'video' || !entry.output.endsWith('.mp4') || bytes.length > 10_000_000) {
+    throw new Error('Unsupported encoded media: ' + entry.source);
+  }
+  const boxes = new Set();
+  for (let offset = 0; offset < bytes.length;) {
+    if (offset + 8 > bytes.length) throw new Error('Truncated MP4 box: ' + entry.source);
+    let size = bytes.readUInt32BE(offset);
+    const type = bytes.toString('ascii', offset + 4, offset + 8);
+    let header = 8;
+    if (size === 1) {
+      if (offset + 16 > bytes.length) throw new Error('Truncated MP4 extended box: ' + entry.source);
+      size = Number(bytes.readBigUInt64BE(offset + 8)); header = 16;
+    } else if (size === 0) size = bytes.length - offset;
+    if (!Number.isSafeInteger(size) || size < header || offset + size > bytes.length) {
+      throw new Error('Invalid MP4 box size: ' + entry.source);
+    }
+    if (offset === 0 && type !== 'ftyp') throw new Error('Missing MP4 file type: ' + entry.source);
+    boxes.add(type); offset += size;
+  }
+  if (!['ftyp', 'moov', 'mdat'].every(type => boxes.has(type))) {
+    throw new Error('Incomplete MP4 container: ' + entry.source);
+  }
+};
+
+export async function buildArtwork({directory = root, entries = artwork,
+  mediaEntries = entries === artwork ? media : {}, check = false, inventory = true} = {}) {
   const packageData = JSON.parse(await readFile(join(root, 'package.json'), 'utf8'));
   const cachePath = join(directory, cacheFile);
   const previous = await readFile(cachePath, 'utf8').then(JSON.parse, () => ({entries: {}}));
@@ -143,6 +178,36 @@ export async function buildArtwork({directory = root, entries = artwork, check =
       }
       next.entries[key][variant] = {source: sourceInfo, fingerprint, output: {path: file, ...output}};
     }
+  }
+
+  for (const [key, entry] of Object.entries(mediaEntries)) {
+    if (next.entries[key] || entry.group !== 'nft' || !entry.source.startsWith('sources/') ||
+        entry.source.split('/').includes('..') || !entry.output.startsWith('nfts/') ||
+        entry.output.split('/').includes('..') || expected.has(entry.output)) {
+      throw new Error('Invalid or duplicate encoded media: ' + key);
+    }
+    expected.add(entry.output); generated++;
+    const bytes = await readFile(join(directory, entry.source));
+    await validateMedia(bytes, entry);
+    const sourceInfo = {path: entry.source, bytes: bytes.length, sha256: hash(bytes)};
+    const outputPath = join(directory, 'assets', entry.output);
+    const fingerprint = hash(JSON.stringify({mode: 'preserve', source: sourceInfo.sha256,
+      type: entry.type, output: entry.output}));
+    const previousOutput = await readFile(outputPath).catch(error => {
+      if (error.code !== 'ENOENT') throw error;
+      return null;
+    });
+    const same = previousOutput?.equals(bytes) ?? false;
+    const current = same && previous.entries?.[key]?.original?.fingerprint === fingerprint;
+    if (!current) {
+      changes.push(key + '/original');
+      if (!check && !same) {
+        await mkdir(dirname(outputPath), {recursive: true});
+        await writeFile(outputPath, bytes);
+      }
+    }
+    next.entries[key] = {original: {source: sourceInfo, fingerprint,
+      output: {path: entry.output, bytes: bytes.length, sha256: sourceInfo.sha256}}};
   }
 
   if (inventory) {

@@ -141,3 +141,20 @@ export const filesFor = entry => {
 export const publicPath = (entry, file) => entry.group === 'resource'
   ? `/images/resources/${file.split('/').at(-1)}`
   : `/images/${file}`;
+
+// Approved encoded media retains its original geometry, quality and URL.
+// The builder copies from sources and verifies source/output hashes in the cache.
+export const media = Object.freeze(Object.fromEntries(
+  ['common', 'uncommon', 'rare', 'epic', 'legendary', 'mythical'].flatMap(name =>
+    [['image', 'avif'], ['video', 'mp4']].map(([type, extension]) => [
+      `nft_${name}_${type}`,
+      Object.freeze({group: 'nft', name, type,
+        source: `sources/nfts/${name}.${extension}`, output: `nfts/${name}.${extension}`}),
+    ])),
+));
+
+export const activeFiles = () => [
+  ...Object.values(artwork).flatMap(entry => Object.values(filesFor(entry))
+    .map(file => ({file, path: publicPath(entry, file)}))),
+  ...Object.values(media).map(entry => ({file: entry.output, path: '/' + entry.output})),
+];

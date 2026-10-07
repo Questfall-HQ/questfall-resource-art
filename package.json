@@ -1,9 +1,9 @@
 {
   "name": "@questfall/resource-art",
-  "version": "2.15.0",
+  "version": "2.16.0",
   "private": true,
   "type": "module",
-  "description": "Shared resource, lootbox, and attribute artwork for Questfall Application and Admin",
+  "description": "Shared resource artwork and Founder NFT images and animations for Questfall Application and Admin",
   "types": "./catalog.d.ts",
   "exports": {
     ".": {
